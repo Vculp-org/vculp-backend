@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Notifications\Events\**" />
+    <EmbeddedResource Remove="Notifications\Events\**" />
+    <None Remove="Notifications\Events\**" />
+    <None Remove="User\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="7.0.0" />
+<!--    <PackageReference Include="RedbusTech.DateTime.Extensions" Version="1.1.0" />-->
+<!--    <PackageReference Include="RedbusTech.DDD.Shared" Version="4.0.0" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vculp.DDD.Shared\Vculp.DDD.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="User\" />
+  </ItemGroup>
+</Project>

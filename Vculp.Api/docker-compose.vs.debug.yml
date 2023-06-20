@@ -1,0 +1,5 @@
+version: '3.7'
+
+services:
+  vculp-api:
+    image: kennyagrisoft.azurecr.io/winmill/agrisoft.winmill.api:vs-

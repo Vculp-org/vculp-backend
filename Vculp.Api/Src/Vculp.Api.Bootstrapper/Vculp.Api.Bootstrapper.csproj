@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="7.0.1" />
+    <PackageReference Include="CorrelationId" Version="3.0.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.WorkerService" Version="2.21.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+    <PackageReference Include="RazorLight" Version="2.0.0-rc.3" />
+<!--    <PackageReference Include="RedbusTech.Api.Shared.Types" Version="4.0.3" />-->
+<!--    <PackageReference Include="RedbusTech.DDD.EventDispatcher.DotnetCore" Version="2.0.3" />-->
+<!--    <PackageReference Include="RedbusTech.DDD.EventReducer.DotNetCore" Version="1.0.0" />-->
+<!--    <PackageReference Include="RedbusTech.Extensions.Http.AuthHandlers" Version="1.0.0" />-->
+    <PackageReference Include="Scrutor" Version="4.2.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vculp.Api.Data.EntityFramework\Vculp.Api.Data.EntityFramework.csproj" />
+    <ProjectReference Include="..\Vculp.Api.Domain.Interfaces\Vculp.Api.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\Vculp.Api.Domain\Vculp.Api.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

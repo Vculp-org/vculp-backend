@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+		<PreserveCompilationReferences>true</PreserveCompilationReferences>
+		<PreserveCompilationContext>true</PreserveCompilationContext>
+		<GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>..\Vculp.Api\bin\Debug\netcoreapp2.2\Vculp.Api.Common.xml</DocumentationFile>
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DocumentationFile>..\Vculp.Api\bin\Release\netcoreapp2.2\Vculp.Api.Common.xml</DocumentationFile>
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Notifications\Dto\**" />
+	  <EmbeddedResource Remove="Notifications\Dto\**" />
+	  <None Remove="Notifications\Dto\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="Customers\Dtos\Write\ManipulationCustomerDto.cs" />
+		<Compile Remove="Customers\Dtos\Write\UpdateCustomerDto.cs" />
+		<Compile Remove="Customers\Dtos\Write\WriteCustomerDto.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FluentValidation" Version="11.5.2" />
+		<PackageReference Include="MediatR" Version="9.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Microsoft.Azure.ServiceBus" Version="5.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="7.0.7" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+<!--		<PackageReference Include="RedbusTech.Api.Shared.Abstractions" Version="4.0.3" />-->
+<!--		<PackageReference Include="RedbusTech.Api.Shared.Types" Version="4.0.3" />-->
+<!--		<PackageReference Include="RedbusTech.String.Extensions" Version="1.1.1" />-->
+<!--		<PackageReference Include="RedbusTech.TransactionalOutbox" Version="1.0.2" />-->
+		<PackageReference Include="System.Text.Json" Version="7.0.3" />
+		<PackageReference Include="TimeZoneConverter" Version="6.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Vculp.Api.Domain.Core\Vculp.Api.Domain.Core.csproj" />
+		<ProjectReference Include="..\Vculp.Api.Shared.Abstractions\Vculp.Api.Shared.Abstractions.csproj" />
+		<ProjectReference Include="..\Vculp.Extensions\Vculp.Extensions.csproj" />
+		<ProjectReference Include="..\Vculp.TransactionalOutbox\Vculp.TransactionalOutbox.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vculp.Api.Common\Vculp.Api.Common.csproj" />
+    <ProjectReference Include="..\Vculp.Api.Domain.Core\Vculp.Api.Domain.Core.csproj" />
+    <ProjectReference Include="..\Vculp.Api.Domain.Interfaces\Vculp.Api.Domain.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

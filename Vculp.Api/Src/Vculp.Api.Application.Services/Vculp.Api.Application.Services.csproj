@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+		<UserSecretsId>f82be71d-c8d7-42d5-b93b-332c938c80f8</UserSecretsId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	  <WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="Billing\EventHandlers\**" />
+		<EmbeddedResource Remove="Billing\EventHandlers\**" />
+		<None Remove="Billing\EventHandlers\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Geocoding.Microsoft" Version="4.0.1" />
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="7.0.7" />
+		<PackageReference Include="RazorLight" Version="2.0.0-rc.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Resources\Common\CommandHandlerErrors.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>CommandHandlerErrors.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Resources\Common\CommandHandlerErrors.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>CommandHandlerErrors.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Vculp.Api.Domain.Interfaces\Vculp.Api.Domain.Interfaces.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Common\EventReduction\" />
+	</ItemGroup>
+
+</Project>

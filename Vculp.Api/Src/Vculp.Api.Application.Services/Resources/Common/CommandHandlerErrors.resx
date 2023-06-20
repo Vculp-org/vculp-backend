@@ -1,0 +1,1862 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WriteOrderDtoValidator_OrderLinesAreRequired" xml:space="preserve">
+    <value>An order requires at least one order line.</value>
+    <comment>The error returned during order creation validation when order has no order lines</comment>
+  </data>
+  <data name="ApplyPendingPriceListPricesProcessManagerInProgress" xml:space="preserve">
+    <value>The live price list prices are currently in the process of being updated. Please try again later.</value>
+    <comment>The error returned when any ApplyPendingPriceListPricesProcessManager is in progress.</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_CustomerNotValid" xml:space="preserve">
+    <value>Customer is not valid for OrderLine</value>
+    <comment>The error returned during orderline creation validation when order line has different customer than VWD</comment>
+  </data>
+  <data name="UpdateHaulageRateCommandHandler_SpeciesNotValid" xml:space="preserve">
+    <value>Species '{0}' does not exist.</value>
+    <comment>The error returned during orderline creation validation when order line has different customer than VWD</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_MedicationNotValid" xml:space="preserve">
+    <value>Medication is not valid for OrderLine</value>
+    <comment>The error returned during orderline creation validation when order line has different medicaiton than VWD</comment>
+  </data>
+  <data name="DeleteCollectionOrderCommandHandler_PendingCanBeDeleted" xml:space="preserve">
+    <value>Only collection orders with a status of pending can be deleted.</value>
+    <comment>The error returned when collection order is not in pending status but delete command is called.</comment>
+  </data>
+  <data name="UpdateContractWeeklySupplyCommandHandler_ContractIsLongerOpen" xml:space="preserve">
+    <value>The contracted kilograms cannot be changed when the contract is no longer open.</value>
+    <comment>The error returned when contract is not in open state.</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_OrderNotValid" xml:space="preserve">
+    <value>Order is not valid for OrderLine</value>
+    <comment>The error returned during orderline creation validation when order line has different order than VWD</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_ProductNotValid" xml:space="preserve">
+    <value>Product is not valid for OrderLine</value>
+    <comment>The error returned during orderline creation validation when order line has different product than VWD</comment>
+  </data>
+  <data name="DeleteStoreCommandHandler_StoreAssosiatedWithCollectionOrder" xml:space="preserve">
+    <value>There are collection orders associated with this store, the store cannot be deleted.</value>
+    <comment>The error returned when collection orders associated with this store</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_VWDCancelled" xml:space="preserve">
+    <value>VWD is cancelled</value>
+    <comment>The error returned during orderline creation validation when vwd is cancelled</comment>
+  </data>
+  <data name="ApplyPendingCustomerPricesProcessManagerInProgress" xml:space="preserve">
+    <value>The live customer prices are currently in the process of being updated. Please try again later.</value>
+    <comment>The error returned when any ApplyPendingCustomerPricesProcessManager is in progress.</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_VWDExpired" xml:space="preserve">
+    <value>VWD is expired</value>
+    <comment>The error returned during orderline creation validation when vwd is expired</comment>
+  </data>
+  <data name="WeighOutARawMaterialWeighmentCommandHandler_CollectionOrderAlreadyWeighOut" xml:space="preserve">
+    <value>CollectionOrder {0} has been already Weighted out.</value>
+    <comment>The error returned when CollectionOrder is already WeighOut.</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_VWD_InvalidTonnesRemaining" xml:space="preserve">
+    <value>VWD does not have sufficient tonnes remaining</value>
+    <comment>The error returned during orderline creation validation when vwd has not sufficient tonnes remaining</comment>
+  </data>
+  <data name="CreatePriceListPendingPriceUpdateCommandHandler_PriceListDoesNotExists" xml:space="preserve">
+    <value>Price list does not exist with given price list code '{0}'.</value>
+    <comment>The error message retured from the API when field must be unique</comment>
+  </data>
+  <data name="PendingPriceListPricesRefreshCommandHandler_OverridesNotConfirmed" xml:space="preserve">
+    <value>There are {0} price lists with manual overrides that have not been confirmed. All manual overrides must be confirmed before updating the pending prices.</value>
+    <comment>The error message retured from the API</comment>
+  </data>
+  <data name="FieldDataNotFound" xml:space="preserve">
+    <value>{0} not found.</value>
+    <comment>The error message retured from the API when field data was not found.</comment>
+  </data>
+  <data name="UpdateTrailerCommandHandler_IsAlreadyInUse" xml:space="preserve">
+    <value>'{0}' is already in use.</value>
+    <comment>The error message retured from the API when field must be unique</comment>
+  </data>
+  <data name="UpdateProductFormPriceAdjustmentsCommandHandler_CurrencyDoesNotExist" xml:space="preserve">
+    <value>Currency '{0}' does not exist.</value>
+    <comment>The error message retured from the API when field value does not exist in system.</comment>
+  </data>
+  <data name="FieldIsAlreadyInUse" xml:space="preserve">
+    <value>'{0}' is already in use.</value>
+    <comment>The error message retured from the API when field must be unique</comment>
+  </data>
+  <data name="CreateStoreCommandHandler_StoreNameFieldIsAlreadyInUse" xml:space="preserve">
+    <value>Store name '{0}' is already in use.</value>
+    <comment>The error message retured from the API when field must be unique</comment>
+  </data>
+  <data name="UpdatePriceOfPriceListPendingPriceUpdateOverrideCommandHandler_PriceListOverrideNotExists" xml:space="preserve">
+    <value>Price list '{0}' does not have a manual override, the pending price cannot be updated.</value>
+    <comment>The error message retured from the API when field must be unique</comment>
+  </data>
+  <data name="UpdateStoreCommandHandler_StoreNameFieldIsAlreadyInUse" xml:space="preserve">
+    <value>Store name '{0}' is already in use.</value>
+    <comment>The error message retured from the API when field must be unique</comment>
+  </data>
+  <data name="WeighOutARawMaterialWeighmentCommandHandler_AlreadyWeighOut" xml:space="preserve">
+    <value>RawMaterial Weighment {0} is already weighed out.</value>
+    <comment>The error message retured from the API when RawMaterial Weighment is already weighed out.</comment>
+  </data>
+  <data name="SendOrderToProductionCommandHandler_OrderAlreadyInProduction" xml:space="preserve">
+    <value>Order is already in production</value>
+    <comment>The error returned during order sending to production when order has been already sent to production</comment>
+  </data>
+  <data name="CreateLoadOrderLinesCommandHandler_OrderLineHasUnacknowledged_Notes" xml:space="preserve">
+    <value>There are unacknowledged notes associated with one or more of the order lines.</value>
+    <comment>The error returned during orderlines load when there are unacknowledged notes associated with orderlines</comment>
+  </data>
+  <data name="CreateRawMaterialCommandHandler_CodeFieldIsAlreadyInUse" xml:space="preserve">
+    <value>Raw material code '{0}' has already been used.</value>
+    <comment>The error returned when raw material code already in use.</comment>
+  </data>
+  <data name="CancelOrderCommandHandler_NotAllOrderLines_CanBeCancelled" xml:space="preserve">
+    <value>Order contains order line(s) that cannot be cancelled</value>
+    <comment>The error returned during order cancellation when order has order line that cannot be moved to cancelled stage</comment>
+  </data>
+  <data name="CancelOrderCommandHandler_OrderAlreadyCancelled" xml:space="preserve">
+    <value>Order is already cancelled</value>
+    <comment>The error returned during order cancellation when order is was already cancelled</comment>
+  </data>
+  <data name="CreatePriceListPricesPendingRemovalCommandHandler_PriceListPriceDoesNotExistForPriceList" xml:space="preserve">
+    <value>The PriceListPrice {0} does not exist for PriceList {1}.</value>
+    <comment>The error returned during PriceListPrice does not exists for given PriceList.</comment>
+  </data>
+  <data name="CreatePendingPriceListPriceChangeCommandHandler_PriceListPriceDoesNotExistForPriceList" xml:space="preserve">
+    <value>The PriceListPrice {0} does not exist for PriceList {1}.</value>
+    <comment>The error returned during PriceListPrice does not exists for given PriceList.</comment>
+  </data>
+  <data name="CreatePriceListPricesPendingRemovalCommandHandler_PriceListPricePendingRemovalAlreadyExistsForPriceListPrice" xml:space="preserve">
+    <value>Price list price {0} is already pending removal.</value>
+    <comment>The error returned during Price list price is already pending removal.</comment>
+  </data>
+  <data name="CancelOrderLineCommandHandler_LoadedOrderLineCannotBeCancelled" xml:space="preserve">
+    <value>An order line that has been loaded cannot be cancelled.</value>
+    <comment>The error returned during order line cancellation when order line cannot be cancelled because it has been loaded.</comment>
+  </data>
+  <data name="CancelOrderLineCommandHandler_OrderLineIsCancelled" xml:space="preserve">
+    <value>Order line is already cancelled</value>
+    <comment>The error returned during order lice cancellation when order line was cancelled before</comment>
+  </data>
+  <data name="UpdateOrder_CancelledOrder_CannotBeChanged" xml:space="preserve">
+    <value>Cancelled order cannot be changed</value>
+    <comment>The error returned during order update/patch process when order is cancelled</comment>
+  </data>
+  <data name="UpdateCancelledObject" xml:space="preserve">
+    <value>{0} is cancelled and cannot be updated</value>
+    <comment>The error returned during updating cancelled object</comment>
+  </data>
+  <data name="UpdateOrderLineCommandHandler_UpdateOrderLine_ThatIsAssignedToLoad" xml:space="preserve">
+    <value>Cannot update certain order line properties when it is assigned to load</value>
+    <comment>The error returned during order line  update, when user tries to update some properties that are not allowed to update while order line is assigned to load</comment>
+  </data>
+  <data name="CancelLoadCommandHandler_LoadAlreadyCancelled" xml:space="preserve">
+    <value>Load is already cancelled</value>
+    <comment>The error returned during load cancellation when load is was already cancelled</comment>
+  </data>
+  <data name="SendLoadToOutloadingCommandHandler_LoadContainsCancelledOrderLines" xml:space="preserve">
+    <value>Cannot send load that contains cancelled order lines to outloading</value>
+    <comment>The error returned during load sending to outload validation when load has cancelled order lines</comment>
+  </data>
+  <data name="SendLoadToOutloadingCommandHandler_LoadContainsNotOrderLines" xml:space="preserve">
+    <value>Cannot send load that contains no order lines to outloading</value>
+    <comment>The error returned during load sending to outload validation when load has no order lines</comment>
+  </data>
+  <data name="SendLoadToOutloadingCommandHandler_LoadIsCancelled" xml:space="preserve">
+    <value>Cannot send cancelled load to outloading</value>
+    <comment>The error returned during load sending to outload validation when load is cancelled</comment>
+  </data>
+  <data name="SendLoadToOutloadingCommandHandler_LoadIsSentToOutloading" xml:space="preserve">
+    <value>Load is already sent to outloading</value>
+    <comment>The error returned during load sending to outload validation when load is already sent to outloading</comment>
+  </data>
+  <data name="UpdateLoadSectionCollectionAreaCommandHandler_LoadIsSentToOutloading" xml:space="preserve">
+    <value>Load is sent to outloading</value>
+    <comment>The error returned during changing collection area for load section when laod is sent to production</comment>
+  </data>
+  <data name="AddOrderLinesToLoadCommandHandler_LoadIsSentToOutloading" xml:space="preserve">
+    <value>Items cannot be added to loads that have been sent to outloading</value>
+    <comment>The error returned during adding order lines to load when load is sent to production</comment>
+  </data>
+  <data name="UpdateLoadCommandHandler_loadIsCancelled_Or_SentToOutloading" xml:space="preserve">
+    <value>Cannot update load that is cancelled or sent to outlaoding</value>
+    <comment>The error returned during load update when load is cancelled ot sent to outloading</comment>
+  </data>
+  <data name="CreateContractTransactionCommandHandler_StoreDoesNotExist" xml:space="preserve">
+    <value>Store {0} does not exists.</value>
+    <comment>The error returned store does not exists with given store name.</comment>
+  </data>
+  <data name="CreateContractTransactionCommandHandler_ContractStatusClosed" xml:space="preserve">
+    <value>Contract {0} is closed. Transactions cannot be added to a closed contract.</value>
+    <comment>The error returned contract status is closed.</comment>
+  </data>
+  <data name="ReorderLoadSectionsCommandHandler_CapacityMissmatch" xml:space="preserve">
+    <value>Order capacity in section {0} is greater than section maximum capacity</value>
+    <comment>The error returned during load sections reordering when order line cannot be placed in the section</comment>
+  </data>
+  <data name="CreateSupplierApprovedMaterialCommandHandler_RawMaterialIsAlreadyAnApprovedMaterialForGivenSupplier" xml:space="preserve">
+    <value>Raw material {0} is already an approved material for supplier {1}.</value>
+    <comment>The error returned when raw material is alredy an approved material for supplier.</comment>
+  </data>
+  <data name="CreateSupplierApprovedMaterialCommandHandler_RawMaterialDoesNotExists" xml:space="preserve">
+    <value>Raw material {0} does not exist.</value>
+    <comment>The error returned when raw material does not exits.</comment>
+  </data>
+  <data name="ReorderLoadSectionsCommandHandler_InvalidOrerLineId" xml:space="preserve">
+    <value>Order line id is not valid</value>
+    <comment>The error returned during load sections reordering when order line id is invalid</comment>
+  </data>
+  <data name="ReorderLoadSectionsCommandHandler_InvalidSectionNumber" xml:space="preserve">
+    <value>Invalid section number</value>
+    <comment>The error returned during load sections reordering when section num is invalid</comment>
+  </data>
+  <data name="ReorderLoadSectionsCommandHandler_LoadHasFixedSequence" xml:space="preserve">
+    <value>Load {0} has a fixed sequence. The order of the sections cannot be changed</value>
+    <comment>The error returned during load sections reordering when load has fixed sequence</comment>
+  </data>
+  <data name="ReorderLoadSectionsCommandHandler_OrderMightBeMissed" xml:space="preserve">
+    <value>Order on section would be missed</value>
+    <comment>The error returned during load sections reordering when order would be missed</comment>
+  </data>
+  <data name="ReorderLoadSectionsCommandHandler_SectionNumbersAreDuplicated" xml:space="preserve">
+    <value>SectionNumbers are duplicated</value>
+    <comment>The error returned during load sections reordering when section nums are duplicated</comment>
+  </data>
+  <data name="AddOrderLinesToLoadCommandHandler_OrderLineIsLoaded" xml:space="preserve">
+    <value>Order line is already loaded to load</value>
+    <comment>The error returned during adding order lines to load sections when order line is already loaded to load</comment>
+  </data>
+  <data name="DissociateSortCodeFromSalesRepCommandHandler_SortCodeAssignedToCustomer" xml:space="preserve">
+    <value>Sort code is assigned to customer.</value>
+    <comment>The error returned during diassigning sort codes from sales reps when at least one customer has sort code assigned</comment>
+  </data>
+  <data name="DeleteSortCodeCommandHandler_SortCodeAssociated_WithSalesRep" xml:space="preserve">
+    <value>Sort code is associated with sales rep.</value>
+    <comment>The error returned during deleting sort code when sort code is associated to sales rep</comment>
+  </data>
+  <data name="Last_OrderLineOnOrder" xml:space="preserve">
+    <value>The last order line for a order cannot be deleted.</value>
+    <comment>The error returned during order line removel when order line is last order line on order</comment>
+  </data>
+  <data name="UpdateOrder_OrderWitoutOrderLines_CannotBeSentToProduction" xml:space="preserve">
+    <value>An order with no order lines cannot be sent to production</value>
+    <comment>The error returned during order sending to producation validation when order has no order lines</comment>
+  </data>
+  <data name="AssociateSortCodeToSalesRepCommandHandler_SortCodeIsalreadyAssociatedWitSalesRep" xml:space="preserve">
+    <value>Sort code {0} is already associated with sales rep {1}.</value>
+    <comment>The error returned during associating sort code with sales rep when sort code is already associated with it</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_DeliverySiteNotValid" xml:space="preserve">
+    <value>Delivery site is not valid for given vwd</value>
+    <comment>The error returned during order line creation validation when vwd delivery site is note the same as order line delivery site</comment>
+  </data>
+  <data name="UpdateCustomerPricingInfoCommandHandler_PriceListIsNotAssociatedTo_Customerentity" xml:space="preserve">
+    <value>Pricelist {0} is not associated with {1} '{2}'</value>
+    <comment>The error returned during customer pricing info update when price lsit is not associated with customer related entities</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_CustomerPersonaNonGrata" xml:space="preserve">
+    <value>Order lines cannot be added to an order when the customer is considered persona non grata</value>
+    <comment>The error returned during order line creation when customer is persona nongrata</comment>
+  </data>
+  <data name="CreateOrder_CustomerPersonaNonGrata" xml:space="preserve">
+    <value>An order cannot be created for a customer that is considered persona non grata</value>
+    <comment>The error returned during creating order when customer is persona non grata</comment>
+  </data>
+  <data name="ItemIsAlreadyAssociated" xml:space="preserve">
+    <value>{0} is already associated with {1}.</value>
+    <comment>The error returned when item is already associated awith another entity</comment>
+  </data>
+  <data name="TextGroupCode_AlereadyExists" xml:space="preserve">
+    <value>A text group with code {0} already exists</value>
+    <comment>The error returned during text group create / update when code duplicates in db</comment>
+  </data>
+  <data name="AssociatedWithProduct" xml:space="preserve">
+    <value>{0} is associated with Product</value>
+    <comment>The error returned during deleting entity that is associated with product</comment>
+  </data>
+  <data name="SendOrderToProductionCommandHandler_OrderIsBlocked" xml:space="preserve">
+    <value>The order is blocked, a blocked order cannot be sent to production</value>
+    <comment>The error returned during order sending to production when order has been blocked</comment>
+  </data>
+  <data name="UnblockOrderCommandHandler_OrderIsNotBlocked" xml:space="preserve">
+    <value>Order {0} is not blocked. Only orders that are blocked can be unblocked</value>
+    <comment>The error returned during order unblocking when order was not blocked</comment>
+  </data>
+  <data name="DeleteSalesRepCommandHandler_CustomerAssociated_WithSalesRep" xml:space="preserve">
+    <value>Sales rep {0} is associated with one or more customers and cannot be deleted.</value>
+    <comment>The error returned during deleting sales rep when customer associated with sales rep exists</comment>
+  </data>
+  <data name="CreateSalesRepCommandHandler_CountyDoesNotExist" xml:space="preserve">
+    <value>County does not exist.</value>
+    <comment>The error returned during creting of updating sales rep when county with given name / county code does not exist</comment>
+  </data>
+  <data name="CreateCustomerAppProductHistoryConfigurationCommandHandler_SpeciesIsUsed" xml:space="preserve">
+    <value>An customer app product history configuration already exists for species {0}</value>
+    <comment>The error returned during update/create additive config for species that is already in use</comment>
+  </data>
+  <data name="AgeRangeAssociatedWithProduct" xml:space="preserve">
+    <value>The age range {0} for sub-species {1} is in use against one or more products and cannot be deleted</value>
+    <comment>The error returned during age range dissassociation from sub species when they are in use for product</comment>
+  </data>
+  <data name="AssociatedWithActiveAgent" xml:space="preserve">
+    <value>{0} is associated with Active Agent</value>
+    <comment>The error returned during deleting entity that is associated with Active Agent</comment>
+  </data>
+  <data name="AssociateIntegratorToCategoryCommandHandler_CategoryIsNotIntegrator" xml:space="preserve">
+    <value>'{0}' Is not an Integrator Category</value>
+    <comment>The error returnd when category is not an Integrator Category</comment>
+  </data>
+  <data name="DisassociateIntegratorFromCategoryCommandHandler_CategoryIsNotIntegrator" xml:space="preserve">
+    <value>'{0}' is not an Integrator Category.</value>
+    <comment>The error returned when Category is not an integrator category</comment>
+  </data>
+  <data name="DissociateItegratorFromCategoryCommandHandler_CategoryIntegratorAssignedToCustomer" xml:space="preserve">
+    <value>Integrator '{0}'  Category '{1}' assigned to customer.</value>
+    <comment>The error returned when inegrator and category is assigned to customer</comment>
+  </data>
+  <data name="AssociateMerchantToCategoryCommandHandler_CategoryIsNotMerchant" xml:space="preserve">
+    <value>'{0}' Is not a Merchant Category</value>
+    <comment>The error returned when category is not a merchant category</comment>
+  </data>
+  <data name="DisassociateMerchantFromCategoryCommandHandler_CategoryIsNotMerchant" xml:space="preserve">
+    <value>'{0}' is not Merchant Category.</value>
+    <comment>The error returned when Category is not a merchant category</comment>
+  </data>
+  <data name="DissociateMerchantFromCategoryCommandHandler_CategoryMerchantAssignedToCustomer" xml:space="preserve">
+    <value>Merchant  '{0}'  Category '{1}' assigned to customer.</value>
+    <comment>The error returned when merchant and category is assigned to customer</comment>
+  </data>
+  <data name="AssociateCustomerToCategoryCommandHandler_CategoryIsNotGroup" xml:space="preserve">
+    <value>'{0}' Is not group Category</value>
+    <comment>The error returnd when category is not Group Category</comment>
+  </data>
+  <data name="DissociateCustomerGroupFromCategoryCommandHandler_CategoryGroupAssignedToCustomer" xml:space="preserve">
+    <value>Customer Group  '{0}'  Category '{1}' assigned to customer.</value>
+    <comment>The error returned when the Customer Group  and category is assigned to customer</comment>
+  </data>
+  <data name="DisassociateCustomerGroupFromCategoryCommandHandler_CategoryIsNotCustomerGroup" xml:space="preserve">
+    <value>'{0}' is not Customer Group Category.</value>
+    <comment>The error returned when category is not Customer Group Category</comment>
+  </data>
+  <data name="DeleteActiveAgentCommandHandler_HasDrugProduct_Association" xml:space="preserve">
+    <value>Active Agent '{0}' is associated with one or more drug products and cannot be deleted.</value>
+    <comment>The error message retured from the API when deleting an active agent that is associated with a drug product</comment>
+  </data>
+  <data name="DeleteDrugProductCommandHandler_HasMedication_Association" xml:space="preserve">
+    <value>Drug Product '{0}' is associated with one or more medications and cannot be deleted.</value>
+    <comment>The error message retured from the API when deleting a drug product that is associated with a medication</comment>
+  </data>
+  <data name="RemoveDiseaseCommandHandler_AssociatedWithMedication" xml:space="preserve">
+    <value>Disease '{0}' is associated with one or more medications and cannot be deleted</value>
+    <comment>Ther error returned when a disease cannot be deleted as it is associated with a medication</comment>
+  </data>
+  <data name="CreatePriceListCommandHandler_CurrencyDoesNotExist" xml:space="preserve">
+    <value>Currency code '{0}' does not exist.</value>
+    <comment>The error returned during creating or updating pricelist when curency code does not exist</comment>
+  </data>
+  <data name="DeletePriceListCommandHandler_AssociatedWithCustomer" xml:space="preserve">
+    <value>Pricelist '{0}' cannot be deleted as one or more customers are associated with this pricelist</value>
+    <comment>Ther error returned when a pricelist cannot be deleted as it is associated with a customer(s)</comment>
+  </data>
+  <data name="DeleteCustomerGroupCommandHandler_AssociatedWithCustomer" xml:space="preserve">
+    <value>Customer group '{0}' is associated with one or more customers and cannot be deleted.</value>
+    <comment>The error returned when a customer group cannot be deleted as it is associated with a customer(s)</comment>
+  </data>
+  <data name="DeleteMerchantCommandHandler_AssociatedWithCustomer" xml:space="preserve">
+    <value>Merchant '{0}' is associated with one or more customers and cannot be deleted.</value>
+    <comment>Ther error returned when a merchant cannot be deleted as it is associated with a customer(s)</comment>
+  </data>
+  <data name="CreateDrugProductForMedicationCommandHandler_DoesNotExist" xml:space="preserve">
+    <value>Drug product '{0}' does not exist</value>
+    <comment>The error during adding new drug product to medication</comment>
+  </data>
+  <data name="CreateDrugProductForMedicationCommandHandler_HasDrugProduct_Association" xml:space="preserve">
+    <value>Drug product '{0} 'is already included in medication '{1}'</value>
+    <comment>The error returned while adding new drug product to medication</comment>
+  </data>
+  <data name="BusinessType_RequiresMoreCotnacts_ToBeSpecified" xml:space="preserve">
+    <value>A customer with a business type of {0} must have at least {1} contacts.</value>
+    <comment>The error returned during customer crate / update when contacts count is not enough</comment>
+  </data>
+  <data name="Category_DoesNotContain" xml:space="preserve">
+    <value>{0} {1} is not valid for category {2}</value>
+    <comment>The error returned during customer create pr edit process when category does not contain group or merchant or integrator</comment>
+  </data>
+  <data name="EntityDoesNotContain" xml:space="preserve">
+    <value>{0} does not contain {1}.</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="FieldIsRequired" xml:space="preserve">
+    <value>{0} is required.</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="ManipulationCustomerDtoValidator_SpeciesMatchesIsOrganic" xml:space="preserve">
+    <value>An organic customer must be associated with an organic species</value>
+    <comment>The error returned during customer craete/update when customer requires Organic species</comment>
+  </data>
+  <data name="ManipulationCustomerDtoValidator_SpeciesMatchesNonOrganic" xml:space="preserve">
+    <value>A non-organic customer must be associated with a non-organic species</value>
+    <comment>The error returned during customer create/update when customer requires non Organic species</comment>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>{0} with such '{1}' does not exist</value>
+    <comment>The error returned if selected field does not have given value</comment>
+  </data>
+  <data name="NullIsRequired" xml:space="preserve">
+    <value>{0} should be NULL</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="Species_Requires_VwdEmail" xml:space="preserve">
+    <value>Customers with a species of {0} must have a VWD Email Address.</value>
+    <comment>The error returned during customer create/update when speices requires vwd email but it was not provided</comment>
+  </data>
+  <data name="CanHaveVet_Requires_VwdEmailToBeEmpty" xml:space="preserve">
+    <value>VWD Email Address must be empty for category which cannot have vet.</value>
+    <comment>The error returned during customer create/update when category has canhavevet to false and vwd email is provided</comment>
+  </data>
+  <data name="CreateActiveAgentContributionForDrugProductCommandHandler_DoesNotExist" xml:space="preserve">
+    <value>Active agent '{0}' does not exist</value>
+    <comment>The error during adding new drug product to medication</comment>
+  </data>
+  <data name="CreateActiveAgentContributionForDrugProductCommandHandler_HasActiveAgentContribution_Association" xml:space="preserve">
+    <value>Active agent '{0}' is already included in drug product '{1}'</value>
+    <comment>The error returned while adding new drug product to medication</comment>
+  </data>
+  <data name="DeleteActiveAgentContributionForDrugProductCommandHandler_CannotDeleteLastItem" xml:space="preserve">
+    <value>The last active agent for a drug product cannot be removed.</value>
+    <comment>The error returned while deleting last active agent contribution from a drug product</comment>
+  </data>
+  <data name="DissociateCustomerCategoryFromSpeciesCommandHandler_CategorySpeciesAssignedToCustomer" xml:space="preserve">
+    <value>Category '{0}' cannot be disassociated from species '{1}' as one or more customers are using this combination.</value>
+    <comment>The error returned when the Category  and species is assigned to customer</comment>
+  </data>
+  <data name="DeleteCategory_CategoryAssignedToCustomer" xml:space="preserve">
+    <value>There are one or more customers associated with category '{0}'. This category cannot be deleted.</value>
+    <comment>The error returned during deletion of category when any customer has associated category</comment>
+  </data>
+  <data name="UpdateCustomerPricingInfoCommandHandler_PriceListDoesNotMatch_CustomerCurrency" xml:space="preserve">
+    <value>The currency of pricelist '{0}' does not match the currency of the customer.</value>
+    <comment>The error returned during updating customer pricing info when pricelist currency does not match with customer currency.</comment>
+  </data>
+  <data name="DeleteProductFormCommandHandler_AssociatedWithProduct" xml:space="preserve">
+    <value>Product form '{0}' is associated with one or more products and cannot be deleted.</value>
+    <comment>The error returned during deleting product form when product associated with product form exists.</comment>
+  </data>
+  <data name="DeletePhysicalFormCommandHandler_AssociatedWithProductConfiguration" xml:space="preserve">
+    <value>Physical form '{0}' is associated with one or more product configurations and cannot be deleted.</value>
+    <comment>The error returned during deleting physical from when product configuration associated with physical form exists.</comment>
+  </data>
+  <data name="CreateSubSpeciesCommandHandler_SubSpeciesAlreadyExists" xml:space="preserve">
+    <value>A sub-species with name '{0}' already exists.</value>
+    <comment>The error returned during update/create sub-species that is already in use.</comment>
+  </data>
+  <data name="UpdateLoadLoadingStatusCommandHandler_CannotSetLoadingStatusAsAccepted" xml:space="preserve">
+    <value>Load '{0}' cannot be accepted.</value>
+    <comment>The error returned during updating loading status when loading status cannot be set to accepted.</comment>
+  </data>
+  <data name="UpdateLoadLoadingStatusCommandHandler_CannotSetLoadingStatusAsPending" xml:space="preserve">
+    <value>Load '{0}' cannot have its status set to pending.</value>
+    <comment>The error returned during updating loading status when loading status cannot be set to pending.</comment>
+  </data>
+  <data name="UpdateVetVwdCommandHandler_Disease_DoesNotExist" xml:space="preserve">
+    <value>Disease '{0}' does not exist.</value>
+    <comment>The error returned when disease does not exists.</comment>
+  </data>
+  <data name="UpdateVetVwdCommandHandler_OnlyPendingVwdCanBeUpdated" xml:space="preserve">
+    <value>A veterinary written directive with a status of '{0}' cannot be updated.</value>
+    <comment>The error returned when user tries to update Vwd whose status is not pending.</comment>
+  </data>
+  <data name="UpdateVetsVwdStatusCommandValidator_StatusChangeToApprove" xml:space="preserve">
+    <value>Only a veterinary written directive that has a status of pending can be approved.</value>
+    <comment>The error returned while changing status of VWD to approve </comment>
+  </data>
+  <data name="UpdateVetsVwdStatusCommandValidator_StatusChangeToCancelled" xml:space="preserve">
+    <value>Only a veterinary written directive that has a status of pending or approved can be cancelled.</value>
+    <comment>The error returned while changing status of VWD to cancelled </comment>
+  </data>
+  <data name="CreatePriceForMedicationCommandHandler_Currency_Not_Found" xml:space="preserve">
+    <value>Currency code {0} does not exist.</value>
+  </data>
+  <data name="CreatePriceForMedicationCommandHandler_HasPriceList_Medication_Price" xml:space="preserve">
+    <value>A price for medication code {0} already exists on price list {1}.</value>
+    <comment>The error returned during create price for medication validation</comment>
+  </data>
+  <data name="CreatePriceForMedicationCommandHandler_MedicationCode_Not_Found" xml:space="preserve">
+    <value>Medication code {0} does not exist.</value>
+    <comment>The error returned during create price for medication validation</comment>
+  </data>
+  <data name="UpdateVehicleCommandHandler_VehicleTypeValidation_IsAssociatedInLoad" xml:space="preserve">
+    <value>Vehicle '{0}' is associated with one or more loads. The type of a vehicle cannot be changed once it has been associated with a load.</value>
+    <comment>The error returned during vehicle updation validation when user tries to update vehicle type for vehicle used in one or more load.</comment>
+  </data>
+  <data name="DeleteVehicleCommandHandler_AssociatedWithLoad" xml:space="preserve">
+    <value>Vehicle {0} is associated with one or more loads and cannot be deleted.</value>
+    <comment>The error returned when trying to delete vehicle which is already associated with load</comment>
+  </data>
+  <data name="DeleteDriverCommandHandler_AssociatedWithLoad" xml:space="preserve">
+    <value>Driver {0} is associated with one or more loads and cannot be deleted.</value>
+    <comment>The error returned when trying to delete driver which is already associated with load</comment>
+  </data>
+  <data name="DeleteTrailerCommandHandler_AssociatedWithLoad" xml:space="preserve">
+    <value>Trailer {0} is associated with one or more loads and cannot be deleted.</value>
+    <comment>The error returned when trying to delete trailer which is already associated with load</comment>
+  </data>
+  <data name="CreateDriverCommandHandler_DriverCodeIsInUse" xml:space="preserve">
+    <value>Driver code '{0}' is already in use by another driver.</value>
+    <comment>The error returned when a command to create a new driver is processed and the requested driver code is already in use.</comment>
+  </data>
+  <data name="UpdateDriverCommandHandler_DriverCodeIsInUse" xml:space="preserve">
+    <value>Driver code '{0}' is already in use.</value>
+    <comment>The error returned when a command to update a driver with a new driver code that is already in use is issued.</comment>
+  </data>
+  <data name="EntityNotExistWithField" xml:space="preserve">
+    <value>{0} {1} does not exist.</value>
+    <comment>The error returned if entity not exist with given field</comment>
+  </data>
+  <data name="UpdateVwdCommandHandler_HasProduct_Medication" xml:space="preserve">
+    <value>Medication code {0} must be a valid medication for the product code {1}.</value>
+    <comment>The error returned if vwd doesn't have valid product medication association.</comment>
+  </data>
+  <data name="ManipulationsOrderLineDto_Medication_IsNotValid_ForProduct" xml:space="preserve">
+    <value>Medication is not valid for given product</value>
+    <comment>The error returned when Medication is not valid for given product</comment>
+  </data>
+  <data name="ManipulationsOrderLineDto_Quantity_Requires_Pallets_Or_Bags" xml:space="preserve">
+    <value>{0} requires {1} or {2} to be defined</value>
+    <comment>The error message retured from the API when quantity requires some bags or pallets to  be defined</comment>
+  </data>
+  <data name="ManipulationsOrderLineDto_Quantity_Requires_Something" xml:space="preserve">
+    <value>{0} requires {1} to be defined</value>
+    <comment>The error message retured from the API when quantity requires some property to be defined</comment>
+  </data>
+  <data name="FieldIsNotValidDate_InThePast" xml:space="preserve">
+    <value>'{0}' cannot be in the past</value>
+    <comment>The error message retured from the API when a date field is in the past</comment>
+  </data>
+  <data name="UpdateVwdCommandHandler_MedicationDoesNotRequireVwd" xml:space="preserve">
+    <value>Medication '{0}' does not require a Vwd.</value>
+    <comment>The error message retured from the API when given medication does not requires vwd</comment>
+  </data>
+  <data name="CreateVehicleCommandValidator_VehicleTypeRequiresDefaultTrailer" xml:space="preserve">
+    <value>Vehicles of type '{0}' must have a default trailer.</value>
+    <comment>The error message returned when default trailer is not provided for vehicle type having trailer</comment>
+  </data>
+  <data name="CreateVehicleCommandValidator_VehicleTypeCannotHaveDefaultTrailer" xml:space="preserve">
+    <value>Vehicles of type '{0}' cannot have a default trailer.</value>
+    <comment>The error returned during vehicle creation / updation when vehicle does not require a trailer but default trailer is provided.</comment>
+  </data>
+  <data name="CreateVehicleCommandValidator_VehicleTypeMustHaveSection" xml:space="preserve">
+    <value>Vehicles of type '{0}' must have at least one section.</value>
+    <comment>The error returned during vehicle creation when vehicle of particular type does not have section.</comment>
+  </data>
+  <data name="CreateVehicleCommandValidator_SectionsCapacityMoreThanMaximumCapacity" xml:space="preserve">
+    <value>Vehicle does not have capacity greater than {0} tonnes.</value>
+    <comment>The error message retured from the API when the vehicles capacity is over reached.</comment>
+  </data>
+  <data name="CreateVehicleCommandValidator_SectionsMoreThanMaximumAllowedSection" xml:space="preserve">
+    <value>The maximum number of sections allowed for a vehicle is {0}.</value>
+    <comment>The error message retured from the API when the number of sections is greater than maximum allowed sections for a vehicle.</comment>
+  </data>
+  <data name="FieldMustBeGreaterThanOrEqual" xml:space="preserve">
+    <value>'{0}' must be greater than or equal to {1}.</value>
+    <comment>The error message retured from the API when field must be greater than or equal to some value</comment>
+  </data>
+  <data name="FieldMustBeLessThanOrEqual" xml:space="preserve">
+    <value>'{0}' must be less than or equal to {1}.</value>
+    <comment>The error message retured from the API when field must be less than or equal to some value</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_DoNotHaveCapacityToLoadOrderLineInSections" xml:space="preserve">
+    <value>The Section(s) does not have sufficient capacity to load the order line.</value>
+    <comment>This error is returned during load creation validation when sections does not have sufficient capacity.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_Entity_NotSpecifiedForHaulier" xml:space="preserve">
+    <value>{0} '{1}' is not valid for specified haulier.</value>
+    <comment>This error is returned during load creation validation when entity doesn't belong to haulier.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_ExceededLoadSectionQuantity" xml:space="preserve">
+    <value>Load does not have sufficient capacity to load order line into sections.</value>
+    <comment>This error is returned during load creation validation when load does not have sufficient capacity.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_LoadMustHaveFixedSequanceError" xml:space="preserve">
+    <value>Has Fixed Sequence must be true for loads which contain multi section orders, or multi order sections.</value>
+    <comment>The error is returned during load creation validation when any orders on the load that are loaded into more than one section and HasFixedSequence is true.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_OrderLineAlreadyLoaded" xml:space="preserve">
+    <value>Cannot load order an line which is already part of a load.</value>
+    <comment>This error is returned during load creation validation when order line  is already loaded.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_OrderLineHasSectionNumber_BiggerThanLoadSections" xml:space="preserve">
+    <value>One or more of the sections does not exist on the load.</value>
+    <comment>The error is returned during load creation validation when section number is greated then load section number.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_OrderLineShouldBeBulk" xml:space="preserve">
+    <value>Non bulk orders cannot be added to a bulk load.</value>
+    <comment>This error is returned during load creation validation when order line type is not bulk.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_OrderLineShouldBeNonBulk" xml:space="preserve">
+    <value>Bulk orders cannot be added to a non bulk load.</value>
+    <comment>This error is returned during load creation validation when order line type is not non-bulk.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_OrderLine_Cancelled" xml:space="preserve">
+    <value>Cannot load order line which has been cancelled.</value>
+    <comment>This error is returned during load creation validation when order line  has been cancelled.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_OrderLine_InProduction" xml:space="preserve">
+    <value>Cannot load order lines which have not been sent to production.</value>
+    <comment>This error is returned during load creation validation when order line  is not sent to production.</comment>
+  </data>
+  <data name="CreateLoadOrderLinesCommandHandler_InsufficientCapacityInSection_ForOrderLine" xml:space="preserve">
+    <value>The Section(s) does not have sufficient capacity to load the order line.</value>
+    <comment>This error is returned during load creation validation when sections does not have sufficient capacity.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_NumberOfPallets_ToBeLoaded_AreGreaterThanNumberOfSections" xml:space="preserve">
+    <value>Number of sections specified while creating load cannot be less than number of pallets to be loaded.</value>
+    <comment>The error returned during load creation when load sections are not enough to load pallets.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_NumberOfSections_ShouldBeGreaterThanEqualToPallets" xml:space="preserve">
+    <value>Number of sections specified for order line cannot be less than number of pallets in order line.</value>
+    <comment>The error returned during load creation when load sections are not enough to load pallets.</comment>
+  </data>
+  <data name="CreateLoadOrderLinesCommandHandler_InsufficientNumberofSection_ForOrderLinePallets" xml:space="preserve">
+    <value>Load does not have sufficient number of sections available to load pallets for the order line.</value>
+    <comment>The error returned during load creation when load sections are not enough to load pallets.</comment>
+  </data>
+  <data name="RemoveOrderLineFromLoadCommandHandler_OrderLineCannotBeRemoved" xml:space="preserve">
+    <value>The order line cannot be removed from the load.</value>
+    <comment>The error message is returned when order line cannot be removed from the load.</comment>
+  </data>
+  <data name="OrderLineCommandHandler_DeliverySiteNotValid" xml:space="preserve">
+    <value>Delivery site {0} is not a valid delivery site for customer {1}.</value>
+    <comment>The error returned while adding or updating orderline when the given delivery site is invalid for the given customer</comment>
+  </data>
+  <data name="OrderLineCommandHandler_MedicationCodeNotValid" xml:space="preserve">
+    <value>Medication {0} is not a valid medication for product {1}.</value>
+    <comment>The error returned while adding or updating orderline when given medication code is invalid for the product associated with the given product configuration</comment>
+  </data>
+  <data name="OrderLineCommandHandler_ProductConfigurationDoesNotExist" xml:space="preserve">
+    <value>Product configuration {0} does not exist.</value>
+    <comment>The error returned while adding or updating orderline when the given product configuration does not exist</comment>
+  </data>
+  <data name="OrderLineApplicationService_EitherBagsOrPalletsMustBeGreaterThanZero" xml:space="preserve">
+    <value>{0} requires either the number of bags or number of pallets to be greater than zero.</value>
+    <comment>The error returned while validating orderline when both bags and pallets values are null or zero for non-bulk product that can be delivered on pallets</comment>
+  </data>
+  <data name="OrderLineApplicationService_KilogramsMustbeGreaterThanZero" xml:space="preserve">
+    <value>Kilograms must be greater than zero for bulk products.</value>
+    <comment>The error returned while validating orderline when kilograms is null or zero for bulk product</comment>
+  </data>
+  <data name="OrderLineApplicationService_MustBeGreaterThanZero" xml:space="preserve">
+    <value>{0} must be greater than zero.</value>
+    <comment>The error returned while validating orderline when property is null or zero for a product that can be delivered on pallets</comment>
+  </data>
+  <data name="OrderLineApplicationService_MustBeGreaterThanZeroForProductThatCannotBeDeliveredOnPallet" xml:space="preserve">
+    <value>{0} must be greater than zero for product configuration {1}.</value>
+    <comment>The error returned while validating orderline when property is null or zero for a product that can not be delivered on pallets</comment>
+  </data>
+  <data name="OrderLineApplicationService_MustBeNullForBulkProduct" xml:space="preserve">
+    <value>{0} must be null for a bulk product.</value>
+    <comment>The error returned while validating orderline when property is not null for a bulk product</comment>
+  </data>
+  <data name="OrderLineApplicationService_MustBeNullForNonBulkProduct" xml:space="preserve">
+    <value>{0} must be null for a non-bulk product.</value>
+    <comment>The error returned while validating orderline when property is null for a non-bulk product</comment>
+  </data>
+  <data name="OrderLineApplicationService_MustBeNullForProductThatCannotBeDeliveredOnPallet" xml:space="preserve">
+    <value>{0} must be null as product configuration {1} cannot be delivered on pallets.</value>
+    <comment>The error returned while validating orderline when property is null for a product that can not be delivered on pallets</comment>
+  </data>
+  <data name="OrderLineApplicationService_OnlyBagsOrPalletsCanBeSupplied" xml:space="preserve">
+    <value>Only bags or pallets can be supplied as a quantity, not both.</value>
+    <comment>The error returned while validating orderline when both bags and pallets values are not null for non-bulk product that can be delivered on pallets</comment>
+  </data>
+  <data name="OrderLineApplicationService_ProductConfigurationDoesNotExist" xml:space="preserve">
+    <value>Product configuration {0} does not exist.</value>
+    <comment>The error returned while validating orderline when the given product configuration does not exist</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_ScriptNumberDoesNotExist" xml:space="preserve">
+    <value>A Veterinary written directive is required for this order line as medication {0} requires a veterinary written directive.</value>
+    <comment>The error returned while creating orderline when Vwd is  null if medication requires it</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_VwdMustBeNull" xml:space="preserve">
+    <value>Medication {0} does not require a veterinary written directive.</value>
+    <comment>The error returned while creating orderline when Vwd exist if medication does require it.</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_VwdNotFound" xml:space="preserve">
+    <value>No veterinary written directive exists with script number {0}.</value>
+    <comment>The error returned while creating orderline when Vwd does not exist for given script number</comment>
+  </data>
+  <data name="UpdateOrderLinePreparationStatusCommandHandler_PreperationStatusCannotBeUpdated" xml:space="preserve">
+    <value>The preparation status for the order line cannot be updated.</value>
+    <comment>The error returned during update preparation status validation for order line.</comment>
+  </data>
+  <data name="CreateAcknowledgementsCommandHandler_NoteMustBelongToCustomerOrDeliverySiteOrOrderOrOrderLine" xml:space="preserve">
+    <value>The note must be associated with a customer, delivery site, order or order line that is associated with the load.</value>
+    <comment>The error returned during validation of notes while creating acknowledgements.</comment>
+  </data>
+  <data name="UpdateLoadCommandHandler_LoadMustHaveFixedSequanceError" xml:space="preserve">
+    <value>Has Fixed Sequence must be true for loads which contain multi section orders, or multi order sections.</value>
+    <comment>The error is returned during load creation validation when any orders on the load that are loaded into more than one section and HasFixedSequence is true.</comment>
+  </data>
+  <data name="ReassignOrderLinesCommandHandler_InsufficientSectionCapacity" xml:space="preserve">
+    <value>Order line {0} requires {1} tonnes capacity, but section {2} only has {3} tonnes available.</value>
+    <comment>The error returned during order line reassignment when section does not have sufficient capacity to be loaded.</comment>
+  </data>
+  <data name="ReassignOrderLinesCommandHandler_LoadHasFixedSequence" xml:space="preserve">
+    <value>Load {0} has a fixed sequence.</value>
+    <comment>The error returned during order line reassignment when load has fixed sequence.</comment>
+  </data>
+  <data name="ReassignOrderLinesCommandHandler_MissingOrderLineId" xml:space="preserve">
+    <value>Order line {0} is missing. All order lines on the load must be included when moving order lines to a new section.</value>
+    <comment>The error returned during order line reassignment when all order line of load are not reassigned.</comment>
+  </data>
+  <data name="ReassignOrderLinesCommandHandler_OrderLineDoesNotExistsOnLoad" xml:space="preserve">
+    <value>Order line {0} does not exist on load {1}.</value>
+    <comment>The error returned during order line reassignment when order line does not exists on load.</comment>
+  </data>
+  <data name="ReassignOrderLinesCommandHandler_SectionDoesNotExistsOnLoad" xml:space="preserve">
+    <value>Section {0} does not exist on load {1}.</value>
+    <comment>The error returned during order line reassignment when section name does not exists on load.</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_LoadedQuantityMustBeWholeNumber" xml:space="preserve">
+    <value>The loaded quantity is not a whole number for non bulk Order line {0}</value>
+    <comment>The error returned during load order lines when loaded quantity is not a whole number for non bulk Order line</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_OrderLineAlreadyLoaded" xml:space="preserve">
+    <value>Order line {0} has been already loaded on load {1}.</value>
+    <comment>The error returned during load order lines when order line already loaded on load.</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_OrderLineDoesNotExist" xml:space="preserve">
+    <value>Order line {0} does not exist.</value>
+    <comment>The error returned during load order lines when order line does not exist.</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_OrderLineDoesNotExistsOnLoad" xml:space="preserve">
+    <value>Order line {0} does not exist on load {1}.</value>
+    <comment>The error returned during load order lines when order line does not exist on load.</comment>
+  </data>
+  <data name="CreateLoadRequestCommand_LoadMustBeBulkLoad" xml:space="preserve">
+    <value>The Load {0} must be a bulk load.</value>
+    <comment>The error returned during create load request when load is a non bulk load.</comment>
+  </data>
+  <data name="CreateLoadRequestCommand_NoOrderLinesOnTheLoadForCollectionArea" xml:space="preserve">
+    <value>There are no order lines on the load {0} for the collection area {1}.</value>
+    <comment>The error returned during create load request when there are no order lines on the load for the collection area..</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_OrderLineIsNotPending" xml:space="preserve">
+    <value>Order line {0} can not be loaded as it is not pending.</value>
+    <comment>The error returned during load order lines when order line has pending status.</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_BulkOrderLineMaximumRunNumbers" xml:space="preserve">
+    <value>Order line {0} contains more than 5 run numbers. The maximum number of run numbers allowed for bulk order line is 5.</value>
+    <comment>The error returned during load order lines when bulk order line contains more than allowed run numbers</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_NonBulkOrderLineMaximumRunNumbers" xml:space="preserve">
+    <value>Order line {0} contains more than 3 run numbers. The maximum number of run numbers allowed for non bulk order line is 3.</value>
+    <comment>The error returned during load order lines when non bulk order line contains more than allowed run numbers</comment>
+  </data>
+  <data name="CreateCompletedLoadRequestItemCommandHandler_MustBeGreaterThanZero" xml:space="preserve">
+    <value>{0} must be greater than zero.</value>
+    <comment>The error returned while Creating created load request item when section number is less than or equal to zero</comment>
+  </data>
+  <data name="CreateCompletedLoadRequestItemCommandHandler_SecondDateMustBeLaterThanFirstDate" xml:space="preserve">
+    <value>{0} must be later than {1}.</value>
+    <comment>The error returned while Creating created load request item when second weighment date is before or same as first weighment date</comment>
+  </data>
+  <data name="CreateCompletedLoadRequestItemCommandHandler_SecondNumberMustBeGreaterThanFirstNumber" xml:space="preserve">
+    <value>{0} must be greater than {1}.</value>
+    <comment>The error returned while Creating created load request item when second weighment number is less than or equal to first weighment number</comment>
+  </data>
+  <data name="CreateCompletedLoadRequestItemCommandHandler_ItemWithSequenceNumberAlreadyCompleted" xml:space="preserve">
+    <value>The load request order line item with {0} sequence number has already been completed.</value>
+    <comment>The error returned while Creating created load request item when a  load request order line item with the given sequence number has already been completed.</comment>
+  </data>
+  <data name="CompleteDocketDeliveryCommandHandler_InvalidDocketOnDelivery" xml:space="preserve">
+    <value>The docket number {0} is not a valid docket on the delivery.</value>
+    <comment>The error returned during complete docket delivery when docket does not exist on delivery.</comment>
+  </data>
+  <data name="LCompleteDocketDeliveryCommandHandler_DocketDeliveryAlreadyCompleted" xml:space="preserve">
+    <value>The docket number {0} in the delivery is already completed</value>
+    <comment>The error returned during complete docket delivery when docket has completed status.</comment>
+  </data>
+  <data name="ExcludeDocketFromInvoicingCommandHandler_DocketAlreadyInvoiced" xml:space="preserve">
+    <value>Docket {0} has already been invoiced. The invoice number is {1}</value>
+    <comment>The error returned when Docket has been already invoiced</comment>
+  </data>
+  <data name="UpdateLabellingMaterialsPrintOrderCommandHandler_DoesNotContainAllFormulationLabellingMaterials" xml:space="preserve">
+    <value>Collection does not contain all of the labelling materials in the formulation {0}</value>
+    <comment>The error returned while updating labelling materials print orders when request does contain all of the labelling materials in the formulation</comment>
+  </data>
+  <data name="UpdateLabellingMaterialsPrintOrderCommandHandler_LabellingMaterialsDoesNotExistInFormulation" xml:space="preserve">
+    <value>Labelling material {0} does not exist in the formulation {1}</value>
+    <comment>The error returned while updating labelling materials print orders when request contain any labelling material that does not exist in the formulation</comment>
+  </data>
+  <data name="UpdateFormulationNutritionalValuesPrintOrderCommandHandler_DoesNotContainAllFormulationNutritionalValues" xml:space="preserve">
+    <value>Collection does not contain all of the nutritional values in the formulation {0}</value>
+    <comment>The error returned while updating nutritional values print orders when request does contain all of the nutritional values in the formulation</comment>
+  </data>
+  <data name="UpdateFormulationNutritionalValuesPrintOrderCommandHandler_NutritionalValuesDoesNotExistInFormulation" xml:space="preserve">
+    <value>Nutritional Value {0} does not exist in the formulation {1}</value>
+    <comment>The error returned while updating nutritional values print orders when request contain any nutritional value that does not exist in the formulation</comment>
+  </data>
+  <data name="UnitsMustBeBagsForNonBulkDeliveryOption" xml:space="preserve">
+    <value>Units must be bags for non-bulk delivery option.</value>
+    <comment>The error returned during validation of billing document item units when elivery Option for the Product Configuration is not bulk, Units must be Bags.</comment>
+  </data>
+  <data name="UnitsMustBeTonnesForBulkDeliveryOption" xml:space="preserve">
+    <value>Units must be tonnes for bulk delivery option.</value>
+    <comment>The error returned during validation of billing document item units when Delivery Option for the Product Configuration is bulk, Units must be Tonnes.</comment>
+  </data>
+  <data name="CreateBillingDocumentCommandHandler_DeliveryDocketIsExcludedFromInvoicingError" xml:space="preserve">
+    <value>Delivery docket {0} is excluded from invoicing.</value>
+    <comment>The error message returned during invoice creation when the delivery docket is excluded from invoicing.</comment>
+  </data>
+  <data name="CreateBillingDocumentCommandHandler_InvoicingForDeliveryDocketAlreadyCompletedError" xml:space="preserve">
+    <value>The invoicing for delivery docket {0} has already been completed.</value>
+    <comment>The error message returned during invoice creation when the invoice for the provided delivery docket has already been completed.</comment>
+  </data>
+  <data name="UploadBillingDocumentFileCommandHandler_BillingDocumentStatusIsNotFinal" xml:space="preserve">
+    <value>Can not create billing document file as billing document is not final.</value>
+    <comment>The error message returned while uploading billing document file and billing document status is not final.</comment>
+  </data>
+  <data name="MillDoesNotHaveVwdEnabled" xml:space="preserve">
+    <value>Mill '{0}' does not have VWD enabled.</value>
+    <comment>The error message retured from the API when mill doesn't have vwd enabled.</comment>
+  </data>
+  <data name="AddNutritionalValueToFormulationCommandHandler_NutritionalValueIsAlreadyPartOfFormulation" xml:space="preserve">
+    <value>The nutritional value {0} is already a part of the formulation.</value>
+    <comment>The error returned while adding nutritional value that already part of the formulation</comment>
+  </data>
+  <data name="AddLabellingMaterialToFormulationCommandHandler_RawMaterialIsAlreadyPartOfFormulation" xml:space="preserve">
+    <value>The raw material {0} is already a part of the labelling materials for the formulation.</value>
+    <comment>The error returned while adding raw material that is already part of the  labelling materials for the formulation</comment>
+  </data>
+  <data name="AddIngredientToFormulationCommandHandler_RawMaterialIsAlreadyPartOfFormulation" xml:space="preserve">
+    <value>The raw material {0} is already a part of the ingredient for the formulation.</value>
+    <comment>The error returned while adding raw material that is already part of the  ingredient for the formulation</comment>
+  </data>
+  <data name="AddIngredientToFormulationCommandHandler_RawMaterialIsAlreadyPartOfLabellingMaterialForFormulation" xml:space="preserve">
+    <value>The raw material {0} is already a part of the labelling materials for the formulation.</value>
+    <comment>The error returned while adding raw material that is already part of the  labelling materials for the formulation</comment>
+  </data>
+  <data name="AddIngredientToFormulationCommandHandler_SourceIsExternal" xml:space="preserve">
+    <value>Ingredient cannot be added to the formulation as source is external</value>
+    <comment>The error returned while adding ingredient to formulation having external source</comment>
+  </data>
+  <data name="RemoveIngredientFromFormulationCommandHandler_CannotDeleteLastIngredient" xml:space="preserve">
+    <value>The last ingredient for the formulation cannot be removed.</value>
+    <comment>The error returned while removing ingredient from a formulation when ingredient is the last one in the formulation</comment>
+  </data>
+  <data name="RemoveLabellingMaterialFromFormulationCommandHandler_CannotDeleteLastLabellingMaterial" xml:space="preserve">
+    <value>The last labelling material for the formulation cannot be removed.</value>
+    <comment>The error returned while removing labelling material from a formulation when labelling material is the last one in the formulation</comment>
+  </data>
+  <data name="AddNutritionalValueToFormulationCommandHandler_RawSpecificationCannotSpecified" xml:space="preserve">
+    <value>Raw specification cannot specified for the nutritional value when formulation source is external</value>
+    <comment>The error returned while adding nutritional value with Raw Specification and source is external</comment>
+  </data>
+  <data name="CreateFormulationCommandHandler_RawSpecificationCannotSpecified" xml:space="preserve">
+    <value>Raw specification cannot specified for the nutritional value when formulation source is external</value>
+    <comment>The error returned while creating formulation with nutritional value having Raw Specification and source is external</comment>
+  </data>
+  <data name="ApproveFormulationCommandHandler_FormulationIsNotPending" xml:space="preserve">
+    <value>Only a pending Formulation can be approved</value>
+    <comment>The error returned while approving formulation which is not pending</comment>
+  </data>
+  <data name="AddFootnoteToRawMaterialCommandHandler_FootnoteIsAlreadyAssociated" xml:space="preserve">
+    <value>The footnote {0} is already associated with the raw material.</value>
+    <comment>The error returned while adding footnote that is already associated with the raw material</comment>
+  </data>
+  <data name="CreateBagLabelCommandHandler_MedicationIsNotActive" xml:space="preserve">
+    <value>The medication {0} is not active</value>
+    <comment>The error returned when creating bag label and medication is not active</comment>
+  </data>
+  <data name="CreateBagLabelCommandHandler_MedicationMustBeAssociatedWithProduct" xml:space="preserve">
+    <value>The medication {0} is not associated with the product {1}.</value>
+    <comment>The error returned when creating bag label and medication is not associated with the product</comment>
+  </data>
+  <data name="CreateBagLabelCommandHandler_MillIsNotEnabledForLabelling" xml:space="preserve">
+    <value>The mill must be enabled for labelling</value>
+    <comment>The error returned when creating bag label and mill is not enabled for labelling</comment>
+  </data>
+  <data name="CreateBagLabelCommandHandler_MustHaveBagDeliveryOption" xml:space="preserve">
+    <value>The product must have a product configuration with a delivery option of Bag associated with it</value>
+    <comment>The error returned when creating bag label and product configuration with a delivery option of bag is not associated with the product</comment>
+  </data>
+  <data name="CreateBagLabelCommandHandler_ProductIsNotActive" xml:space="preserve">
+    <value>The product {0} is not active</value>
+    <comment>The error returned when creating bag label and product is not active</comment>
+  </data>
+  <data name="CreateBillingReasonCommandHandler_ReasonAlreadyExistError" xml:space="preserve">
+    <value>Reason '{0}' already exists.</value>
+    <comment>The error returned during reason creation when a reason with the given name already exist</comment>
+  </data>
+  <data name="UpdateBillingReasonCommandHandler_ReasonAlreadyExistError" xml:space="preserve">
+    <value>A reason with the name '{0}' already exists.</value>
+    <comment>The error returned when updating a reason name, when the new reason name is already in use</comment>
+  </data>
+  <data name="CreateCustomerCommandHandler_CategoryDoesNotAllowLinkedLivestock" xml:space="preserve">
+    <value>Category '{0}' does not allow linked livestock.</value>
+    <comment>The error returned during customer creation when livestock counts are provided for a customer category that does not allow linked livestock.</comment>
+  </data>
+  <data name="CreateCustomerCommandHandler_LivestockCountsInvalidSpeciesError" xml:space="preserve">
+    <value>Delivery site '{0}' contains livestock counts for an invalid species. Species :'{1}'.</value>
+    <comment>The error returned during customer creation when a delivery site contains a livestock count for an invalid species.</comment>
+  </data>
+  <data name="CreateCustomerCommandHandler_LivestockCountsInvalidSubSpeciesError" xml:space="preserve">
+    <value>Delivery site '{0}' contains livestock counts for an invalid sub-species. Species: '{1}', Sub-Species '{2}'.</value>
+    <comment>The error returned during customer creation when a delivery site contains a livestock count for an invalid sub species.</comment>
+  </data>
+  <data name="CreateCustomerCommandHandler_MissingMandatoryLivestockCountError" xml:space="preserve">
+    <value>Delivery site '{0}' requires a livestock count for '{1}'.</value>
+    <comment>The error returned during customer creation when a mandatory associated stock type is not provided for a delivery site.</comment>
+  </data>
+  <data name="CreateVehicleCommandHandler_DriverDoesNotExistForHaulierError" xml:space="preserve">
+    <value>Driver '{0}' does not exist for haulier '{1}'.</value>
+    <comment>The error returned during vehicle creation when the default driver does not exist for the haulier.</comment>
+  </data>
+  <data name="CreateVehicleCommandHandler_TrailerDoesNotExistForHaulierError" xml:space="preserve">
+    <value>Trailer '{0}' does not exist for haulier '{1}'.</value>
+    <comment>The error returned during vehicle creation when the default trailer does not exist for the haulier.</comment>
+  </data>
+  <data name="UpdateVehicleCommandHandler_DriverDoesNotExistForHaulierError" xml:space="preserve">
+    <value>Driver '{0}' does not exist for haulier.</value>
+    <comment>The error returned during vehicle update when the default driver does not exist for the haulier.</comment>
+  </data>
+  <data name="UpdateVehicleCommandHandler_TrailerDoesNotExistForHaulierError" xml:space="preserve">
+    <value>Trailer '{0}' does not exist for haulier.</value>
+    <comment>The error returned during vehicle update when the default trailer does not exist for the haulier.</comment>
+  </data>
+  <data name="CreateFormulationImportProcessCommandHandler_RawMaterialIsNotActive" xml:space="preserve">
+    <value>{0} with code '{1}' is not active.</value>
+    <comment>The error returned when creating formulation import process and raw material is not active.</comment>
+  </data>
+  <data name="CreateExchangeRateCommandHandler_ExchangeRateAlreadyExistError" xml:space="preserve">
+    <value>Exchange rate from the source currency code '{0}' to the target currency code '{1}' already exists.</value>
+    <comment>The error returned during exchange rate creation when a exchange rate from the source currency code to the target currency code already exists.</comment>
+  </data>
+  <data name="CreateBillingDocumentCommandHandler_UnitPriceTypeMustBePricePerItemOrPricePerTonne" xml:space="preserve">
+    <value>Unit Price Type should be 'Price Per Item' or 'Price Per Tonne'.</value>
+    <comment>The error message returned when unit price type is invalid.</comment>
+  </data>
+  <data name="DistributeBulkNotificationCommandHandler_ContentCanNotBeEmpty" xml:space="preserve">
+    <value>Content can not be Empty.</value>
+    <comment>The error message returned when content is empty.</comment>
+  </data>
+  <data name="DistributeBulkNotificationCommandHandler_AtLeastOneOfTheFiltersMustBeProvided" xml:space="preserve">
+    <value>At least one of the filters must be provided.</value>
+    <comment>The error message returned when filters is not provided.</comment>
+  </data>
+  <data name="DistributeBulkNotificationCommandHandler_NoNotificationContactsWereFoundUsingTheSuppliedFilters" xml:space="preserve">
+    <value>No notification contacts were found using the supplied filters.</value>
+    <comment>The error message returned when content is null.</comment>
+  </data>
+  <data name="DistributeBulkNotificationCommandHandler_ContactDoesNotExist" xml:space="preserve">
+    <value>Contact '{0}' does not exist.</value>
+    <comment>The error message returned when contact does not found.</comment>
+  </data>
+  <data name="CreateHaulageRatesCommandHandler_HaulierAlreadyHasAHaulageRateForSpeciesAndRoute" xml:space="preserve">
+    <value>Haulier '{0}' already has a haulage rate for species '{1}' and route '{2}'.</value>
+    <comment>The error message returned when haulier already has a haulage rate for given species and route.</comment>
+  </data>
+  <data name="CreateHaulageRatesCommandHandler_SpeciesNotValid" xml:space="preserve">
+    <value>Species '{0}' does not exist.</value>
+    <comment>The error message returned when species not valid.</comment>
+  </data>
+  <data name="DistributeBulkNotificationCommandHandler_NoNotificationContactsWereFoundUsingTheSuppliedFiltersForNotificationTypeSms" xml:space="preserve">
+    <value>No notification contacts were found using the supplied filters for notification type sms.</value>
+    <comment>The error message returned when contact does not found using the supplied filters for notification type sms.</comment>
+  </data>
+  <data name="DistributeBulkNotificationCommandHandler_NoNotificationContactsWereFoundUsingTheSuppliedFiltersForNotificationTypeEmail" xml:space="preserve">
+    <value>No notification contacts were found using the supplied filters for notification type email.</value>
+    <comment>The error message returned when contact does not found using the supplied filters for notification type email.</comment>
+  </data>
+  <data name="DistributeNotificationCommandHandler_ContactDoesNotExist" xml:space="preserve">
+    <value>Contact '{0}' does not exist.</value>
+    <comment>The error message returned when contact does not found.</comment>
+  </data>
+  <data name="DistributeNotificationCommandHandler_ContactDoesNotHaveAMobileNumber" xml:space="preserve">
+    <value>Contact '{0}' does not have a mobile number.</value>
+    <comment>The error message returned when contact does not have mobile number.</comment>
+  </data>
+  <data name="DistributeNotificationCommandHandler_ContactDoesNotHaveAnEmail" xml:space="preserve">
+    <value>Contact '{0}' does not have an email address.</value>
+    <comment>The error message returned when contact does not have an email address.</comment>
+  </data>
+  <data name="CreatePendingPriceListPriceChangeCommandHandler_ForGivenPriceListIdThereIsNoPriceListPendingPriceUpdate" xml:space="preserve">
+    <value>Price list {0} does not have a manual override, a new pending price cannot be created.</value>
+    <comment>The error message returned when no PriceListPendingPriceUpdate exist.</comment>
+  </data>
+  <data name="CreatePalletAccountTransactionCommandHandler_PalletAccountIsDisabled" xml:space="preserve">
+    <value>Pallet account disabled. Transactions cannot be added for a disabled pallet account.</value>
+    <comment>The error message returned when pallet account is disabled while creating transaction.</comment>
+  </data>
+  <data name="CreatePalletAccountTransactionCommandHandler_DocketNumberNotFoundForCustomerAssociatedWithPalletTransaction" xml:space="preserve">
+    <value>Invalid docket number. No delivery docket with number '{0}' was found for customer code '{1}'.</value>
+    <comment>The error returned when the provided docket number not found for customer which is not associated with pallet transaction.</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_OutboundPalletsNotAllowedForBulkOrderLine" xml:space="preserve">
+    <value>Outbound pallets cannot be recorded when loading a bulk order line.</value>
+    <comment>The error returned, when the API request contains order lines that are bulk order lines.</comment>
+  </data>
+  <data name="CompleteDocketDeliveryCommandHandler_NotNonBulkDocketOnDelivery" xml:space="preserve">
+    <value>Docket number {0} is not a non-bulk docket. Inbound Pallets can only be supplied for a Non Bulk Docket.</value>
+    <comment>The error returned when inbound pallets supplied and docket number is not a non bulk docket.</comment>
+  </data>
+  <data name="CreateMedicationCommandHandler_StockControlUnitNotExistError" xml:space="preserve">
+    <value>StockControlUnit '{0}' does not exist.</value>
+    <comment>The error returned during medication creation when StockControlUnit does not exist.</comment>
+  </data>
+  <data name="CreateMedicationCommandHandler_VATCodeNotExistError" xml:space="preserve">
+    <value>VATCode '{0}' does not exist.</value>
+    <comment>The error returned during medication creation when VATCode does not exist.</comment>
+  </data>
+  <data name="UpdateMedicationCommandHandler_StockControlUnitNotExistError" xml:space="preserve">
+    <value>StockControlUnit '{0}' does not exist.</value>
+    <comment>The error returned during editing medication when StockControlUnit does not exist.</comment>
+  </data>
+  <data name="UpdateMedicationCommandHandler_VATCodeNotExistError" xml:space="preserve">
+    <value>VATCode '{0}' does not exist.</value>
+    <comment>The error returned during editing medication when VATCode does not exist.</comment>
+  </data>
+  <data name="CreateMedicationCommandHandler_ProductGroupNotExistError" xml:space="preserve">
+    <value>ProductGroup '{0}' does not exist.</value>
+    <comment>The error returned during medication creation when product group does not exist.</comment>
+  </data>
+  <data name="UpdateMedicationCommandHandler_ProductGroupNotExistError" xml:space="preserve">
+    <value>ProductGroup '{0}' does not exist.</value>
+    <comment>The error returned during editing medication when product group does not exist</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_OutboundPalletsNotAllowedWhenCustomersDoesNotHavePalletAccount" xml:space="preserve">
+    <value>Outbound pallets cannot be recorded for loads when customers does not have pallet account.</value>
+    <comment>The error returned, when order lines customers does not have pallet account.</comment>
+  </data>
+  <data name="OrderLineCommandHandler_AddingOrderLineIsNotAllowedToOrderAlreadySentToProduction" xml:space="preserve">
+    <value>Order line cannot be added to an order which is sent to production.</value>
+    <comment>The error returned while adding order line when order is in production.</comment>
+  </data>
+  <data name="AddVehicleAuditToLoadCommandHandler_RestrictVehicleAudits" xml:space="preserve">
+    <value>Load '{0}' is a non bulk load. Vehicle audits can only be completed for a bulk load.</value>
+    <comment>The error returned during vehicle audit change when the load is non bulk</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_BulkLoadsMustHaveVehicleAuditsForOrderLines" xml:space="preserve">
+    <value>Vehicle audit not completed. Order lines cannot be added to a bulk load until a vehicle audit has been completed.</value>
+    <comment>The error message returned during adding order lines to a bulk load when the vehicle audits are empty</comment>
+  </data>
+  <data name="MerchantIsAlreadyExistForCustomerCode" xml:space="preserve">
+    <value>A merchant already exists for customer code {0}.</value>
+    <comment>The error message returned when the merchants in the system that are already linked to the same customer.</comment>
+  </data>
+  <data name="IntegratorIsAlreadyExistForCustomerCode" xml:space="preserve">
+    <value>An integrator already exists for customer code {0}.</value>
+    <comment>An error returned when integrators in the system that are linked to the same customer.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_UnacknowledgedOrderLinesError" xml:space="preserve">
+    <value>Order line '{0}' for customer '{1}' and delivery site '{2}' has unacknowledged notes. Product Code: '{3}' Medication Code: '{4}'</value>
+    <comment>The error returned during load creation in the transport module if there are orde lines without acknowledgements</comment>
+  </data>
+  <data name="AddOrderLinesToLoadCommandHandler_UnacknowledgedOrderLinesError" xml:space="preserve">
+    <value>Order line '{0}' for customer '{1}' and delivery site '{2}' has unacknowledged notes. Product Code: '{3}' Medication Code: '{4}'</value>
+    <comment>The error returned during load creation in the transport module if there are orde lines without acknowledgements</comment>
+  </data>
+  <data name="CanNotChangeCollectionArea" xml:space="preserve">
+    <value>Cannot modify collection area {0} for loaded order line.</value>
+    <comment>The error returned when trying to change collection area for loaded order line.</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_BagsMustBeGreaterThanZeroForNoneBulkNonPalletLoadOrderLineError" xml:space="preserve">
+    <value>Non bulk order line {0} which cannot be delivered on pallets must have quantity in bags and the value should be greater than zero.</value>
+    <comment>The error returned during load order lines  when non bulk order line which cannot be delivered as pallets does not have quantity specified in bags</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_BagsOrPalletsShouldBeGreaterThanZeroForNonBulkLoadOrderLineError" xml:space="preserve">
+    <value>Non bulk order line {0} must have either bags or pallets quantities set to greater than zero.</value>
+    <comment>The error returned during load order lines when non bulk order lines which can be devlivered as pallets must have either bags or pallets quantity set to greater than zero</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_PalletsAndBagsAreNotAllowedForBulkLoadOrderLineError" xml:space="preserve">
+    <value>Order line {0} is a bulk order line. Specifying quantities in bags and pallets are not allowed.</value>
+    <comment>The error returned during load order lines when bulk order line contains quantities in bags and pallets</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_TonnesShouldBeGreaterThanZeroForBulkLoadOrderLineError" xml:space="preserve">
+    <value>Order line {0} is a bulk order line. Quantity should be specified in tonnes and the value should be greater than zero.</value>
+    <comment>The error returned during load order lines when bulk order line does not conatain quantity specified in tonnes</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_TonnesShouldBeNullForNoneBulkLoadOrderLineError" xml:space="preserve">
+    <value>Order line {0} is a non bulk order line. The quantity cannot be specified in tonnes.</value>
+    <comment>The error returned during load order lines when non bulk order line have quantity specified in tonnes</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_PalletsMustBeEmptyForNonPaNoneBulkNonPalletLoadOrderLineError" xml:space="preserve">
+    <value>Order line {0} is a non bulk order line that cannot be delivered on pallets. </value>
+    <comment>The error returned during load order lines when order line is a non bulk which cannot be delivered on pallets has quantity specified in pallets</comment>
+  </data>
+  <data name="UpdateOrderLineCommandHandler_UpdateOrderLine_CannotChangeMedication" xml:space="preserve">
+    <value>The medication cannot be changed for an order line associated with a Vwd.</value>
+    <comment>The error message returned when trying to update medication for an order line associated with a Vwd.</comment>
+  </data>
+  <data name="UpdateOrderLineCommandHandler_UpdateOrderLine_CannotChangeProduct" xml:space="preserve">
+    <value>The product cannot be changed for an order line associated with a Vwd.</value>
+    <comment>The error message returned when trying to update product for an order line associated with a Vwd.</comment>
+  </data>
+  <data name="UpdateLoadCommandHandler_DriverNotFound" xml:space="preserve">
+    <value>Driver not found for driver code '{0}'.</value>
+    <comment>The error message returned when driver not found for provided driver code.</comment>
+  </data>
+  <data name="UpdateLoadCommandHandler_InvalidDriverForHaulierAsTheLoad" xml:space="preserve">
+    <value>The driver provided is not for the same Haulier as the load.</value>
+    <comment>The error message returned when the provided driver is not for the same Haulier as the load.</comment>
+  </data>
+  <data name="UpdateLoadCommandHandler_LoadingCompleted" xml:space="preserve">
+    <value>The loading of the load has been completed.</value>
+    <comment>The error message returned when the load has been completed.</comment>
+  </data>
+  <data name="SendLoadToOutloadingCommandHandler_LoadContainBlockedOrderLines" xml:space="preserve">
+    <value>Order number '{0}' is blocked. Loads containing blocked orders cannot be sent to outloading.</value>
+    <comment>The error returned when order is sent to outloading with blocked order lines.</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_LoadNonBulkOrderWithVariableWeightAndCanBeDeliveredOnPalletsMustHaveTonnesError" xml:space="preserve">
+    <value>Order line {0} is a non bulk order line that has variable weight. The weight should be specified in tonnes along with the bags or pallets.</value>
+    <comment>The error returned during load order lines when non bulk order line is a variable weight that can be delivered in pallets and the weight is not specified in tonnes and bags and/or pallets</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_LoadNonBulkOrderWithVariableWeightAndCannotBeDeliveredOnPalletsMustHaveTonnesError" xml:space="preserve">
+    <value>Order line {0} is a non bulk order line that has variable weight. The weight should be specified in tonnes along with the bags.</value>
+    <comment>The error returned during load order lines when non bulk order line is a variable weight that can be delivered in pallets and the weight is not specified in tonnes and bags.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_MissingTransportPlanningConfiguration" xml:space="preserve">
+    <value>Transport planning configuration does not exists</value>
+    <comment>The error returned during load creation when transport planning configuration is missing</comment>
+  </data>
+  <data name="UpdateLoadCommandHandler_FieldCannotBeChanged_When_LoadingStarted" xml:space="preserve">
+    <value>'{0}' cannot be changed when loading started.</value>
+    <comment>The error returned when the field trying to change when loading is started.</comment>
+  </data>
+  <data name="LoadOrderLineWeighmentCommandHandler_OrderLineDoesNotExistOnTheLoad" xml:space="preserve">
+    <value>Order line with id '{0}' does not exist on the load.</value>
+    <comment>The error returned when the order line does not exist on the load.</comment>
+  </data>
+  <data name="UpdateSecondWeighmentCommandHandler_LoadOrderLineWeighmentIsAlreadyCompleted" xml:space="preserve">
+    <value>The load order line weighment with id '{0}' is already completed.</value>
+    <comment>The error message returned during recording the second weight when load order line weighment is already completed.</comment>
+  </data>
+  <data name="UpdateSecondWeighmentCommandHandler_OrderLineDoesNotExistOnLoad" xml:space="preserve">
+    <value>Order line does not exists on the load with id '{0}' .</value>
+    <comment>The error message returned when the order line does not exist on the load.</comment>
+  </data>
+  <data name="UpdateSecondWeighmentCommandHandler_OrderLineStatusIsNotPending" xml:space="preserve">
+    <value>Order line status is not pending.</value>
+    <comment>The error message returned when order line status is not pending.</comment>
+  </data>
+  <data name="CreateRoleCommandHandler_RoleNameIsInUse" xml:space="preserve">
+    <value>Role name '{0}' already exists.</value>
+    <comment>The error returned when the role name already in use</comment>
+  </data>
+  <data name="AddUserToRoleCommandHandler_UserIsAMember" xml:space="preserve">
+    <value>User '{0}' is already a member of the role '{1}'</value>
+    <comment>The error returned when the user is already a member of the role.</comment>
+  </data>
+  <data name="UpdateRoleCommandHandler_RoleNameIsInUse" xml:space="preserve">
+    <value>Role name '{0}' already exists.</value>
+    <comment>The error returned when the role name already in use</comment>
+  </data>
+  <data name="UpdateFirstWeighmentCommandHandler_LoadOrderLineWeighmentIsAlreadyCompleted" xml:space="preserve">
+    <value>The load order line weighment with id '{0}' is already completed.</value>
+    <comment>The error message returned during recording the first weight when load order line weighment is already completed.</comment>
+  </data>
+  <data name="UpdateFirstWeighmentCommandHandler_OrderLineDoesNotExistOnLoad" xml:space="preserve">
+    <value>Order line does not exists on the load with id '{0}' .</value>
+    <comment>The error message returned when the order line does not exist on the load.</comment>
+  </data>
+  <data name="UpdateFirstWeighmentCommandHandler_OrderLineStatusIsNotPending" xml:space="preserve">
+    <value>Order line status is not pending.</value>
+    <comment>The error message returned when order line status is not pending.</comment>
+  </data>
+  <data name="CreateApplicationPermissionCommandHandler_ApplicationPermissionAlreadyAssignedToTheRole" xml:space="preserve">
+    <value>The application permission with id {0} already assigned to the role.</value>
+    <comment>The error returned during the assignment of application permission to the role.</comment>
+  </data>
+  <data name="CreateVwdCommandHandler_MillHasNoMedicationLicenceNumber" xml:space="preserve">
+    <value>Mill {0} has no medication licence number.</value>
+    <comment>The error message returned when creating a Vwd for a mill with no medication licence number.</comment>
+  </data>
+  <data name="UpdateVwdCommandHandler_MillHasNoMedicationLicenceNumber" xml:space="preserve">
+    <value>Mill {0} has no medication licence number.</value>
+    <comment>The error message returned when updating the Mill for a Vwd and the mill with no medication licence number.</comment>
+  </data>
+  <data name="CreateVwdCommandHandler_VwdIsCancelled" xml:space="preserve">
+    <value>The Vwd used to replace a Vwd must not be a cancelled Vwd.</value>
+    <comment>The error returned when the Vwd used to replace Vwd is cancelled.</comment>
+  </data>
+  <data name="CreateVwdCommandHandler_VwdToReplaceCustomerIsDifferent" xml:space="preserve">
+    <value>The Vwd used to replace a Vwd must be for the same customer as the original Vwd.</value>
+    <comment>The error returned when the Vwd to replace not for the same customer as the original Vwd.</comment>
+  </data>
+  <data name="CreateVwdCommandHandler_VwdToReplaceIsCancelled" xml:space="preserve">
+    <value>A Cancelled Vwd cannot be replaced.</value>
+    <comment>The error returned when the Vwd to replace is cancelled.</comment>
+  </data>
+  <data name="CreateVwdCommandHandler_VwdToReplaceIsExpired" xml:space="preserve">
+    <value>The Vwd used to replace a Vwd must not be expired.</value>
+    <comment>The error returned when the Vwd used to replaced a Vwd is expired.</comment>
+  </data>
+  <data name="UpdateVwdCommandHandler_VwdIsAlreadyReplaced" xml:space="preserve">
+    <value>Vwd with given code {0} is already replaced</value>
+    <comment>The error message retured from the API when vwd with given code is already replaced by another vwd</comment>
+  </data>
+  <data name="UpdateVwdCommandHandler_VwdIsCancelled" xml:space="preserve">
+    <value>The Vwd used to replace a Vwd must not be a cancelled Vwd.</value>
+    <comment>The error returned when the Vwd used to replace Vwd is cancelled.</comment>
+  </data>
+  <data name="UpdateVwdCommandHandler_VwdToReplaceCustomerIsDifferent" xml:space="preserve">
+    <value>The Vwd used to replace a Vwd must be for the same customer as the original Vwd.</value>
+    <comment>The error returned when the Vwd to replace not for the same customer as the original Vwd.</comment>
+  </data>
+  <data name="UpdateVwdCommandHandler_VwdToReplaceDoesNotExists" xml:space="preserve">
+    <value>Vwd with given code {0} does not exist</value>
+    <comment>The error message retured from the API when vwd with given code does not exist</comment>
+  </data>
+  <data name="UpdateVwdCommandHandler_VwdToReplaceIsCancelled" xml:space="preserve">
+    <value>A Cancelled Vwd cannot be replaced.</value>
+    <comment>The error returned when the Vwd to replace is cancelled.</comment>
+  </data>
+  <data name="UpdateVwdCommandHandler_VwdToReplaceIsExpired" xml:space="preserve">
+    <value>The Vwd used to replace a Vwd must not be expired.</value>
+    <comment>The error returned when the Vwd used to replaced a Vwd is expired.</comment>
+  </data>
+  <data name="UpdateVwdPrintingStatusCommandHandler_VwdIdDoesNotExist" xml:space="preserve">
+    <value>Vwd {0} does not exist.</value>
+    <comment>The error message returned when VwdIds are not found</comment>
+  </data>
+  <data name="UpdateHaulageRatesCommandHandler_HaulierAlreadyHasAHaulageRateForSpeciesAndRoute" xml:space="preserve">
+    <value>Haulier '{0}' already has a haulage rate for species '{1}' and route '{2}'.</value>
+    <comment>The error message returned when haulier already has a haulage rate for given species and route.</comment>
+  </data>
+  <data name="UpdateProductFormCustomerPriceAdjustmentCommandHandler_CurrencyIdDoesNotExist" xml:space="preserve">
+    <value>Currency {0} does not exist.</value>
+    <comment>The error message returned when CurrencyIds are not found</comment>
+  </data>
+  <data name="CreateCustomerPendingPriceUpdateOverridesCommandHandler_OverrideIsAlreadyExistForCustomer" xml:space="preserve">
+    <value>A pending price update override already exists for customer '{0}'.</value>
+    <comment>The error message retured from the API when Override is already exist for Customer</comment>
+  </data>
+  <data name="UpdatePendingCustomerSpecificPriceChangesCommandHandler_CustomerPendingPriceUpdateOverrideDoesNotExists" xml:space="preserve">
+    <value>Customer {0} does not have a manual override, the pending price cannot be updated.</value>
+    <comment>The error message retured from the API when does not have a manual override</comment>
+  </data>
+  <data name="CreateCustomerSpecificPricePendingRemovalCommandHandler_CustomerSpecificPricePendingRemovalDoesExist" xml:space="preserve">
+    <value>Customer specific price {0} is already pending removal.</value>
+    <comment>The error message retured from the API when Customer specific price is already pending for removal.</comment>
+  </data>
+  <data name="CreatePendingCustomerSpecificPriceChangeCommandHandler_PendingCustomerSpecificPriceChangeDoesExist" xml:space="preserve">
+    <value>Customer specific price {0} is already pending price change.</value>
+    <comment>The error message retured from the API when Customer specific price is already pending for price change.</comment>
+  </data>
+  <data name="CreatePendingCustomerSpecificPriceChangesCommandHandler_CustomerPendingPriceUpdateOverrideDoesNotExists" xml:space="preserve">
+    <value>Customer {0} does not have a manual override, a new pending price cannot be created.</value>
+    <comment>The error message retured from the API during pending price creation when the customer does not have a manual override</comment>
+  </data>
+  <data name="UpdatePrintedDocumentStatusCommandHandler_DocumentDoesNotExist" xml:space="preserve">
+    <value>Document {0} does not exist.</value>
+    <comment>The error message returned when Document not found</comment>
+  </data>
+  <data name="UpdatePendingCustomerPricesCommandHandler_CustomersNumberOfOverridesNotConfirmed" xml:space="preserve">
+    <value>The are {0} customers with manual overrides that have not been confirmed. All manual overrides must be confirmed before updating the pending prices.</value>
+    <comment>The error returned when Customers with manual overrides that have not been confirmed.</comment>
+  </data>
+  <data name="CreateContractCommandHandler_RawMaterialDoesNotExist" xml:space="preserve">
+    <value>RawMaterial with Material code {0} does not exist.</value>
+    <comment>The error returned when RawMaterial does not exist.</comment>
+  </data>
+  <data name="CreateContractCommandHandler_SupplierDoesNotExist" xml:space="preserve">
+    <value>Supplier with supplier code {0} does not exist.</value>
+    <comment>The error returned when supplier does not exist.</comment>
+  </data>
+  <data name="UpdateContractCommandHandler_ContractIsAlreadyClosed" xml:space="preserve">
+    <value>Contract {0} is already closed.</value>
+    <comment>The error returned when Contract is already closed.</comment>
+  </data>
+  <data name="CreateSupplierCommandHandler_SupplierCodeFieldIsAlreadyInUse" xml:space="preserve">
+    <value>A supplier already exists with supplier code {0}</value>
+    <comment>The error message retured from the API when supplier code field must be unique</comment>
+  </data>
+  <data name="CreateApplyPendingPriceListPricesProcessCommandHandler_NoPriceUpdatesToApply" xml:space="preserve">
+    <value>There are no pending price list price changes to apply.</value>
+    <comment>The error returned when creating a new apply pending list update process when there are no pending updates to apply.</comment>
+  </data>
+  <data name="CreateApplyPendingCustomerPricesProcessCommandHandler_NoPriceUpdatesToApply" xml:space="preserve">
+    <value>There are no pending customer price changes to apply.</value>
+    <comment>The error returned when creating a new apply pending customer prices process when there are no pending updates to apply.</comment>
+  </data>
+  <data name="CreateRawMaterialOrderCommandHandler_RawMaterialDoesNotExist" xml:space="preserve">
+    <value>Raw material {0} does not exist.</value>
+    <comment>The error returned when raw material does not exits.</comment>
+  </data>
+  <data name="CreateRawMaterialOrderCommandHandler_RawMaterialIsNotApprovedForSupplier" xml:space="preserve">
+    <value>Raw material {0} is not an approved material for supplier {1}.</value>
+    <comment>The error returned when raw material is not approved for supplier</comment>
+  </data>
+  <data name="CreateRawMaterialOrderCommandHandler_SupplierDoesNotExist" xml:space="preserve">
+    <value>Supplier with supplier code {0} does not exist.</value>
+    <comment>The error returned when supplier does not exist.</comment>
+  </data>
+  <data name="CancelCollectionOrderCommandHandler_CollectionOrderAlreadyCancelled" xml:space="preserve">
+    <value>The collection order is already cancelled.</value>
+    <comment>The error returned when collection order is already cancelled.</comment>
+  </data>
+  <data name="CancelCollectionOrderCommandHandler_CollectionOrderDoesNotExist" xml:space="preserve">
+    <value>Collection order '{0}' does not exist.</value>
+    <comment>The error returned when collection order does not exists.</comment>
+  </data>
+  <data name="CancelCollectionOrderCommandHandler_CollectionOrderStatusNotAllowed" xml:space="preserve">
+    <value>Collection orders with a status of {0} cannot be cancelled.</value>
+    <comment>The error returned when collection order status is not allowed for cancellation.</comment>
+  </data>
+  <data name="CreateCollectionOrdersCommandHandler_MaximumNoOfCollectionOrder" xml:space="preserve">
+    <value>The maximum number of collection orders that can be created in a single request is {0}.</value>
+    <comment>The error returned when collection orders have maximum number of collection orders that can be created</comment>
+  </data>
+  <data name="CreateCollectionOrdersCommandHandler_DriverDoesNotExist" xml:space="preserve">
+    <value>Driver '{0}' does not exist.</value>
+    <comment>The error returned when driver does not exists.</comment>
+  </data>
+  <data name="CreateCollectionOrdersCommandHandler_HaulierDoesNotExist" xml:space="preserve">
+    <value>Haulier '{0}' does not exist.</value>
+    <comment>The error returned when haulier does not exists.</comment>
+  </data>
+  <data name="CreateCollectionOrdersCommandHandler_LocationDoesNotExist" xml:space="preserve">
+    <value>Location '{0}' does not exist.</value>
+    <comment>The error returned when location does not exists.</comment>
+  </data>
+  <data name="CreateCollectionOrdersCommandHandler_RawMaterialDoesNotExist" xml:space="preserve">
+    <value>RawMaterial '{0}' does not exist.</value>
+    <comment>The error returned when raw material does not exists.</comment>
+  </data>
+  <data name="CreateCollectionOrdersCommandHandler_RawMaterialNotApprovedForSupplier" xml:space="preserve">
+    <value>RawMaterial '{0}' is not approve material for supplier {1}.</value>
+    <comment>The error returned when raw material is not approved for supplier.</comment>
+  </data>
+  <data name="CreateCollectionOrdersCommandHandler_StoreDoesNotExist" xml:space="preserve">
+    <value>Store '{0}' does not exist.</value>
+    <comment>The error returned when store does not exists.</comment>
+  </data>
+  <data name="CreateCollectionOrdersCommandHandler_SupplierDoesNotExist" xml:space="preserve">
+    <value>Supplier '{0}' does not exist.</value>
+    <comment>The error returned when supplier does not exists.</comment>
+  </data>
+  <data name="CreateCollectionOrdersCommandHandler_VehicleDoesNotExist" xml:space="preserve">
+    <value>Vehicle '{0}' does not exist.</value>
+    <comment>The error returned when vehicle does not exists.</comment>
+  </data>
+  <data name="CreateCollectionOrdersCommandHandler_DriverDoesNotExistForHaulier" xml:space="preserve">
+    <value>Driver '{0}' does not exist for haulier {1}.</value>
+    <comment>The error returned when driver does not linked to haulier.</comment>
+  </data>
+  <data name="CreateCollectionOrdersCommandHandler_VehicleDoesNotExistForHaulier" xml:space="preserve">
+    <value>Vehicle '{0}' does not exist for haulier {1}.</value>
+    <comment>The error returned when Vehicle does not linked to haulier.</comment>
+  </data>
+  <data name="UpdateCollectionOrderCommandHandler_CollectionOrderStatusNotValid" xml:space="preserve">
+    <value>Collection order cannot be updated. Only collection orders with a status of Pending can be updated.</value>
+    <comment>The error returned when the collection order status is not valid.</comment>
+  </data>
+  <data name="UpdateCollectionOrderCommandHandler_CollectionOrderStatusNotRaised" xml:space="preserve">
+    <value>Collection order cannot be marked as printed. Only collection orders with a status of Raised can be marked printed.</value>
+    <comment>The error returned when the collection order status is not valid.</comment>
+  </data>
+  <data name="UpdateCollectionOrderCommandHandler_DriverDoesNotExist" xml:space="preserve">
+    <value>Driver '{0}' does not exist.</value>
+    <comment>The error returned when Driver does not exists.</comment>
+  </data>
+  <data name="UpdateCollectionOrderCommandHandler_DriverDoesNotExistForHaulier" xml:space="preserve">
+    <value>Driver '{0}' does not exist for haulier {1}.</value>
+    <comment>The error returned when driver does not linked to haulier.</comment>
+  </data>
+  <data name="UpdateCollectionOrderCommandHandler_HaulierDoesNotExist" xml:space="preserve">
+    <value>Haulier '{0}' does not exist.</value>
+    <comment>The error returned when Haulier does not exists.</comment>
+  </data>
+  <data name="UpdateCollectionOrderCommandHandler_LocationDoesNotExist" xml:space="preserve">
+    <value>Location '{0}' does not exist.</value>
+    <comment>The error returned when location does not exists.</comment>
+  </data>
+  <data name="UpdateCollectionOrderCommandHandler_RawMaterialDoesNotExist" xml:space="preserve">
+    <value>RawMaterial '{0}' does not exist.</value>
+    <comment>The error returned when RawMaterial does not exists.</comment>
+  </data>
+  <data name="UpdateCollectionOrderCommandHandler_RawMaterialNotApprovedForSupplier" xml:space="preserve">
+    <value>RawMaterial '{0}' is not approve material for supplier.</value>
+    <comment>The error returned when raw material is not approved for supplier.</comment>
+  </data>
+  <data name="UpdateCollectionOrderCommandHandler_StoreDoesNotExist" xml:space="preserve">
+    <value>Store '{0}' does not exist.</value>
+    <comment>The error returned when Store does not exists.</comment>
+  </data>
+  <data name="UpdateCollectionOrderCommandHandler_SupplierDoesNotExist" xml:space="preserve">
+    <value>Supplier '{0}' does not exist.</value>
+    <comment>The error returned when Supplier does not exists.</comment>
+  </data>
+  <data name="UpdateCollectionOrderCommandHandler_VehicleDoesNotExist" xml:space="preserve">
+    <value>Vehicle '{0}' does not exist.</value>
+    <comment>The error returned when Vehicle does not exists.</comment>
+  </data>
+  <data name="UpdateCollectionOrderCommandHandler_VehicleDoesNotExistForHaulier" xml:space="preserve">
+    <value>Vehicle '{0}' does not exist for haulier {1}.</value>
+    <comment>The error returned when driver does not linked to vehicle.</comment>
+  </data>
+  <data name="CollectionOrderContractAllocationCommandHandler_CollectionOrderDoesNotExist" xml:space="preserve">
+    <value>Collection orders {0} does not exist.</value>
+    <comment>The error message returned when Collection orders are not found</comment>
+  </data>
+  <data name="CollectionOrderContractAllocationCommandHandler_CollectionOrderDoesNotHaveContract" xml:space="preserve">
+    <value>Unable to assign a contract for collection order. Supplier: {0}, Raw Material: {1}, Store: {2}, Haulier: {3}, Driver Name: {4}, Vehicle Code: {5}.</value>
+    <comment>The error returned when the collection order does not have assigned contract.</comment>
+  </data>
+  <data name="CollectionOrderContractAllocationCommandHandler_CollectionOrdersDoesNotExist" xml:space="preserve">
+    <value>Collection orders does not exist.</value>
+    <comment>The error message returned when Collection orders are not found</comment>
+  </data>
+  <data name="CollectionOrderContractAllocationCommandHandler_CollectionOrdersStatusNotValid" xml:space="preserve">
+    <value>Collection orders ids {0} cannot be assigned for contract. Only collection orders with a status of Pending can be assigned.</value>
+    <comment>The error returned when the collection order status is not valid.</comment>
+  </data>
+  <data name="CollectionOrderContractAllocationCommandHandler_MaximumNoOfCollectionOrderIds" xml:space="preserve">
+    <value>The maximum number of collection orders that can be assigned in a single request is {0}.</value>
+    <comment>The error returned when collection orders have maximum number of collection orders that can be assigned.</comment>
+  </data>
+  <data name="RejectContractTransactionCommandHandler_ContractIsAlreadyClosed" xml:space="preserve">
+    <value>The contract for the transaction has been closed, the transactions for the contract cannot be changed.</value>
+    <comment>The error message returned when contract is already closed.</comment>
+  </data>
+  <data name="RejectContractTransactionCommandHandler_ContractTransactionAlreadyRejected" xml:space="preserve">
+    <value>The transaction has already been rejected.</value>
+    <comment>The error message returned when contract transaction is already rejected.</comment>
+  </data>
+  <data name="UpdateDocketContractTransactionCommandHandler_ContractIsAlreadyClosed" xml:space="preserve">
+    <value>The contract for the transaction has been closed, the transactions for the contract cannot be changed.</value>
+    <comment>The error returned when the contract for contract transaction is already closed.</comment>
+  </data>
+  <data name="UpdateNonDocketContractTransactionCommandHandler_ContractIsAlreadyClosed" xml:space="preserve">
+    <value>The contract for the transaction has been closed, the transactions for the contract cannot be changed.</value>
+    <comment>The error returned when the contract for contract transaction is already closed.</comment>
+  </data>
+  <data name="UpdateNonDocketContractTransactionCommandHandler_ContractTransactionDateShouldBeGreaterThanContractDate" xml:space="preserve">
+    <value>Contract Transaction date should be greater than to Contract start date '{0}'.</value>
+    <comment>The error returned when Contract Transaction date less than to Contract start date.</comment>
+  </data>
+  <data name="UpdateNonDocketContractTransactionCommandHandler_StoreDoesNotExist" xml:space="preserve">
+    <value>Store '{0}' does not exist.</value>
+    <comment>The error returned when Store does not exists.</comment>
+  </data>
+  <data name="CreateRawMaterialWeighmentCommandHandler_CollectionOrderDoesNotExist" xml:space="preserve">
+    <value>Collection order '{0}' does not exist.</value>
+    <comment>The error returned when collection order does not exists.</comment>
+  </data>
+  <data name="CreateRawMaterialWeighmentCommandHandler_CollectionOrderStatusNotValid" xml:space="preserve">
+    <value>Collection order status invalid. Weighments can only be created for collection orders with a status of rasied.</value>
+    <comment>The error returned while collection order status is not valid.</comment>
+  </data>
+  <data name="CreateRawMaterialWeighmentCommandHandler_DriverDoesNotExist" xml:space="preserve">
+    <value>Driver '{0}' does not exist.</value>
+    <comment>The error returned when driver does not exists.</comment>
+  </data>
+  <data name="CreateRawMaterialWeighmentCommandHandler_DriverDoesNotExistForHaulier" xml:space="preserve">
+    <value>Driver '{0}' is not associated with the haulier for the collection order.</value>
+    <comment>The error returned when the driver does not exist for the haulier.</comment>
+  </data>
+  <data name="CreateRawMaterialWeighmentCommandHandler_CollectionOrderAlreadyWeightedOut" xml:space="preserve">
+    <value>Collection order '{0}' has been already weighed out.</value>
+    <comment>The error returned when the Collection order has been already weighed out.</comment>
+  </data>
+  <data name="CancelRawMaterialWeighmentCommandHandler_WeighmentIsAlreadyCancelled" xml:space="preserve">
+    <value>RawMaterial Weighment {0} is already cancelled.</value>
+    <comment>The error returned when the RawMaterial Weighment has been already cancelled.</comment>
+  </data>
+  <data name="CancelRawMaterialWeighmentCommandHandler_WeighmentIsWeighedOut" xml:space="preserve">
+    <value>RawMaterial Weighment {0} is already weighed out.</value>
+    <comment>The error returned when the RawMaterial Weighment has been already weighed out.</comment>
+  </data>
+  <data name="DeleteCollectionOrderCommandHandler_PendingCnBeDeleted" xml:space="preserve">
+    <value>Only collection orders with a status of pending can be deleted.</value>
+    <comment>The error message returned while collection order status is not pending and trying to delete that collection order.</comment>
+  </data>
+  <data name="UpdateContractTransactionSequenceNumberCommandHandler_TransactionIdDoesNotExist" xml:space="preserve">
+    <value>Transaction Ids not exist for contract and transaction date '{0}'</value>
+    <comment>The error returned when transaction ids are diffrent for the contract and transaction date.</comment>
+  </data>
+  <data name="UpdateContractTransactionSequenceNumberCommandHandler_TransactionIdMissing" xml:space="preserve">
+    <value>Transaction Ids are missing for contract and transaction date '{0}'</value>
+    <comment>The error returned when transaction ids are missing for the contract and transaction date.</comment>
+  </data>
+  <data name="UpdateRawMaterialWeighmentCommandHandler_DriverDoesNotExist" xml:space="preserve">
+    <value>Driver '{0}' does not exist.</value>
+    <comment>The error returned when Driver does not exists.</comment>
+  </data>
+  <data name="UpdateRawMaterialWeighmentCommandHandler_DriverDoesNotExistForHaulier" xml:space="preserve">
+    <value>Driver '{0}' does not exist for haulier {1}.</value>
+    <comment>The error returned when driver does not linked to haulier.</comment>
+  </data>
+  <data name="UpdateRawMaterialWeighmentCommandHandler_HaulierDoesNotExist" xml:space="preserve">
+    <value>Haulier '{0}' does not exist.</value>
+    <comment>The error returned when Haulier does not exists.</comment>
+  </data>
+  <data name="UpdateRawMaterialWeighmentCommandHandler_RawMaterialDoesNotExist" xml:space="preserve">
+    <value>RawMaterial '{0}' does not exist.</value>
+    <comment>The error returned when RawMaterial does not exists.</comment>
+  </data>
+  <data name="UpdateRawMaterialWeighmentCommandHandler_RawMaterialNotApprovedForSupplier" xml:space="preserve">
+    <value>RawMaterial '{0}' is not approve material for supplier.</value>
+    <comment>The error returned when raw material is not approved for supplier.</comment>
+  </data>
+  <data name="UpdateRawMaterialWeighmentCommandHandler_StoreDoesNotExist" xml:space="preserve">
+    <value>Store '{0}' does not exist.</value>
+    <comment>The error returned when Store does not exists.</comment>
+  </data>
+  <data name="UpdateRawMaterialWeighmentCommandHandler_SupplierDoesNotExist" xml:space="preserve">
+    <value>Supplier '{0}' does not exist.</value>
+    <comment>The error returned when Supplier does not exists.</comment>
+  </data>
+  <data name="UpdateRawMaterialWeighmentCommandHandler_VehicleDoesNotExist" xml:space="preserve">
+    <value>Vehicle '{0}' does not exist.</value>
+    <comment>The error returned when Vehicle does not exists.</comment>
+  </data>
+  <data name="UpdateRawMaterialWeighmentCommandHandler_VehicleDoesNotExistForHaulier" xml:space="preserve">
+    <value>Vehicle '{0}' does not exist for haulier {1}.</value>
+    <comment>The error returned when driver does not linked to vehicle.</comment>
+  </data>
+  <data name="UpdateRawMaterialWeighmentCommandHandler_WeightOut_WeighmentHasBeenWeighedOut" xml:space="preserve">
+    <value>The weight out must be supplied for a weighment that has been weighed out.</value>
+    <comment>The error returned when The weight out must be supplied for a weighment that has been weighed out.</comment>
+  </data>
+  <data name="UpdateRawMaterialWeighmentCommandHandler_WeightOut_WeighmentHasNotBeenWeighedOut" xml:space="preserve">
+    <value>The weight out cannot be supplied for a weighment that has not been weighed out.</value>
+    <comment>The error returned when The weight out cannot be supplied for a weighment that has not been weighed out.</comment>
+  </data>
+  <data name="CreateLoadCommandHandler_HaulierHaulageTypeNotValid" xml:space="preserve">
+    <value>{0} does not have valid haulage type, only finished product as a haulage type allowed.</value>
+    <comment>The error returned during load creation validation when haulier does not have valid haulage type.</comment>
+  </data>
+  <data name="DeleteCollectionOrderCommandHandler_ContractTransactionDateLessThanContractStartDate" xml:space="preserve">
+    <value>The date of the transaction to be moved must be greater than or equal to the start date of the target contract.</value>
+    <comment>The error returened when  date of the transaction to be moved is less than to the start date of the target contract.</comment>
+  </data>
+  <data name="TransferContractTransactionCommandHandler_DocketIsNotAssociated" xml:space="preserve">
+    <value>The transaction being moved must have a docket associated with it.</value>
+    <comment>The error returned when contract transaction does not have associated docket.</comment>
+  </data>
+  <data name="TransferContractTransactionCommandHandler_RawMaterialIsDifferent" xml:space="preserve">
+    <value>The raw material for the target contract must be the same as the source contract.</value>
+    <comment>The error returned when raw material for the target contract diffrent from the source contract.</comment>
+  </data>
+  <data name="TransferContractTransactionCommandHandler_SourceContractMustBeOpen" xml:space="preserve">
+    <value>The source contract must be open.</value>
+    <comment>The error returned when source contract is closed.</comment>
+  </data>
+  <data name="TransferContractTransactionCommandHandler_SourceContractTransactionDoesNotExist" xml:space="preserve">
+    <value>The source contract transaction in the request must exist for the source contract in the request.</value>
+    <comment>The error returned when contract transaction is not exist for source contract id.</comment>
+  </data>
+  <data name="TransferContractTransactionCommandHandler_SupplierIsDifferent" xml:space="preserve">
+    <value>The supplier for the target contract must be the same as the source contract.</value>
+    <comment>The error returned when supplier for the target contract diffrent from the source contract.</comment>
+  </data>
+  <data name="TransferContractTransactionCommandHandler_TargetContractMustBeOpen" xml:space="preserve">
+    <value>The target contract must be open.</value>
+    <comment>The error returned when target contract is closed.</comment>
+  </data>
+  <data name="CreateDriverCommandHandler_VehicleAndDriverHaulierNotValid" xml:space="preserve">
+    <value>Vehicle '{0}' does not exist for haulier {1}.</value>
+    <comment>The error returned when Vehicle does not exists for haulier.</comment>
+  </data>
+  <data name="CreateDriverCommandHandler_VehicleNotExist" xml:space="preserve">
+    <value>Vehicle '{0}' does not exist.</value>
+    <comment>The error returned when Vehicle does not exists.</comment>
+  </data>
+  <data name="CreateHaulageRateCommandHandler_HaulageRateAlreadyExists" xml:space="preserve">
+    <value>A Haulage rate for haulier '{0}' and store '{1}' already exists.</value>
+    <comment>The error returned when Haulage rate is already exists.</comment>
+  </data>
+  <data name="CreateHaulageRateCommandHandler_HaulierDoesNotExist" xml:space="preserve">
+    <value>Haulier '{0}' does not exist.</value>
+    <comment>The error returned when Haulier does not exists.</comment>
+  </data>
+  <data name="CreateHaulageRateCommandHandler_HaulierHaulageTypeNotValid" xml:space="preserve">
+    <value>Haulier '{0}' haulage type is not a valid haulage type, only Raw Material haulage type is allowed.</value>
+    <comment>The error returned when Haulage type is not valid.</comment>
+  </data>
+  <data name="CreateHaulageRateCommandHandler_StoreDoesNotExist" xml:space="preserve">
+    <value>Store '{0}' does not exist.</value>
+    <comment>The error returned when Store does not exists.</comment>
+  </data>
+  <data name="UpdateHaulageRateCommandHandler_HaulierDoesNotExist" xml:space="preserve">
+    <value>Haulier '{0}' does not exist.</value>
+    <comment>The error returned when Haulier does not exists.</comment>
+  </data>
+  <data name="UpdateHaulageRateCommandHandler_StoreDoesNotExist" xml:space="preserve">
+    <value>Store '{0}' does not exist.</value>
+    <comment>The error returned when Store does not exists.</comment>
+  </data>
+  <data name="UpdateContractMonthlySupplyCommandHandler_ContractIsAlreadyClosed" xml:space="preserve">
+    <value>Contract {0} is already closed.</value>
+    <comment>The error returned when Contract is already closed.</comment>
+  </data>
+  <data name="UpdateHaulageRateCommandHandler_HaulageRateAlreadyExists" xml:space="preserve">
+    <value>A Haulage rate for haulier '{0}' and store '{1}' already exists.</value>
+  </data>
+  <data name="CreateMedicationCommandHandler_RequiresVWDDurationRequired" xml:space="preserve">
+    <value>Duration is required for medications that require a Vwd.</value>
+    <comment>The error returned when Duration is required for medications that require a Vwd.</comment>
+  </data>
+  <data name="UpdateMedicationCommandHandler_RequiresVWDDurationRequired" xml:space="preserve">
+    <value>Duration is required for medications that require a Vwd.</value>
+    <comment>The error returned when Duration is required for medications that require a Vwd.</comment>
+  </data>
+  <data name="CreateApplyPendingCustomerPricesProcessCommandHandler_ManualOverridesNotConfirmed" xml:space="preserve">
+    <value>The are {0} customers with manual overrides that have not been confirmed. All manual overrides must be confirmed before the pending prices can be made live.</value>
+    <comment>The error returned from the API when a request to make the pending customer specific prices live is made and there are manual overrides that have not been confirmed.</comment>
+  </data>
+  <data name="CreateApplyPendingPriceListPricesProcessCommandHandler_ManualOverridesNotConfirmed" xml:space="preserve">
+    <value>There are {0} price lists with manual overrides that have not been confirmed. All manual overrides must be confirmed before the pending prices can be made live.</value>
+    <comment>The error returned from the API when a request to make the pending price list prices live is made and there are manual overrides that have not been confirmed.</comment>
+  </data>
+  <data name="UpdateVwdCommandHandler_OnlyPendingVwdCanBeUpdated" xml:space="preserve">
+    <value>A veterinary written directive with a status of '{0}' cannot be updated.</value>
+    <comment>The error returned by the API when attempting to updated an Vwd that is not pending.</comment>
+  </data>
+  <data name="UpdateVwdCommandHandler_TonnesCannotBeSetToLessThanTonnesUsed" xml:space="preserve">
+    <value>The tonnes for the veterinary written directive cannot be set to less than the tonnes used.</value>
+    <comment>The error returned by the API when setting the tonnes for a Vwd to less than the tonnes used.</comment>
+  </data>
+  <data name="UpdateOrderLineCommandHandler_UpdateOrderLine_VwdHasInsufficientTonnes" xml:space="preserve">
+    <value>The vwd associated with this order line does not have sufficient tonnes for the new order line quantity.</value>
+    <comment>The error returned during the updating of an order line when the vwd associated with the order line does not have sufficient tonnes for the new order line quantity.</comment>
+  </data>
+  <data name="CreateLoadRequestCommandHandler_LoadRequestAlreadyExistsForLoad" xml:space="preserve">
+    <value>The loading of load {0} has already been requested.</value>
+    <comment>The error returned by the API when creating a load request for a load that has already been requested.</comment>
+  </data>
+  <data name="CreateCustomerCommandHandler_UnableToAssignCustomerCode" xml:space="preserve">
+    <value>Unable to assign a code for the new customer. Please contact your administrator.</value>
+    <comment>The error returned during customer creation if we are unable to assign a customer code, due to the codes being used already in ABM.</comment>
+  </data>
+  <data name="CreateLoadRequestCommandHandler_NoOrderLinesFoundForLoading" xml:space="preserve">
+    <value>No order lines found for loading on load {0}</value>
+    <comment>The error returned during the creation of a load request when there are no order lines found for loading.</comment>
+  </data>
+  <data name="CreateCompletedLoadRequestItemCommandHandler_LoadIsCancelled" xml:space="preserve">
+    <value>Load {0} has been cancelled.</value>
+    <comment>The error returned when attempting to create a completed load request item for a load that has been cancelled.</comment>
+  </data>
+  <data name="CreateCompletedLoadRequestItemCommandHandler_OrderLineIsNotPending" xml:space="preserve">
+    <value>Order line {0}-{1} is not pending loading. The status the order line is {2}</value>
+    <comment>The error returned when attempting to create a completed load request item for an order line that is not pending.</comment>
+  </data>
+  <data name="CreateLoadRequestCommandHandler_LoadIsCancelled" xml:space="preserve">
+    <value>Load {0} has been cancelled.</value>
+    <comment>The error returned when creating a load request for a cancelled load.</comment>
+  </data>
+  <data name="LoadOrderLinesCommandHandler_LoadIsCancelled" xml:space="preserve">
+    <value>Load {0} has been cancelled.</value>
+    <comment>The error returned when attempting to load order lines for a load that has been cancelled.</comment>
+  </data>
+  <data name="LoadOrderLineWeighmentCommandHandler_LoadIsCancelled" xml:space="preserve">
+    <value>Load {0} has been cancelled.</value>
+    <comment>The error returned when creating a weighment for an order line on a load that has been cancelled.</comment>
+  </data>
+  <data name="LoadOrderLineWeighmentCommandHandler_OrderLineStatusIsNotPending" xml:space="preserve">
+    <value>The order line is not pending loading. The status of the order line is {0}</value>
+    <comment>The error returned when creating a weighment for an order line that is not pending loading.</comment>
+  </data>
+  <data name="UpdateFirstWeighmentCommandHandler_LoadIsCancelled" xml:space="preserve">
+    <value>Load {0} has been cancelled.</value>
+    <comment>The error returned when updating a weighment for a load that has been cancelled.</comment>
+  </data>
+  <data name="CreateMedicationCommandHandler_ProductCodeExistsInAbm" xml:space="preserve">
+    <value>A product already exists in ABM with the code '{0}'.</value>
+    <comment>The error returned during the creation of a medication, if the medication already exists in ABM</comment>
+  </data>
+  <data name="LoadOrderLineWeighmentCommandHandler_LoadRequestAlreadyExistsForOrderLine" xml:space="preserve">
+    <value>The loading of order line '{2}' for order '{1}' has already been requested for load number '{0}'</value>
+    <comment>The error returned when creating the first weighment for an order line, when loading of the order line has already been requested.</comment>
+  </data>
+  <data name="UpdateSecondWeighmentCommandHandler_LoadRequestAlreadyExistsForOrderLine" xml:space="preserve">
+    <value>The loading of order line '{2}' for order '{1}' has already been requested for load number '{0}'</value>
+    <comment>The error returned when creating the second weighment for an order line, when loading of the order line has already been requested.</comment>
+  </data>
+  <data name="CreateBagLabelCommandHandler_LabelTemplateRequiresMedication" xml:space="preserve">
+    <value>Label template '{0}' requires a medication.</value>
+    <comment>The error returned during label creation when a medication code is not provided for a template that requires a medication.</comment>
+  </data>
+  <data name="CaptureDeliverySiteEstimatesCoordinatesCommandHandler_UnableToCaptureGpsCoordinates" xml:space="preserve">
+    <value>Unable to capture the co-ordinates for delivery site id {0}. Please review the site address.</value>
+    <comment>The error returned during the GPS capture process for a delivery site, if no co-ordinates can be found for the site address.</comment>
+  </data>
+  <data name="AddIngredientToFormulationCommandHandler_FormulationIsExternalError" xml:space="preserve">
+    <value>Formulation code '{0}' is an external formulation. Ingredients cannot be added.</value>
+    <comment>The error returned when attempting to add an ingredient to an external formulation.</comment>
+  </data>
+  <data name="RemoveIngredientFromFormulationCommandHandler_FormulationIsExternalError" xml:space="preserve">
+    <value>Formulation code '{0}' is an external formulation. Ingredients cannot be removed.</value>
+    <comment>The error returned when attempting to remove an ingredient from an external formulation.</comment>
+  </data>
+  <data name="UpdateFormulationIngredientCommandHandler_FormulationIsExternalError" xml:space="preserve">
+    <value>Formulation code '{0}' is an external formulation. Ingredients cannot be updated.</value>
+    <comment>The error returned when attempting to update an ingredient in an external formulation.</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_VwdExpiryDateInvalid" xml:space="preserve">
+    <value>Script number '{0}' cannot be used for the order line. The date required of the order line is after the expiry date of the vwd.</value>
+    <comment>The error message returned when creating an order line with a vwd that expires before the date required of the order line</comment>
+  </data>
+  <data name="CreateOrderLineCommandHandler_VwdStartDateInvalid" xml:space="preserve">
+    <value>Script number '{0}' cannot be used for the order line. The earliest date of the order line is before the start date of the vwd.</value>
+    <comment>The error message returned when creating an order line with a vwd that starts after the earliest date of the order line</comment>
+  </data>
+  <data name="DeliverySiteApplicationService_Create_CustomerAlreadyHasSiteWithGivenName" xml:space="preserve">
+    <value>The customer already has a delivery site named '{0}'. Delivery site names for customers must be unique.</value>
+    <comment>The error returned during delivery site creation if the customer already has a delivery site with the given name.</comment>
+  </data>
+  <data name="DeliverySiteApplicationService_Update_CustomerAlreadyHasSiteWithGivenName" xml:space="preserve">
+    <value>The customer already has a delivery site named '{0}'. Delivery site names for customers must be unique.</value>
+    <comment>The error returned during delivery site updates if the customer already has a delivery site with the given name.</comment>
+  </data>
+  <data name="ApplyPendingPricesProcessManagerInProgress" xml:space="preserve">
+    <value>The live prices are currently in the process of being updated. Please try again later.</value>
+    <comment>The error returned when attempting to update data in the pending prices module, when a process to apply live price updates is running.</comment>
+  </data>
+  <data name="UpdateDeliveryOptionAdjustmentsCommandHandler_CurrencyIdDoesNotExist" xml:space="preserve">
+    <value>Currency {0} does not exist.</value>
+    <comment>The error message returned when CurrencyIds are not found during the updating of price adjustments for a delivery option.</comment>
+  </data>
+  <data name="UpdatePendingCustomerSpecificPriceChangesCommandHandler_PriceNotConfiguredManually" xml:space="preserve">
+    <value>Only pending prices that were created manually can be updated.</value>
+    <comment>The error returned when a request is made to update a pending customer price that was not applied manually</comment>
+  </data>
+  <data name="UpdatePendingPriceListPriceChangeCommandHandler_PriceNotConfiguredManually" xml:space="preserve">
+    <value>Only pending prices that were created manually can be updated.</value>
+    <comment>The error returned when a request is made to update a pending price list price that was not applied manually</comment>
+  </data>
+  <data name="DeletePendingCustomerSpecificPriceUpdateCommandHandler_PriceNotConfiguredManually" xml:space="preserve">
+    <value>Only pending prices that were created manually can be deleted.</value>
+    <comment>The error returned when a request is made to delete a pending customer price that was not applied manually</comment>
+  </data>
+  <data name="DeletePendingPriceListPriceUpdateCommandHandler_PriceNotConfiguredManually" xml:space="preserve">
+    <value>Only pending prices that were created manually can be deleted.</value>
+    <comment>The error returned when a request is made to delete a pending price list price that was not applied manually</comment>
+  </data>
+  <data name="CreateApplyPendingPricesProcessCommandHandler_NoPriceUpdatesToApply" xml:space="preserve">
+    <value>There are no pending price changes to apply.</value>
+    <comment>The error returned when creating a new apply pending prices process when there are no pending updates to apply.</comment>
+  </data>
+</root>

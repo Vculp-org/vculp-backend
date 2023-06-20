@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+		<PreserveCompilationReferences>true</PreserveCompilationReferences>
+		<PreserveCompilationContext>true</PreserveCompilationContext>
+		<GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+		<RootNamespace>Vculp.Api.Domain</RootNamespace>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	</PropertyGroup>
+  <ItemGroup>
+	  <None Remove="Notifications\Email\Templates\collection-order-cancel-plain.cshtml" />
+	  <None Remove="Notifications\Email\Templates\collection-order-cancel.cshtml" />
+	  <None Remove="Notifications\Email\Templates\collection-order-assigned-contract-plain.cshtml" />
+	  <None Remove="Notifications\Email\Templates\collection-order-assigned-contract.cshtml" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Geocoding.Microsoft" Version="4.0.1" />
+		<PackageReference Include="MailKit" Version="2.15.0" />
+		<PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.16" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+		<PackageReference Include="System.Threading.AccessControl" Version="6.0.0" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vculp.Api.Data.EntityFramework\Vculp.Api.Data.EntityFramework.csproj" />
+    <ProjectReference Include="..\Vculp.Api.Domain.Core\Vculp.Api.Domain.Core.csproj" />
+    <ProjectReference Include="..\Vculp.Api.Domain.Interfaces\Vculp.Api.Domain.Interfaces.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Microsoft.AspNetCore.SignalR.Core">
+			<HintPath>..\..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.signalr.core\1.1.0\lib\netstandard2.0\Microsoft.AspNetCore.SignalR.Core.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Notifications\Email\Templates\**" />
+		<EmbeddedResource Include="Notifications\Email\Assets\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Notifications\Email\Templates\*.*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Notifications\Email\Assets\*.*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Notifications\Sms\EventHandlers\DomainEvents\" />
+	</ItemGroup>
+</Project>

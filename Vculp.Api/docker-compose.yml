@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  vculp-api:
+    image: kennyagrisoft.azurecr.io/winmill/agrisoft.winmill.api
+    build:
+      context: ./Src/Vculp.Api
+      dockerfile: Dockerfile
+    environment:
+      - secrets_path=/ProgramData/Docker/secrets

@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CollectionIsRequired" xml:space="preserve">
+    <value>{0} should not be empty</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Company Name</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="ContactsShouldContainOneOrZeroSecondary" xml:space="preserve">
+    <value>Contacts should contain one or zero secondary contacts</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="ContactsShouldContainOnePrimary" xml:space="preserve">
+    <value>Contacts should contain one primary contact</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="EmailNotNullWithEmailToBeconfimed" xml:space="preserve">
+    <value>A contact cannot have an email address if EmailToBeConfirmed is set to true.</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="EntityDoesNotContain" xml:space="preserve">
+    <value>{0} does not contain {1}</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="FieldIsRequired" xml:space="preserve">
+    <value>{0} is required</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="GreaterThanOrEqualTo" xml:space="preserve">
+    <value>{0} should be greater than or equal to {1}</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>{0} is invalid</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="InvalidEmailAddress" xml:space="preserve">
+    <value>Invalid Email address</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="InvalidLengthMax" xml:space="preserve">
+    <value>Maximum {0} characters are allowed</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="InvalidObjectForSpecifiedObjectForProduct" xml:space="preserve">
+    <value>Specified {0} is not valid for the {1}.</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="InvalidObjectInTheProductsModule" xml:space="preserve">
+    <value>The {0} for the product must be a valid {1} in the Products module.</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="InvalidPhoneNumber" xml:space="preserve">
+    <value>Invalid Phone number</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="InvalidProductCode" xml:space="preserve">
+    <value>The product code must be unique (e.g. no other product with the same code can already exist). The max length is {} and this field is mandatory.</value>
+  </data>
+  <data name="MandatoryStockTypesNotCovered" xml:space="preserve">
+    <value>AssociatedStockTypes that are mandatory against the customers species are required</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>{0} with such {1} does not exist</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="NullIsRequired" xml:space="preserve">
+    <value>{0} should be NULL</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="Range" xml:space="preserve">
+    <value>{0} should be in range from {1} to {2}</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="SpeciesIsNotValidAssociatedStockType" xml:space="preserve">
+    <value>The species in the request must exist in the AssociatedStockTypes collection for the customers species.</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="SubspeciesForMandatoryStockTypeIsMissing" xml:space="preserve">
+    <value>The stock numbers object should contain a stock total entry for every sub-species that is linked to the species that is marked as a mandatory associated stock type.</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="WriteCustomerSpecificProductPricesDtoValidator_CustomerSpecificPricesExistsError" xml:space="preserve">
+    <value>Customer Specific Product Prices already exists for customer {0} for product {1}</value>
+    <comment>The error returned during customer specific price creation validation when product prices already exists for specific customer.</comment>
+  </data>
+  <data name="WriteCustomerDtoValidator_PriceListCurrency_DoesNotMatch_CustomerCurrency" xml:space="preserve">
+    <value>PriceList Currency does not match Customer Currency</value>
+    <comment>The error returned during customer creation validation when Price list has different currency that customer</comment>
+  </data>
+  <data name="WriteProductConfigurationDtoValidator_DeliveryOption_DoesNotExistError" xml:space="preserve">
+    <value>Delivery Option {0} does not exist.</value>
+    <comment>The error returned during product configuration creation when the delivery option does not exist.</comment>
+  </data>
+  <data name="WriteProductConfigurationDtoValidator_Formulation_DoesNotExistError" xml:space="preserve">
+    <value>Formulation {0} does not exist.</value>
+    <comment>The error returned during product configuration creation when the formulation does not exist.</comment>
+  </data>
+  <data name="WriteProductConfigurationDtoValidator_PhysicalForm_DoesNotExistError" xml:space="preserve">
+    <value>Physical Form {0} does not exist.</value>
+    <comment>The error returned during product configuration creation when the physical form does not exist.</comment>
+  </data>
+  <data name="WriteProductConfigurationDtoValidator_ProductionCode_ContainsWhiteSpaceError" xml:space="preserve">
+    <value>The production code for delivery option {0} contains whitespace. A production code cannot contain whitespace.</value>
+    <comment>The error returned during product configuration creation when the production code contains whitespace.</comment>
+  </data>
+  <data name="WriteProductCreationPriceListPriceDtoValidator_PriceIsNegativeError" xml:space="preserve">
+    <value>The price for {0} on price list {1} is invalid. Prices cannot be less than zero.</value>
+    <comment>The error returned during product creation when a price list price is created with a price less than zero.</comment>
+  </data>
+  <data name="WriteProductCreationPriceListPriceDtoValidator_PriceListDoesntExistError" xml:space="preserve">
+    <value>No price list exists with code {0}</value>
+    <comment>The error returned during product creation when a price exists for a price list that does not exist.</comment>
+  </data>
+  <data name="WriteProductCustomerSpecificProductPriceDtoValidator_CustomerDoesNotExistError" xml:space="preserve">
+    <value>No customer exists with customer code {0}</value>
+    <comment>The error retured during product creation when a customer specific price for a product is provided for a customer which does not exist.</comment>
+  </data>
+  <data name="WriteProductCustomerSpecificProductPriceDtoValidator_PriceLessThanZeroError" xml:space="preserve">
+    <value>The price for delivery option {0} for customer {1} is invalid. Prices cannot be less than zero.</value>
+    <comment>The error retured during product creation when a customer specific price for a product is provided with a negative price.</comment>
+  </data>
+  <data name="WriteProductDtoValidator_DeliveryOptionForCustomerSpecificPriceDoesNotExistError" xml:space="preserve">
+    <value>Product {0} does not contain a delivery option {1}. Customer {2} can not have a specific price for this delivery option.</value>
+    <comment>The error returned during product creation validation when a customer specific price is included for a delivery option not activated for the product.</comment>
+  </data>
+  <data name="WriteProductDtoValidator_DeliveryOptionForPriceListPriceDoesNotExistError" xml:space="preserve">
+    <value>Product {0} does not contain a delivery option {1}. Pricelist {2} can not contain a price for this delivery option. </value>
+    <comment>The error returned during product creation validation when a pricelist price is included for a delivery option not activated for the product.</comment>
+  </data>
+  <data name="WriteProductDtoValidator_ProductCodeIsAlreadyInUse" xml:space="preserve">
+    <value>Product code {0} is already in use by another product.</value>
+    <comment>The error message returned as part of product creation when the product code is already in use.</comment>
+  </data>
+  <data name="ManipulationsProductDtoValidator_ProductFormIsNotValidForSubGroup" xml:space="preserve">
+    <value>Product form with code {0} is not a valid text group for sub-group {1}</value>
+    <comment>The error returned during product creation/updating validation when the product form is not a valid product form for the sub-species</comment>
+  </data>
+  <data name="ManipulationsProductDtoValidator_TextGroupIsNotValidForSubSpecies" xml:space="preserve">
+    <value>Text group with code {0} is not a valid text group for sub species {1}</value>
+    <comment>The error returned during product creation/updating validation when the text group is not a valid text group for the species</comment>
+  </data>
+  <data name="ManipulationsProductDtoValidator_SubSpeciesIsNotValidForSpecies" xml:space="preserve">
+    <value>Sub species with code {0} is not a valid sub species for species {1}</value>
+    <comment>The error returned during product creation/updating validation when the text group is not a valid text group for the species</comment>
+  </data>
+  <data name="WriteProductConfigurationPriceDtoValidator_ConfigurationDoesNotExistError" xml:space="preserve">
+    <value>Product does not contain configuration with code {0}</value>
+    <comment>The error returned during price list price creation validation when product does not contain configuration with set code.</comment>
+  </data>
+  <data name="WriteProductConfigurationPriceDtoValidator_PriceIsNegativeError" xml:space="preserve">
+    <value>The price for product configuration code {0} is invalid. Prices cannot be less than zero.</value>
+    <comment>The error returned during price list price creation validation when price is less than zero.</comment>
+  </data>
+  <data name="WriteProductPriceListPricesDtoValidator_PriceListDoesNotExistError" xml:space="preserve">
+    <value>No Price List exists with code {0}</value>
+    <comment>The error returned during price list price creation validation when a price list price for a product is provided for a price list which does not exist.</comment>
+  </data>
+  <data name="WriteProductPriceListPricesDtoValidator_PriceListPricesExistsError" xml:space="preserve">
+    <value>Price List Prices already exists for customer {0} for product {1}</value>
+    <comment>The error returned during price list price creation validation when product prices already exists for specific price list</comment>
+  </data>
+  <data name="UpdateProductPriceListPricesDtoValidator_PriceListPricesDoesNotExistsError" xml:space="preserve">
+    <value>Price List Prices do not exist for customer {0} and product {1}</value>
+    <comment>The error returned during price list price update validation when product prices does not exists for specific price list</comment>
+  </data>
+  <data name="UpdateCustomerSpecificProductPricesDtoValidator_CustomerSpecificPricesNotExistError" xml:space="preserve">
+    <value>Customer Specific Product Prices do not exist for customer {0} and product {1}</value>
+    <comment>The error returned during price list price creation validation when product prices do not exists for specific price list</comment>
+  </data>
+  <data name="ParameterIsNotValidIso8601DateString" xml:space="preserve">
+    <value>{0} is not valid ISO 8601 date string</value>
+    <comment>Erroro returned when date string is not valid ISO8601 date string</comment>
+  </data>
+  <data name="ManipulationsProductConfigurationPriceDtoValidator_PriceIsNegativeError" xml:space="preserve">
+    <value>The production code contains whitespace. A production code cannot contain whitespace.</value>
+    <comment>The error returned during product configuration update when the production code contains whitespace.</comment>
+  </data>
+  <data name="WriteProductDtoValidator_ConfigurationsContainDuplicatedDeliveryOption" xml:space="preserve">
+    <value>There are two or more Configurations with the same Delivery Option.</value>
+    <comment>The error returned during price list price creation validation when Product Configurations has the same Delivery Option.</comment>
+  </data>
+  <data name="ManipulationsOrderLineDtoValidator_Quantity_Requires_Pallets_Or_Bags" xml:space="preserve">
+    <value>{0} requires {1} or {2} to be defined</value>
+  </data>
+  <data name="ManipulationsOrderLineDtoValidator_Quantity_Requires_Something" xml:space="preserve">
+    <value>{0} requires {1} to be defined</value>
+  </data>
+  <data name="UpdateCancelledObject" xml:space="preserve">
+    <value>{0} is cancelled and cannot be updated</value>
+    <comment>The error returned during updating cancelled object</comment>
+  </data>
+  <data name="OrderLineController_AddNoteToCanceledOrder" xml:space="preserve">
+    <value>Notes cannot be added to a cancelled order</value>
+    <comment>The error returned during adding note to order that is cancelled</comment>
+  </data>
+  <data name="OrderLineController_DeleteNoteFromCanceledOrder" xml:space="preserve">
+    <value>Notes for a cancelled order cannot be deleted</value>
+    <comment>The error returned during deleting note from order that is cancelled</comment>
+  </data>
+  <data name="OrderLineController_UpdateNoteFromCanceledOrder" xml:space="preserve">
+    <value>Notes for a cancelled order cannot be edited</value>
+    <comment>The error returned during updating note for order that is cancelled</comment>
+  </data>
+  <data name="DeliverySiteContactsController_DeliverySiteContact_LastOne" xml:space="preserve">
+    <value>A delivery site must have at least one contact</value>
+    <comment>The error returned durig deletion of delviery site contacts when delivery site has last two contacts</comment>
+  </data>
+  <data name="FieldLengthIsRequired" xml:space="preserve">
+    <value>{0} length should be {1}</value>
+    <comment>The error message retured from the API when the number of items is not queal to {1}</comment>
+  </data>
+  <data name="Category_DoesNotContain" xml:space="preserve">
+    <value>{0} {1} is not valid for category {2}</value>
+    <comment>The error returned during customer create pr edit process when category does not contain group or merchant or integrator</comment>
+  </data>
+  <data name="Array_ContainsDuplicated_Items" xml:space="preserve">
+    <value>{0} contains duplicated items</value>
+    <comment>The error returned when array cotnains duplicated items</comment>
+  </data>
+  <data name="FieldIsAlreadyInUse" xml:space="preserve">
+    <value>'{0}' is already in use.</value>
+    <comment>The error message retured from the API when field must be unique</comment>
+  </data>
+  <data name="ExistingCustomerCodeInUse" xml:space="preserve">
+    <value>Existing customer code {0} is already in use by another customer</value>
+    <comment>The error returned during customer create/update when existing code is already in use</comment>
+  </data>
+  <data name="Species_Requires_VwdEmail" xml:space="preserve">
+    <value>Customers with a species of {0} must have a VWD Email Address.</value>
+    <comment>The error returned during customer create/update when speices requires vwd email but it was not provided</comment>
+  </data>
+  <data name="BusinessType_RequiresMoreCotnacts_ToBeSpecified" xml:space="preserve">
+    <value>A customer with a business type of {0} must have at least {1} contacts.</value>
+    <comment>The error returned during customer crate / update when contacts count is not enough</comment>
+  </data>
+  <data name="CreateOrder_CustomerPersonaNonGrata" xml:space="preserve">
+    <value>An order cannot be created for a customer that is considered persona non grata</value>
+    <comment>The error returned during creating order when customer is persona non grata</comment>
+  </data>
+  <data name="ManipulationsProductDtoValidator_FieldMustBeEmpty" xml:space="preserve">
+    <value>{0} cannot be set for a product category that does not require categorisation</value>
+    <comment>The error returned during order create/update validation when product category does not categorisation</comment>
+  </data>
+  <data name="CustomerLastDeliverySite" xml:space="preserve">
+    <value>A customer must have at least one delivery site, the last delivery site for a customer cannot be deleted</value>
+    <comment>The error returned during deleting customer delveiry site when customer has last delivery site</comment>
+  </data>
+  <data name="ManipulationCustomerDtoValidator_SpeciesMatchesIsOrganic" xml:space="preserve">
+    <value>An organic customer must be associated with an organic species</value>
+    <comment>The error returned during customer craete/update when customer requires Organic species</comment>
+  </data>
+  <data name="ManipulationCustomerDtoValidator_SpeciesMatchesNonOrganic" xml:space="preserve">
+    <value>A non-organic customer must be associated with a non-organic species</value>
+    <comment>The error returned during customer create/update when customer requires non Organic species</comment>
+  </data>
+  <data name="ManipulationsProductDtoValidator_SpeicesRequiresIsOrganic" xml:space="preserve">
+    <value>An organic product must be associated with an organic species</value>
+    <comment>The error returned during product create / update when product requires Organic species</comment>
+  </data>
+  <data name="ManipulationsProductDtoValidator_SpeicesRequiresNonOrganic" xml:space="preserve">
+    <value>A non-organic product must be associated with a non-organic species</value>
+    <comment>The error returned during product create / update when product requires not Organic species</comment>
+  </data>
+  <data name="VatNoIsNotRequiredForIRL" xml:space="preserve">
+    <value>VatNo is not required for customers in IRL</value>
+    <comment>Used by FluentValidator to build validation messages</comment>
+  </data>
+  <data name="WriteProductPriceListPricesDtoValidator_PriceExistsForProductConfigurationError" xml:space="preserve">
+    <value>Price list {0} already has a price for product configuration {1}.</value>
+    <comment>The error returned when creating a price list price for a product configuration that already has a price.</comment>
+  </data>
+  <data name="WriteProductCustomerSpecificProductPriceDtoValidator_PriceExistsForProductConfigurationError" xml:space="preserve">
+    <value>Customer {0} already has a price for product configuration {1}.</value>
+    <comment>The error returned when creating a customer price for a product configuration that already has a price.</comment>
+  </data>
+</root>

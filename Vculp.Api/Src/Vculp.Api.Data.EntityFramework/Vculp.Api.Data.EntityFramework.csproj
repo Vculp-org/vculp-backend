@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CorrelationId" Version="3.0.1" />
+    <PackageReference Include="CsvHelper" Version="30.0.1" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Moq" Version="4.18.4" />
+    <PackageReference Include="RedbusTech.Netwonsoft.Json.Extensions" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vculp.Api.Application.Services\Vculp.Api.Application.Services.csproj" />
+    <ProjectReference Include="..\Vculp.Api.Common\Vculp.Api.Common.csproj" />
+    <ProjectReference Include="..\Vculp.Api.Domain.Core\Vculp.Api.Domain.Core.csproj" />
+    <ProjectReference Include="..\Vculp.Api.Domain.Interfaces\Vculp.Api.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\Vculp.Api.Shared\Vculp.Api.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="Notifications\KeylessEntities\" />
+    <Folder Include="Notifications\QueryHandlers\" />
+    <Folder Include="Notifications\Repositories\" />
+    <Folder Include="SharedKernel\Configurations\" />
+    <Folder Include="SharedKernel\QueryHandlers\" />
+    <Folder Include="SharedKernel\Repositories\" />
+  </ItemGroup>
+
+</Project>

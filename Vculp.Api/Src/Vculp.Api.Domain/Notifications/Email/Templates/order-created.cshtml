@@ -1,0 +1,12 @@
+﻿@using Vculp.Api.Domain.Notifications
+@model Vculp.Api.Common.Notifications.Commands.SendOrderCreatedEmailToCustomerCommand;
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>Your order (attached) has been queued for production.</p>
+
+    @{ await IncludeAsync(NotificationConstants.FooterTemplate); }
+</body>
+</html>
+

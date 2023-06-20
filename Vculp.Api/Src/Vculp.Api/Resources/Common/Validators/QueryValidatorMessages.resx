@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllExpandedVehiclesQuery_InvalidSuppoertedLoadType" xml:space="preserve">
+    <value>This is not a valid supported load type.</value>
+    <comment>The error message for invalid supported load type.</comment>
+  </data>
+  <data name="AllVehiclesQuery_InvalidSuppoertedLoadType" xml:space="preserve">
+    <value>This is not a valid supported load type.</value>
+    <comment>The error message for invalid supported load type.</comment>
+  </data>
+  <data name="DocketsQueryValidator_CreatedBeforeTimeShouldBeLaterThanCreatedAfterTime" xml:space="preserve">
+    <value>{0} time should be later than the {1} time</value>
+    <comment>The error message returned when createdBefore time is not later than the createdAfter time.</comment>
+  </data>
+  <data name="FieldDataNotFound" xml:space="preserve">
+    <value>{0} not found.</value>
+    <comment>The error message retured from the API when field data was not found.</comment>
+  </data>
+  <data name="FieldExceedsMaximumLengthError" xml:space="preserve">
+    <value>The maximum length for {0} is {1}</value>
+    <comment>The error messages returned from the API when a field exceeds its maximum length.</comment>
+  </data>
+  <data name="FieldIsAlreadyInUse" xml:space="preserve">
+    <value>'{0}' is already in use.</value>
+    <comment>The error message retured from the API when field must be unique</comment>
+  </data>
+  <data name="FieldIsNotValid" xml:space="preserve">
+    <value>'{0}' is not valid</value>
+    <comment>The error message retured from the API when filed has not valid value</comment>
+  </data>
+  <data name="FieldIsNotValidDate_InThePast" xml:space="preserve">
+    <value>'{0}' cannot be in the past</value>
+    <comment>The error message retured from the API when a date field is in the past</comment>
+  </data>
+  <data name="FieldIsNotValidEmail" xml:space="preserve">
+    <value>Invalid email address</value>
+    <comment>The error message retured from the API when email has not valid email format.</comment>
+  </data>
+  <data name="FieldIsNotValidISO8601Date" xml:space="preserve">
+    <value>'{0}' is not valid ISO 8601 date</value>
+    <comment>The error message retured from the API when date has not valid ISO 8601 format</comment>
+  </data>
+  <data name="FieldIsRequiredError" xml:space="preserve">
+    <value>{0} is required.</value>
+    <comment>The error message retured from the API when a required field is not populated.</comment>
+  </data>
+  <data name="FieldLengthGreaterThanIsRequired" xml:space="preserve">
+    <value>{0} length should be greater than {1}</value>
+    <comment>The error message retured from the API when field should have length greater that som value</comment>
+  </data>
+  <data name="FieldLengthIsRequired" xml:space="preserve">
+    <value>{0} length should be {1}</value>
+    <comment>The error message retured from the API when the number of items is not queal to {1}</comment>
+  </data>
+  <data name="FieldMustbeGreaterThan" xml:space="preserve">
+    <value>'{0}' must be greater than {1}</value>
+    <comment>The error message retured from the API when field must be grater than some value</comment>
+  </data>
+  <data name="FieldMustBeGreaterThanOrEqual" xml:space="preserve">
+    <value>'{0}' must be greater than or equal to {1}.</value>
+    <comment>The error message retured from the API when field must be greater than or equal to some value</comment>
+  </data>
+  <data name="FieldMustBeLessThanOrEqual" xml:space="preserve">
+    <value>'{0}' must be less than or equal to {1}.</value>
+    <comment>The error message retured from the API when field must be less than or equal to some value</comment>
+  </data>
+  <data name="FileMimeType_IsNotAllowed" xml:space="preserve">
+    <value>File mime type is not allowed</value>
+    <comment>When file mime type is not valid for request</comment>
+  </data>
+  <data name="MustBeNull" xml:space="preserve">
+    <value>'{0}' must be null</value>
+    <comment>The error message retured from the API when field must be null</comment>
+  </data>
+  <data name="OrderLinesCollectionQueryValidator_EqualsTheOnlyOneSpecified" xml:space="preserve">
+    <value>Cannot specify other filter parameters when Equals is specified</value>
+    <comment>The error message returned from the API when other filterparams are specified</comment>
+  </data>
+  <data name="OrderLinesCollectionQueryValidator_OnlyOne_ShouldBe_Specified" xml:space="preserve">
+    <value>Only one of {0} or {1} should be specified</value>
+    <comment>The error message returned from the API when uncombinable filer params are specified</comment>
+  </data>
+  <data name="OrderLinesCollectionQueryValidator_ShouldBeGreaterThan_Field" xml:space="preserve">
+    <value>{0} should be less than LessThan or LessThanOrEqual</value>
+    <comment>The error message returned from the API when uncombinable filer params are specified</comment>
+  </data>
+  <data name="OrderLinesCollectionQueryValidator_ShouldBeLessThan_Field" xml:space="preserve">
+    <value>{0} should be greater than GreaterThan or GreaterThanOrEqualTo</value>
+    <comment>The error message returned from the API when uncombinable filer params are specified</comment>
+  </data>
+  <data name="TrailerCollectionQuery_InvalidSupportedProductType" xml:space="preserve">
+    <value>{0} is not a valid supported product type.</value>
+    <comment>The error message returned when not supported product type is passed as parameter.</comment>
+  </data>
+  <data name="IncludeRelatedOrderLineNotesIsNotRequiredError" xml:space="preserve">
+    <value>{0} should be null when order line filter is not specified.</value>
+    <comment>The error message retured from the API when a required field is not populated when order line filter is specified.</comment>
+  </data>
+  <data name="DocketItemsQueryValidator_CreatedBeforeTimeShouldBeLaterThanCreatedAfterTime" xml:space="preserve">
+    <value>{0} time should be later than the {1} time.</value>
+    <comment>The error message returned when createdBefore time is not later than the createdAfter time.</comment>
+  </data>
+  <data name="FieldShouldContainExactNumberOfCharacters" xml:space="preserve">
+    <value>{0} should be exactly {1} characters long.</value>
+    <comment>The error message returned from the API when the field not exactly required characters long.</comment>
+  </data>
+  <data name="CustomerOrderLinesQueryValidator_OrdersBeforeShouldBeLaterThanOrEqualToOrdersAfter" xml:space="preserve">
+    <value>{0} should be later than or equal to {1}.</value>
+    <comment>The error message returned when orders before date is earlier than orders after date.</comment>
+  </data>
+  <data name="LoadsQueryValidator_CreatedBeforeShouldBeLaterThanOrEqualToCreatedAfter" xml:space="preserve">
+    <value>{0} should be later than or equal to {1}.</value>
+    <comment>The error message returned when created before date is earlier than created after date.</comment>
+  </data>
+</root>
