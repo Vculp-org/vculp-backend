@@ -44,6 +44,8 @@ namespace Vculp.Api.Data.EntityFramework.Notifications.Configurations
             builder.Property("ContactType")
                    .IsRequired()
                    .HasMaxLength(30);
+            
+            builder.HasIndex()
 
         }
 
