@@ -30,11 +30,11 @@ namespace Vculp.Api.Bootstrapper.Common
             services.AddTransient<ITransactionalDomainEventDispatcher, TransactionalDomainEventDispatcher>();
             services.AddTransient<IAsyncDomainEventDispatcher, AsyncDomainEventDispatcher>();
 
-            services.Scan(scan => scan
-                    .FromAssemblyOf<IAuditableEntity>()
-                    .AddClasses(classes => classes.AssignableTo(typeof(IDomainEventReducer<>)))
-                    .AsImplementedInterfaces()
-                    .WithTransientLifetime());
+            // services.Scan(scan => scan
+            //         .FromAssemblyOf<IAuditableEntity>()
+            //         .AddClasses(classes => classes.AssignableTo(typeof(IDomainEventReducer<>)))
+            //         .AsImplementedInterfaces()
+            //         .WithTransientLifetime());
         }
     }
 }

@@ -1,9 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Vculp.Api.Data.EntityFramework;
 using Vculp.Api.Data.EntityFramework.Common;
-using Vculp.Api.Data.EntityFramework.Rbac.Repositories;
-using Vculp.Api.Domain.Interfaces.Rbac.Caching;
-using Vculp.Api.Domain.Interfaces.Rbac.Repositories;
 
 namespace Vculp.Api.Bootstrapper.Common
 {
@@ -31,11 +28,11 @@ namespace Vculp.Api.Bootstrapper.Common
 
             
             //Application Permission
-            services.Decorate<IApplicationPermissionRepository>((inner, services) =>
-            {
-                var applicationPermissionCache = services.GetRequiredService<IApplicationPermissionCache>();
-                return new CachingApplicationPermissionRepository(inner, applicationPermissionCache);
-            });
+            // services.Decorate<IApplicationPermissionRepository>((inner, services) =>
+            // {
+            //     var applicationPermissionCache = services.GetRequiredService<IApplicationPermissionCache>();
+            //     return new CachingApplicationPermissionRepository(inner, applicationPermissionCache);
+            // });
         }
     }
 }

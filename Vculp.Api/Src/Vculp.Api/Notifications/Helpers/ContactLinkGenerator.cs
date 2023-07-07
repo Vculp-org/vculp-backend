@@ -27,10 +27,10 @@ namespace Vculp.Api.Notifications.Helpers
                 throw new ArgumentNullException(nameof(dto));
             }
 
-            dto.Links.Add(new LinkDto(
-                _urlHelper.Link(RouteNames.NotificationsGetContacts, new { }),
-                LinkRels.Self,
-                HttpMethod.Get.Method));
+            // dto.Links.Add(new LinkDto(
+            //     _urlHelper.Link(RouteNames.NotificationsGetContacts, new { }),
+            //     LinkRels.Self,
+            //     HttpMethod.Get.Method));
 
             return dto;
         }

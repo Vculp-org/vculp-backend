@@ -20,9 +20,8 @@ namespace Vculp.Api.Data.EntityFramework
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-     
-            // OnRbacModelCreating(modelBuilder);
-            // OnNotificationsModelCreating(modelBuilder);
+
+            OnUserModelCreating(modelBuilder);
             
             var dateTimeConverter = new ValueConverter<DateTime, DateTime>(
                 v => v, v => DateTime.SpecifyKind(v, DateTimeKind.Utc));

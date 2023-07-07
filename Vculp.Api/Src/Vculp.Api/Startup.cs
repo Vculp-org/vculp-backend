@@ -135,7 +135,7 @@ namespace Vculp.Api
                 .AddIdentityServerAuthentication(options =>
                 {
                     options.Authority = Configuration["identity_server:swagger_ui_identity_server_url"];
-                    options.RequireHttpsMetadata = true;
+                    options.RequireHttpsMetadata = false;
                     options.ApiName = "Vculp.Api";
                 });
 

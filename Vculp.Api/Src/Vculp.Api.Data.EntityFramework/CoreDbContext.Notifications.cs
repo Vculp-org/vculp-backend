@@ -1,7 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Vculp.Api.Data.EntityFramework.Notifications.Configurations;
-using Vculp.Api.Data.EntityFramework.Notifications.KeylessEntities;
-using Vculp.Api.Domain.Core.Notifications;
 
 namespace Vculp.Api.Data.EntityFramework
 {

@@ -24,8 +24,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Vculp.DDD.Shared\Vculp.DDD.Shared.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="User\" />
-  </ItemGroup>
 </Project>

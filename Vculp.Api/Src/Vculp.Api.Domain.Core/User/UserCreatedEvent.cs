@@ -12,16 +12,16 @@ namespace Vculp.Api.Domain.Core.User
         {
         }
 
-        //public UserCreatedEvent(//user as param)
-        //{
-        //    if (user == null)
-        //    {
-        //        throw new ArgumentNullException(nameof(user));
-        //    }
+        public UserCreatedEvent(User user)
+        {
+            if (user == null)
+            {
+                throw new ArgumentNullException(nameof(user));
+            }
 
-        //    UserId = user.Id;
+            UserId = user.Id;
            
-        //}
+        }
 
         public Guid UserId { get; private set; }
      
