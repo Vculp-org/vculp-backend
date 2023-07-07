@@ -5,6 +5,7 @@
     <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
     <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
     <LangVersion>latest</LangVersion>
+    <UserSecretsId>9727a5fd-d68e-40fa-8eba-61df95a2a44d</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -25,7 +26,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Moq" Version="4.18.4" />
-    <PackageReference Include="RedbusTech.Netwonsoft.Json.Extensions" Version="1.1.0" />
+<!--    <PackageReference Include="RedbusTech.Netwonsoft.Json.Extensions" Version="1.1.0" />-->
   </ItemGroup>
 
   <ItemGroup>
