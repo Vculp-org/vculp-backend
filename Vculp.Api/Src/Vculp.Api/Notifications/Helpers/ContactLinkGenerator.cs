@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Net.Http;
 using Microsoft.AspNetCore.Mvc;
-using Vculp.Api.Common;
 using Vculp.Api.Common.Common;
-using Vculp.Api.Common.Common.Dtos;
 using Vculp.Api.Common.Notifications.Responses;
 
 namespace Vculp.Api.Notifications.Helpers

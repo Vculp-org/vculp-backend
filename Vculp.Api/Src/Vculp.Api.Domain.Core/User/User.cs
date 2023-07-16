@@ -1,9 +1,10 @@
 using System;
 using Vculp.Api.Domain.Core.SharedKernel;
+using Vculp.Api.Domain.Core.SharedKernel.Interfaces;
 
 namespace Vculp.Api.Domain.Core.User
 {
-    public class User : AggregateRoot
+    public class User : AggregateRoot, ICreationAuditable, IUpdateAuditable
     {
         #region Constructors
 
@@ -17,7 +18,6 @@ namespace Vculp.Api.Domain.Core.User
             int externalUserId,
             string firstName,
             string lastName,
-            string email,
             string mobileNumber
         )
         {
@@ -36,11 +36,6 @@ namespace Vculp.Api.Domain.Core.User
                 throw new ArgumentException($"{nameof(lastName)} cannot be an empty name", nameof(lastName));
             }
 
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                throw new ArgumentException($"{nameof(email)} cannot be an empty name", nameof(email));
-            }
-
             if (string.IsNullOrWhiteSpace(mobileNumber))
             {
                 throw new ArgumentException($"{nameof(mobileNumber)} cannot be an empty name", nameof(mobileNumber));
@@ -49,7 +44,6 @@ namespace Vculp.Api.Domain.Core.User
             ExternalUserId = externalUserId;
             FirstName = firstName;
             LastName = lastName;
-            EmailAddress = email;
             MobileNumber = mobileNumber;
             DisplayName = $"{FirstName.Trim()} {LastName.Trim()}";
             AddDomainEvent(new UserCreatedEvent(this));
@@ -70,8 +64,54 @@ namespace Vculp.Api.Domain.Core.User
         public bool CanReceiveSms => !string.IsNullOrWhiteSpace(MobileNumber);
         public string DisplayName { get; private set; }
         public DateTime CreationTime { get; private set; }
+        public int? CreatedByUserId { get; }
+        public string CreatedByUserName { get; }
         public DateTime LastUpdated { get; private set; }
+        public int? LastUpdatedByUserId { get; }
+        public string LastUpdatedByUserName { get; }
+        public bool IsActive { get; private set; }
+        public DateTime? DateOfBirth { get; private set; }
 
+        #endregion
+
+
+
+        #region Methods
+
+        public void ChangeEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                throw new ArgumentException($"{nameof(email)} cannot be an empty name", nameof(email));
+            }
+
+            EmailAddress = email;
+        }
+
+        public void ChangeDateOfBirth(DateTime dateTime)
+        {
+            DateOfBirth = dateTime;
+            SetStateToUpdated();
+        }
+        
+        public void Activate()
+        {
+            if (!IsActive)
+            {
+                IsActive = true;
+                SetStateToUpdated();
+            }
+        }
+
+        public void Deactivate()
+        {
+            if (IsActive)
+            {
+                IsActive = false;
+                SetStateToUpdated();
+            }
+        }
+        
         #endregion
         
     }

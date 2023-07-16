@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.Annotations;
 using Vculp.Api.Common;
-using Vculp.Api.Common.Common;
-using Vculp.Api.Common.Notifications.Commands;
 
 namespace Vculp.Api.Notifications.Controllers
 {

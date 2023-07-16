@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Vculp.Api.Domain.Core.SharedKernel.EventReduction;
-using Vculp.Api.Domain.Core.SharedKernel.Interfaces;
 using Vculp.Api.Domain.Notifications.EventHandlers.DomainEvents;
 using Vculp.DDD.Shared;
 using Vculp.DDD.Shared.Interfaces;

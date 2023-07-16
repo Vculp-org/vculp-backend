@@ -1,8 +1,9 @@
 ﻿using CorrelationId;
 using CorrelationId.Abstractions;
 using CorrelationId.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace Vculp.Api.Bootstrapper.Common
 {
     public static class CorrelationIdConfiguration
     {

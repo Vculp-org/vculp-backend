@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Vculp.Api.Data.EntityFramework.Common;
 
@@ -29,10 +30,9 @@ public class UserConfiguration : EntityConfiguration<Domain.Core.User.User>
         builder.Property(r => r.LastName)
             .HasMaxLength(50)
             .IsRequired();
-        
+
         builder.Property(r => r.EmailAddress)
-            .HasMaxLength(100)
-            .IsRequired();
+            .HasMaxLength(100);
 
         builder.Property(r => r.MobileNumber)
             .HasMaxLength(20)
@@ -40,7 +40,16 @@ public class UserConfiguration : EntityConfiguration<Domain.Core.User.User>
         
         builder.HasIndex(r => r.MobileNumber)
             .IsUnique();
+
+        builder.Property(r => r.IsActive)
+            .IsRequired();
         
+        builder.Property(r => r.DisplayName)
+            .HasMaxLength(100)
+            .IsRequired();
         
+        builder.Property(i => i.DateOfBirth)
+            .HasConversion(d => DateTime.SpecifyKind(d.GetValueOrDefault(), DateTimeKind.Utc), d => DateTime.SpecifyKind(d, DateTimeKind.Utc));
+
     }
 }
