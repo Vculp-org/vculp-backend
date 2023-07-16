@@ -1,9 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Vculp.Api.Common.Common;
-
-namespace Vculp.Api.AuthorizationPolicies
+﻿namespace Vculp.Api.AuthorizationPolicies
 {
     // public class UserHasApplicationPermissionHandler : AuthorizationHandler<UserHasApplicationPermissionRequirement>
     // {

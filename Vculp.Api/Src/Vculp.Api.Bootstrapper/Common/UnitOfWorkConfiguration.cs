@@ -1,13 +1,8 @@
 ﻿using CorrelationId.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
-using Vculp.Api.Common.Common;
-using Vculp.Api.Common.Outbox;
 using Vculp.Api.Data.EntityFramework;
 using Vculp.Api.Data.EntityFramework.Common.UnitOfWork;
-using Vculp.Api.Domain.Core.SharedKernel.EventReduction;
 using Vculp.Api.Domain.Interfaces.Common;
-using Vculp.DDD.Shared.Interfaces;
-using Vculp.TransactionalOutbox.Triggers;
 
 namespace Vculp.Api.Bootstrapper.Common
 {

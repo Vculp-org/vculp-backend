@@ -1,24 +1,15 @@
 using System;
 using System.Threading.Tasks;
 using MediatR;
-using Microsoft.AspNet.SignalR;
 using Swashbuckle.AspNetCore.Annotations;
 using Vculp.Api.Common;
 using Vculp.Api.Common.Common;
 using Vculp.Api.Common.Common.Dtos;
-using Vculp.Api.Common.User;
 using Vculp.Api.Common.User.Queries;
 using Vculp.Api.Common.User.Responses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
-using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Swashbuckle.AspNetCore.Annotations;
+using Vculp.Api.Common.User.Commands;
 
 
 namespace Vculp.Api.User.Controllers
