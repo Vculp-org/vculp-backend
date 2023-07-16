@@ -15,7 +15,7 @@ public class UpdateUserCommand : IRequest<Common.ICommandResult<UserResponse>>, 
     
     [BindNever] public Guid CommandId { get; }
     
-    public int ExternalUserId { get; set; }
+    //public int ExternalUserId { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string EmailAddress { get; set; }

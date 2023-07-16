@@ -61,7 +61,6 @@ namespace Vculp.Api.Domain.Core.User
         public string EmailAddress { get; private set; }
         public string MobileNumber { get; private set; }
         public bool CanReceiveEmail => !string.IsNullOrWhiteSpace(EmailAddress);
-        public bool CanReceiveSms => !string.IsNullOrWhiteSpace(MobileNumber);
         public string DisplayName { get; private set; }
         public DateTime CreationTime { get; private set; }
         public int? CreatedByUserId { get; }
