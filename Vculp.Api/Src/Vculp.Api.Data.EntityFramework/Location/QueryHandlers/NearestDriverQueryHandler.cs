@@ -4,14 +4,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Vculp.Api.Application.Services.Common;
 using Vculp.Api.Common.Common;
 using Vculp.Api.Common.Location.Queries;
 using Vculp.Api.Common.Location.Responses;
 using Vculp.Api.Data.EntityFramework.Common;
-using Vculp.Api.Data.EntityFramework.User.Repositories;
-using Vculp.Api.Shared.Abstractions.Paging;
-using Vculp.Api.Shared.Paging;
 
 namespace Vculp.Api.Data.EntityFramework.Location.QueryHandlers;
 

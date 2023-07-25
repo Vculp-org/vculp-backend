@@ -31,6 +31,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Primitives;
 using Microsoft.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json.Converters;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using Vculp.Api.Bootstrapper.Applications;
 using Vculp.Api.Bootstrapper.Common;
@@ -101,7 +102,9 @@ namespace Vculp.Api
             services.BootstrapGeocoder(Configuration);
 
             services.AddMvcCore()
-                .AddNewtonsoftJson()
+                .AddNewtonsoftJson(
+                    opts => opts.SerializerSettings.Converters.Add(new StringEnumConverter())
+                    )
                 .AddAuthorization()
                 .AddApiExplorer()
                 .AddMvcOptions(options =>

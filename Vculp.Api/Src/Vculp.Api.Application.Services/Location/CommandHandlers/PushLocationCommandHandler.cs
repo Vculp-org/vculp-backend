@@ -2,12 +2,10 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http;
 using Microsoft.Extensions.Localization;
 using Vculp.Api.Application.Services.Common;
 using Vculp.Api.Common.Common;
 using Vculp.Api.Common.Location.Commands;
-using Vculp.Api.Common.User.Responses;
 using Vculp.Api.Domain.Interfaces.Common;
 using Vculp.Api.Domain.Interfaces.User;
 

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Vculp.Api.Common.Common;
 using Vculp.Api.Common.Common.Dtos;
 
