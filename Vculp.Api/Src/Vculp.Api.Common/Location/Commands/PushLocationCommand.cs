@@ -14,8 +14,8 @@ namespace Vculp.Api.Common.Location.Commands
         }
 
         public Guid UserId { get; set; }
-        public decimal Longitude { get; set; }
         public decimal Latitude { get; set; }
+        public decimal Longitude { get; set; }
         [BindNever] public Guid CommandId { get; }
     }
 }

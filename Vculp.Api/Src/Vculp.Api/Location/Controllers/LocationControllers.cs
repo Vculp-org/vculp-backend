@@ -9,10 +9,12 @@ using Vculp.Api.Common.User.Queries;
 using Vculp.Api.Common.User.Responses;
 using System.Net.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Vculp.Api.Common.Location.Commands;
+using Vculp.Api.Common.Location.Queries;
+using Vculp.Api.Common.Location.Responses;
 using Vculp.Api.Common.User.Commands;
-using Vculp.Api.Common.Vehicle.Queries;
-using Vculp.Api.Common.Vehicle.Responses;
 
 
 namespace Vculp.Api.User.Controllers
@@ -67,47 +69,45 @@ namespace Vculp.Api.User.Controllers
         }
         
         
-        // /// <summary>
-        // /// Gets nearest vehicles.
-        // /// </summary>
-        // [SwaggerOperation(Tags = new[] { "Location/Locations" })]
-        // [ProducesResponseType(typeof(LinkedCollectionResourceWrapperDto<VehicleResponse>), 200)]
-        // [Produces(MediaTypes.LocationModuleLocationV1MediaType)]
-        // [HttpGet(Name = RouteNames.LocationGetNearestDrivers)]
-        // public async Task<IActionResult> GetNearestDrivers(NearestQuery query)
-        // {
-        //     if (!ModelState.IsValid)
-        //     {
-        //         return BadRequest();
-        //     }
-        //
-        //     var userResponses = await _mediator.Send(query);
-        //
-        //     foreach (var userResponse in userResponses)
-        //     {
-        //         _linkGenerator.GenerateLinks(userResponse);
-        //     }
-        //
-        //     GeneratePagingHeaders(new PagingMetadata
-        //     {
-        //         TotalItems = userResponses.TotalItems,
-        //         TotalPages = userResponses.TotalPages,
-        //         CurrentPage = userResponses.CurrentPage,
-        //         PageSize = userResponses.PageSize
-        //     });
-        //
-        //     var wrapper = new LinkedCollectionResourceWrapperDto<UserResponse>(userResponses);
-        //
-        //     wrapper = CreateHateoasLinksForCollection(wrapper, query, userResponses.HasNext, userResponses.HasPrevious);
-        //
-        //     wrapper.Links.Add(
-        //         new LinkDto(
-        //             Url.Link(RouteNames.UserCreateUser, new { }),
-        //             "create-contract",
-        //             HttpMethod.Post.Method));
-        //
-        //     return Ok(wrapper);
-        // }
+        /// <summary>
+        /// Gets nearest vehicles.
+        /// </summary>
+        [SwaggerOperation(Tags = new[] { "Location/Locations" })]
+        [ProducesResponseType(typeof(LinkedCollectionResourceWrapperDto<NearestDriverResponse>), 200)]
+        [Produces(MediaTypes.LocationModuleLocationV1MediaType)]
+        [HttpGet(Name = RouteNames.LocationGetNearestDrivers)]
+        public async Task<IActionResult> GetNearestDrivers(NearestQuery query)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+        
+            var nearestDrivers = await _mediator.Send(query);
+        
+            // foreach (var userResponse in userResponses)
+            // {
+            //     _linkGenerator.GenerateLinks(userResponse);
+            // }
+            //
+            // GeneratePagingHeaders(new PagingMetadata
+            // {
+            //     TotalItems = userResponses.TotalItems,
+            //     TotalPages = userResponses.TotalPages,
+            //     CurrentPage = userResponses.CurrentPage,
+            //     PageSize = userResponses.PageSize
+            // });
+            //
+            // var wrapper = new LinkedCollectionResourceWrapperDto<UserResponse>(userResponses);
+            //
+            // wrapper = CreateHateoasLinksForCollection(wrapper, query, userResponses.HasNext, userResponses.HasPrevious);
+            //
+            // wrapper.Links.Add(
+            //     new LinkDto(
+            //         Url.Link(RouteNames.UserCreateUser, new { }),
+            //         "create-contract",
+            //         HttpMethod.Post.Method));
+        
+            return Ok(nearestDrivers);
+        }
         
         // /// <summary>
         // /// Get User by Id.
