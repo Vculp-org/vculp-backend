@@ -82,30 +82,7 @@ namespace Vculp.Api.User.Controllers
                 return BadRequest(ModelState);
         
             var nearestDrivers = await _mediator.Send(query);
-        
-            // foreach (var userResponse in userResponses)
-            // {
-            //     _linkGenerator.GenerateLinks(userResponse);
-            // }
-            //
-            // GeneratePagingHeaders(new PagingMetadata
-            // {
-            //     TotalItems = userResponses.TotalItems,
-            //     TotalPages = userResponses.TotalPages,
-            //     CurrentPage = userResponses.CurrentPage,
-            //     PageSize = userResponses.PageSize
-            // });
-            //
-            // var wrapper = new LinkedCollectionResourceWrapperDto<UserResponse>(userResponses);
-            //
-            // wrapper = CreateHateoasLinksForCollection(wrapper, query, userResponses.HasNext, userResponses.HasPrevious);
-            //
-            // wrapper.Links.Add(
-            //     new LinkDto(
-            //         Url.Link(RouteNames.UserCreateUser, new { }),
-            //         "create-contract",
-            //         HttpMethod.Post.Method));
-        
+
             return Ok(nearestDrivers);
         }
         
