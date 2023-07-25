@@ -13,5 +13,10 @@
         public const string AuthSignInInitiate= "AuthSignInInitiate";
         public const string AuthSignInComplete= "AuthSignInComplete";
         
+        // Location
+        
+        public const string LocationPushLocation = "LocationPushLocation";
+        public const string LocationGetNearestDrivers = "LocationGetNearestDrivers";
+
     }
 }

@@ -17,6 +17,9 @@
         public const string AuthModuleSignInCompleteV1MediaType = "application/vnd.vculp.auth.signin.complete.v1+json";
         public const string AuthModuleUserSignInCompleteV1MediaType = "application/vnd.vculp.auth.user.signin.complete.v1+json";
 
-        
+        // Location Module
+        public const string LocationModuleLocationV1MediaType = "application/vnd.vculp.lcation.v1.hateoas+json";
+        public const string LocationModulePushLocationV1MediaType = "application/vnd.vculp.location.push.v1+json";
+
     }
 }
