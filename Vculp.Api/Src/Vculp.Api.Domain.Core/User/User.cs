@@ -92,6 +92,28 @@ namespace Vculp.Api.Domain.Core.User
             DateOfBirth = dateTime;
             SetStateToUpdated();
         }
+
+        public void ChangeFirstName(string firstName)
+        {
+            if (string.IsNullOrWhiteSpace(firstName))
+            {
+                throw new ArgumentException($"{nameof(firstName)} cannot be an empty name", nameof(firstName));
+            }
+
+            FirstName = firstName;
+            SetStateToUpdated();
+        }
+
+        public void ChangeLastName(string lastName)
+        {
+            if (string.IsNullOrWhiteSpace(lastName))
+            {
+                throw new ArgumentException($"{nameof(lastName)} cannot be an empty name", nameof(lastName));
+            }
+
+            LastName = lastName;
+            SetStateToUpdated();
+        }
         
         public void Activate()
         {

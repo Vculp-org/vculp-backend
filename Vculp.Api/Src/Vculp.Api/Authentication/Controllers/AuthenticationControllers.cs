@@ -56,12 +56,18 @@ public class AuthenticationControllers : PagedCollectionController
         string[] saAllowedCharacters = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
 
         string randomOTP = GenerateRandomOtp(6, saAllowedCharacters);
-        
+
         var response = new SignInInitiateResponse()
         {
             MobileNumber = command.MobileNumber,
-            OneTimePassword = 111111
+            OneTimePassword = 111111,
+            RetryCount = 0
         };
+
+        if (response.MobileNumber == "0000000000")
+        {
+            response.RetryCount = 5;
+        }
 
         return Ok(response);
     }
@@ -107,6 +113,7 @@ public class AuthenticationControllers : PagedCollectionController
         }
         else if (command.OneTimePassword == 222222)
         {
+            response.UserType = UserType.Rider;
             response.RegistrationStatus = RegistrationStatus.BasicComplete;
             response.IsNewUser = false;
         }

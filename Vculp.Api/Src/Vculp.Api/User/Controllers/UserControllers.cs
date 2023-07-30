@@ -41,7 +41,7 @@ namespace Vculp.Api.User.Controllers
         [Consumes(MediaTypes.UserModuleCreateUserV1MediaType)]
         [Produces(MediaTypes.UserModuleUserV1MediaType)]
         [HttpPost(Name = RouteNames.UserCreateUser)]
-        public async Task<IActionResult> AddUserAsync([FromBody] CreateUserCommand command)
+        public async Task<IActionResult> CreateUserAsync([FromBody] CreateUserCommand command)
         {
             if (command == null)
             {
@@ -74,7 +74,6 @@ namespace Vculp.Api.User.Controllers
                 new UserQuery() { UserId = commandResult.Result.UserId },
                 commandResult.Result);
         }
-        
         
         /// <summary>
         /// Gets all Users.
@@ -137,6 +136,51 @@ namespace Vculp.Api.User.Controllers
             _linkGenerator.GenerateLinks(userResponse);
 
             return Ok(userResponse);
+        }
+        
+        
+        /// <summary>
+        /// Updates a user for the user module
+        /// </summary>
+        /// <response code="200">Returns the updated user</response>
+        /// <response code="404">When the user does not exist</response>
+        /// <response code="409">When the user name already exist/invalid user type</response>
+        /// <response code="422">When the model structure is correct but validation fails</response>
+        [SwaggerOperation(Tags = new[] { "User/Users" })]
+        [ProducesResponseType(typeof(UserResponse), 200)]
+        [Consumes(MediaTypes.UserModuleUpdateV1MediaType)]
+        [Produces(MediaTypes.UserModuleUserV1MediaType)]
+        [HttpPut("{userid}", Name = RouteNames.UserUpdateUserById)]
+        public async Task<IActionResult> UpdateUserAsync(UpdateUserCommand command)
+        {
+            if (command == null)
+            {
+                return BadRequest();
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return UnprocessableEntity(ModelState);
+            }
+
+            var commandResult = await _mediator.Send(command);
+            if (commandResult.ResultType == CommandResultType.UnprocessableEntity)
+            {
+                ModelState.AddModelErrors(commandResult.Errors);
+                return UnprocessableEntity(ModelState);
+            }
+            if (commandResult.ResultType == CommandResultType.Conflict)
+            {
+                ModelState.AddModelErrors(commandResult.Errors);
+                return Conflict(ModelState);
+            }
+            if (commandResult.ResultType == CommandResultType.NotFound)
+            {
+                return NotFound();
+            }
+
+            _linkGenerator.GenerateLinks(commandResult.Result);
+            return Ok(commandResult.Result);
         }
 
     }

@@ -7,6 +7,7 @@
         public const string UserCreateUser = "UserCreateUser";
         public const string UserGetAllUsers = "UserGetAllUsers";
         public const string UserGetUserById = "UserGetUserById";
+        public const string UserUpdateUserById = "UserUpdateUserById";
 
         //Auth
         
