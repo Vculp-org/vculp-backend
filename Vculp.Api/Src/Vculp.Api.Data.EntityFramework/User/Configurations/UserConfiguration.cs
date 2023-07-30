@@ -43,11 +43,7 @@ public class UserConfiguration : EntityConfiguration<Domain.Core.User.User>
 
         builder.Property(r => r.IsActive)
             .IsRequired();
-        
-        builder.Property(r => r.DisplayName)
-            .HasMaxLength(100)
-            .IsRequired();
-        
+
         builder.Property(i => i.DateOfBirth)
             .HasConversion(d => DateTime.SpecifyKind(d.GetValueOrDefault(), DateTimeKind.Utc), d => DateTime.SpecifyKind(d, DateTimeKind.Utc));
 

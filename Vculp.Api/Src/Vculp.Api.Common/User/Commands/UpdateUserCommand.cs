@@ -1,26 +1,18 @@
 using System;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Vculp.Api.Common.Common;
 using Vculp.Api.Common.User.Responses;
-using Vculp.Api.Shared.Abstractions.Cqrs;
 
 namespace Vculp.Api.Common.User.Commands;
 
-public class UpdateUserCommand : IRequest<Common.ICommandResult<UserResponse>>, ICommand
+public class UpdateUserCommand : IRequest<ICommandResult<UserResponse>>
 {
-    public UpdateUserCommand()
-    {
-        CommandId = Guid.NewGuid();
-    }
-    
-    [FromRoute]
+    [FromRoute(Name = "userId")]
     public Guid UserId { get; set; }
     
     [FromBody]
     public UpdateUserRequestBody Body { get; set; }
-    
-    [BindNever] public Guid CommandId { get; }
 }
 
 

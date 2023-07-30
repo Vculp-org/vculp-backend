@@ -26,7 +26,7 @@ public class UserMapper : Mapper<Domain.Core.User.User>
             UserId = user.Id,
             IsActive = user.IsActive,
             CreationTime = user.CreationTime.ConvertToIso8601DateTimeUtc(),
-            DisplayName = user.DisplayName,
+            DisplayName = $"{user.FirstName.Trim()} {user.LastName.Trim()}",
             LastUpdated = user.LastUpdated.ConvertToIso8601DateTimeUtc(),
             DateOfBirth = user.DateOfBirth.GetValueOrDefault(),
             CreatedByUserId = user.CreatedByUserId,

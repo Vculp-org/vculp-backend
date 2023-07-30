@@ -150,7 +150,7 @@ namespace Vculp.Api.User.Controllers
         [ProducesResponseType(typeof(UserResponse), 200)]
         [Consumes(MediaTypes.UserModuleUpdateV1MediaType)]
         [Produces(MediaTypes.UserModuleUserV1MediaType)]
-        [HttpPut("{userid}", Name = RouteNames.UserUpdateUserById)]
+        [HttpPut("{userId}", Name = RouteNames.UserUpdateUserById)]
         public async Task<IActionResult> UpdateUserAsync(UpdateUserCommand command)
         {
             if (command == null)
@@ -164,20 +164,20 @@ namespace Vculp.Api.User.Controllers
             }
 
             var commandResult = await _mediator.Send(command);
-            if (commandResult.ResultType == CommandResultType.UnprocessableEntity)
-            {
-                ModelState.AddModelErrors(commandResult.Errors);
-                return UnprocessableEntity(ModelState);
-            }
-            if (commandResult.ResultType == CommandResultType.Conflict)
-            {
-                ModelState.AddModelErrors(commandResult.Errors);
-                return Conflict(ModelState);
-            }
-            if (commandResult.ResultType == CommandResultType.NotFound)
-            {
-                return NotFound();
-            }
+            // if (commandResult.ResultType == CommandResultType.UnprocessableEntity)
+            // {
+            //     ModelState.AddModelErrors(commandResult.Errors);
+            //     return UnprocessableEntity(ModelState);
+            // }
+            // if (commandResult.ResultType == CommandResultType.Conflict)
+            // {
+            //     ModelState.AddModelErrors(commandResult.Errors);
+            //     return Conflict(ModelState);
+            // }
+            // if (commandResult.ResultType == CommandResultType.NotFound)
+            // {
+            //     return NotFound();
+            // }
 
             _linkGenerator.GenerateLinks(commandResult.Result);
             return Ok(commandResult.Result);
