@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\api</_PublishTargetUrl>
+    <History>True|2023-07-30T17:10:51.5514931Z;True|2023-07-30T19:48:43.1826129+05:30;False|2023-07-30T19:48:23.3194549+05:30;True|2023-07-28T14:40:43.4048980+05:30;False|2023-07-28T14:40:01.3413232+05:30;True|2023-07-25T21:36:58.2774979+05:30;True|2023-07-25T21:27:46.1981905+05:30;False|2023-07-25T21:27:35.4789664+05:30;False|2023-07-25T21:27:22.7399966+05:30;True|2023-07-25T21:16:37.8060470+05:30;False|2023-07-25T21:16:16.2809713+05:30;True|2023-07-25T15:41:19.7065548+05:30;False|2023-07-25T15:40:43.6627768+05:30;True|2023-07-25T15:29:31.6545264+05:30;True|2023-07-25T15:26:16.8072662+05:30;True|2023-07-25T15:24:12.3876088+05:30;True|2023-07-25T15:22:52.8115097+05:30;True|2023-07-25T15:17:12.3873591+05:30;False|2023-07-25T15:10:47.0107517+05:30;True|2023-07-25T15:09:54.5438284+05:30;False|2023-07-25T15:09:05.7635262+05:30;True|2023-07-25T15:07:13.6942974+05:30;False|2023-07-25T15:04:46.0988287+05:30;False|2023-07-25T15:04:08.0349117+05:30;False|2023-07-25T15:03:39.9017700+05:30;False|2023-07-25T15:02:36.0955934+05:30;False|2023-07-25T15:01:50.2804413+05:30;False|2023-07-25T14:58:55.0589009+05:30;True|2023-07-25T14:35:36.4252218+05:30;False|2023-07-25T14:35:07.8146128+05:30;True|2023-07-25T14:32:47.1373703+05:30;True|2023-07-25T14:18:54.4288232+05:30;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="VculpConnection">
+      <Value>Data Source=vculp-ideXOB0DQ\SQLEXPRESS01%3bInitial Catalog=Vculp%3bPersist Security Info=False%3bUser ID=sa%3bPassword=ondc%4054321%3bMultipleActiveResultSets=True%3bEncrypt=False%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Vculp.Api.Data.EntityFramework.CoreContext">
+      <Value>Data Source=vculp-ideXOB0DQ\SQLEXPRESS01%3bInitial Catalog=Vculp%3bPersist Security Info=False%3bUser ID=sa%3bPassword=ondc%4054321%3bMultipleActiveResultSets=True%3bEncrypt=False%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

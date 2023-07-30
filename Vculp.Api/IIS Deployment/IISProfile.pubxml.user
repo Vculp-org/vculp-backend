@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <History>True|2023-07-25T08:30:33.8782624Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="VculpConnection">
+      <Value>Data Source=vculp-ideXOB0DQ\SQLEXPRESS01%3bInitial Catalog=Vculp%3bPersist Security Info=False%3bUser ID=sa%3bPassword=ondc%4054321%3bMultipleActiveResultSets=True%3bEncrypt=False%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
