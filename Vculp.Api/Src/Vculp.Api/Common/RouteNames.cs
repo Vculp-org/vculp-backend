@@ -18,6 +18,10 @@
         
         public const string LocationPushLocation = "LocationPushLocation";
         public const string LocationGetNearestDrivers = "LocationGetNearestDrivers";
+        
+        // Booking
+        
+        public const string BookingRequestRide = "BookingRequestRide";
 
     }
 }

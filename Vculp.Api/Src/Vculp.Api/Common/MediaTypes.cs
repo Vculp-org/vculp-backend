@@ -21,5 +21,9 @@
         public const string LocationModuleLocationV1MediaType = "application/vnd.vculp.lcation.v1.hateoas+json";
         public const string LocationModulePushLocationV1MediaType = "application/vnd.vculp.location.push.v1+json";
 
+        // Booking Module
+        public const string BookingModuleBookingV1MediaType = "application/vnd.vculp.booking.v1.hateoas+json";
+        public const string BookingModuleRequestRideV1MediaType = "application/vnd.vculp.booking.request.ride.v1+json";
+
     }
 }
