@@ -88,4 +88,8 @@
     <None Remove="Rbac\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="FareRecommendation\Controllers\" />
+  </ItemGroup>
+
 </Project>

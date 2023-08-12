@@ -35,6 +35,7 @@ using Newtonsoft.Json.Converters;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using Vculp.Api.Bootstrapper.Applications;
 using Vculp.Api.Bootstrapper.Common;
+using Vculp.Api.Bootstrapper.GoogleMaps;
 using Vculp.Api.Bootstrapper.Notifications;
 using Vculp.Api.Common;
 using Vculp.Api.Common.Common;
@@ -74,6 +75,7 @@ namespace Vculp.Api
             services.BootstrapVculpDependecies(Configuration);
 
             services.AddHttpContextAccessor();
+            services.AddHttpClient();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 
             services.AddScoped<IUrlHelper>(implementationFactory =>
@@ -100,6 +102,7 @@ namespace Vculp.Api
             services.ConfigureApplicationInsights(Configuration, ApplicationInsightsWorkloadType.Api);
             services.ConfigureApplicationsModule(Configuration);
             services.BootstrapGeocoder(Configuration);
+            services.ConfigureGoogleMapsModule(Configuration);
 
             services.AddMvcCore()
                 .AddNewtonsoftJson(

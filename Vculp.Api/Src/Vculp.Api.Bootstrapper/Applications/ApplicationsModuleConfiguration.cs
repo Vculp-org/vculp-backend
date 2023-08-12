@@ -22,7 +22,7 @@ namespace Vculp.Api.Bootstrapper.Applications
             services.Configure<VculpUiConfiguration>(configuration.GetSection("Applications:VculpUiConfiguration"))
                 .PostConfigure<VculpUiConfiguration>(options =>
                 {
-                    options.GoogleMapsKey = configuration.GetValue<string>("maps-key");
+                    options.GoogleMapsKey = configuration.GetValue<string>("google-maps-key-ui");
                 });
         }
     }

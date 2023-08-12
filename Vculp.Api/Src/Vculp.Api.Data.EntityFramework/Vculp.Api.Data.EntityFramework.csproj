@@ -38,6 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="FareRecommendation\" />
     <Folder Include="Migrations\" />
     <Folder Include="Notifications\KeylessEntities\" />
     <Folder Include="Notifications\QueryHandlers\" />
