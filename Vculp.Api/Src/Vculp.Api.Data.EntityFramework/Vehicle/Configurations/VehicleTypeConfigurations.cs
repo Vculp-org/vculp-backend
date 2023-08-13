@@ -27,6 +27,9 @@ public class VehicleTypeConfigurations : EntityConfiguration<Domain.Core.Vehicle
         builder.Property(i => i.BodyType)
             .IsRequired()
             .HasMaxLength(120);
+
+        builder.Property(i => i.NoOfSeaters)
+            .IsRequired();
         
         builder.OwnsMany(i => i.FareDetails, b =>
         {

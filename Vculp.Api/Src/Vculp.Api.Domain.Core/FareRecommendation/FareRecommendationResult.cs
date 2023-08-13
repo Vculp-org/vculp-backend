@@ -13,7 +13,7 @@
 //         State = ObjectState.Unchanged;
 //     }
 //
-//     public FareRecommendationResult(Price price, string priceSource)
+//     public FareRecommendationResult(FareDetails price)
 //     {
 //         Price = price ?? throw new ArgumentNullException(nameof(price));
 //

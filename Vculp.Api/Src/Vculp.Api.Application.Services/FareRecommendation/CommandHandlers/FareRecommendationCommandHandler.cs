@@ -34,7 +34,7 @@ public class FareRecommendationCommandHandler : CommandHandler,
     {
        
         //Call Fare recommonder service to get recommnded fare
-      await _fareRecommenderService.RecommendFareAsync(request.Origin, request.Destination, request.VehicleType,
+     var fareRecommendationDetails = await _fareRecommenderService.RecommendFareAsync(request.Origin, request.Destination, request.VehicleType,
             request.VehicleBodyType);
 
       throw new NotImplementedException();

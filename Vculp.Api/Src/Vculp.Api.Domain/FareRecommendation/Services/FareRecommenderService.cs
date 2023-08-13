@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Razor.TagHelpers;
+using Vculp.Api.Domain.Core.FareRecommendation;
 using Vculp.Api.Domain.Interfaces.FareRecommendation.Services;
 using Vculp.Api.Domain.Interfaces.GoogleMaps;
 using Vculp.Api.Domain.Interfaces.Vehicle;
@@ -19,7 +20,8 @@ public class FareRecommenderService : IFareRecommenderService
         _vehicleRepository = vehicleRepository ?? throw new ArgumentNullException(nameof(vehicleRepository));
     }
 
-    public async Task RecommendFareAsync(string origin, string destination, string vehicleType, string vehicleBodyType)
+    public async Task<FareRecommendationDetails> RecommendFareAsync(string origin, string destination,
+        string vehicleType, string vehicleBodyType)
     {
         var distanceApiResponse = await _distanceMatrixApi.GetAsync(origin, destination);
 
@@ -47,5 +49,13 @@ public class FareRecommenderService : IFareRecommenderService
 
         var yourMinimumFare = baseFare + durationFare + durationFare + minDistanceFare + tollRate;
         var yourRecommendedFare = baseFare + durationFare + durationFare + recommendedDistanceFare + tollRate;
+
+        var fareRecommendationDetails = new FareRecommendationDetails(origin, destination, element?.Distance.Value ?? 0,
+            element?.Duration.Value ?? 0
+            , baseFare, baseFareFreeKms, actualDistanceAfterFreeBaseFareKms.GetValueOrDefault(),
+            durationFare.GetValueOrDefault(), minDistanceFare.GetValueOrDefault(),
+            recommendedDistanceFare.GetValueOrDefault(), tollRate);
+
+        return fareRecommendationDetails;
     }
 }
