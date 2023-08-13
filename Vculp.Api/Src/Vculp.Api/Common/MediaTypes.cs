@@ -8,6 +8,9 @@
         public const string UserModuleCreateUserV1MediaType = "application/vnd.vculp.user.create.v1+json";
         public const string UserModuleUpdateV1MediaType = "application/vnd.vculp.user.update.v1+json";
         
+        //FareRecommendation
+        public const string FareRecommenderModuleFareRecommendationV1MediaType = "application/vnd.vculp.farerecommendation.v1.hateoas+json";
+        
         
         //Auth Module
         

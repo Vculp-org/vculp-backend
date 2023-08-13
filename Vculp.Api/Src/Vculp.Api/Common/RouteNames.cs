@@ -23,5 +23,8 @@
         
         public const string BookingRequestRide = "BookingRequestRide";
 
+        //FareRecommendation
+        public const string FareRecommenderRecommendFare = "FareRecommenderRecommendFare";
+
     }
 }

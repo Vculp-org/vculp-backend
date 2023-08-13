@@ -53,4 +53,9 @@
 		<ProjectReference Include="..\Vculp.TransactionalOutbox\Vculp.TransactionalOutbox.csproj" />
 	</ItemGroup>
 
+
+	<ItemGroup>
+	  <Folder Include="FareRecommendation\Queries\" />
+	</ItemGroup>
+
 </Project>

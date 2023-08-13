@@ -49,8 +49,7 @@ namespace Vculp.Api.Domain.Core.User
         }
 
         #endregion
-
-
+        
         #region Properties
 
         // TODO: This property should be removed once the Identity Server claims for user id as switched to Guids
@@ -70,9 +69,7 @@ namespace Vculp.Api.Domain.Core.User
         public DateTime? DateOfBirth { get; private set; }
 
         #endregion
-
-
-
+        
         #region Methods
 
         public void ChangeEmail(string email)

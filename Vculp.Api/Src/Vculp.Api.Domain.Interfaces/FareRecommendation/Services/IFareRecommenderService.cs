@@ -1,6 +1,8 @@
+using System.Threading.Tasks;
+
 namespace Vculp.Api.Domain.Interfaces.FareRecommendation.Services;
 
 public interface IFareRecommenderService
 {
-    void RecommendFare(string origin, string destination);
+    Task RecommendFareAsync(string origin, string destination, string vehicleType, string vehicleBodyType);
 }
