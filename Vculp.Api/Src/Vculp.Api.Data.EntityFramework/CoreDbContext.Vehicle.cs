@@ -7,13 +7,13 @@ namespace Vculp.Api.Data.EntityFramework;
 public partial class CoreContext : DbContext
 {
     // Entities
-    public DbSet<Domain.Core.Vehicle.Vehicle> Vehicles { get; set; }
+    public DbSet<Domain.Core.Vehicle.VehicleType> VehicleTypes { get; set; }
 
     // Configurations
 
     public void OnVehiclesModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfiguration(new VehicleConfigurations(this));
+        modelBuilder.ApplyConfiguration(new VehicleTypeConfigurations(this));
     }
 
 }

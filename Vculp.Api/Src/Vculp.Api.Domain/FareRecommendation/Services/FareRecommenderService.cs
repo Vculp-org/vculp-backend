@@ -11,9 +11,9 @@ namespace Vculp.Api.Domain.FareRecommendation.Services;
 public class FareRecommenderService : IFareRecommenderService
 {
     private readonly IDistanceMatrixApi _distanceMatrixApi;
-    private readonly IVehicleRepository _vehicleRepository;
+    private readonly IVehicleTypeRepository _vehicleRepository;
 
-    public FareRecommenderService(IDistanceMatrixApi distanceMatrixApi, IVehicleRepository vehicleRepository)
+    public FareRecommenderService(IDistanceMatrixApi distanceMatrixApi, IVehicleTypeRepository vehicleRepository)
     {
         _distanceMatrixApi = distanceMatrixApi ?? throw new ArgumentNullException(nameof(distanceMatrixApi));
         _vehicleRepository = vehicleRepository ?? throw new ArgumentNullException(nameof(vehicleRepository));

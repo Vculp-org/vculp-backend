@@ -13,11 +13,11 @@ public class FareDetails : ValueObject<FareDetails>
         State = ObjectState.Unchanged;
     }
 
-    public FareDetails(Vehicle vehicle, string city, double baseFare, double freeKms,
+    public FareDetails(VehicleType vehicle, string city, double baseFare, double freeKms,
         double perKmFare, double minPerKmFare, double perMinuteFare, double cancellationFeePercentage,
         double cancellationMaxAmount)
     {
-        VehicleId = vehicle?.Id ?? throw new ArgumentNullException(nameof(vehicle));
+        VehicleTypeId = vehicle?.Id ?? throw new ArgumentNullException(nameof(vehicle));
         if (string.IsNullOrWhiteSpace(city))
         {
             throw new ArgumentException($"{nameof(city)} is null, empty or contains only whitespace", nameof(city));
@@ -73,7 +73,7 @@ public class FareDetails : ValueObject<FareDetails>
 
     #endregion
 
-    public Guid VehicleId { get; set; }
+    public Guid VehicleTypeId { get; set; }
     public string City { get; set; }
     public double BaseFare { get; set; }
     public double FreeKms { get; set; }
@@ -90,7 +90,7 @@ public class FareDetails : ValueObject<FareDetails>
 
     protected override int GetHashCodeCore()
     {
-        return VehicleId.GetHashCode()
+        return VehicleTypeId.GetHashCode()
                ^ City.GetHashCode() ^ BaseFare.GetHashCode()
                ^ FreeKms.GetHashCode()
                ^ PerKmFare.GetHashCode() ^ MinPerKmFare.GetHashCode()

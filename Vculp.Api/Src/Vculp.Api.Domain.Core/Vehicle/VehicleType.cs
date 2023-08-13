@@ -6,19 +6,19 @@ using Vculp.Api.Domain.Core.SharedKernel.Interfaces;
 
 namespace Vculp.Api.Domain.Core.Vehicle;
 
-public class Vehicle : AggregateRoot, ICreationAuditable, IUpdateAuditable
+public class VehicleType : AggregateRoot, ICreationAuditable, IUpdateAuditable
 {
     private List<FareDetails> _fareDetails;
 
     #region Constructors
 
-    protected Vehicle()
+    protected VehicleType()
     {
         _fareDetails = new List<FareDetails>();
         State = ObjectState.Unchanged;
     }
 
-    public Vehicle(string vehicleType, string vehicleBodyType, IEnumerable<FareDetails> fareDetails)
+    public VehicleType(string vehicleType, string vehicleBodyType, IEnumerable<FareDetails> fareDetails)
     {
         if (string.IsNullOrWhiteSpace(vehicleType))
         {
@@ -42,16 +42,16 @@ public class Vehicle : AggregateRoot, ICreationAuditable, IUpdateAuditable
         }
 
         _fareDetails = fareDetails.ToList();
-        VehicleType = vehicleType;
-        VehicleBodyType = vehicleBodyType;
+        Type = vehicleType;
+        BodyType = vehicleBodyType;
     }
     
     #endregion
 
     #region Properties
 
-    public string VehicleType { get; set; }
-    public string VehicleBodyType { get; set; }
+    public string Type { get; set; }
+    public string BodyType { get; set; }
     public IReadOnlyCollection<FareDetails> FareDetails => _fareDetails.AsReadOnly();
     public DateTime CreationTime { get; }
     public int? CreatedByUserId { get; }

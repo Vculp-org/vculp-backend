@@ -7,13 +7,13 @@ using Vculp.Api.Domain.Interfaces.Vehicle;
 
 namespace Vculp.Api.Data.EntityFramework.Vehicle.Repositories;
 
-public class VehicleRepository : Repository<Domain.Core.Vehicle.Vehicle>, IVehicleRepository
+public class VehicleTypeRepository : Repository<Domain.Core.Vehicle.VehicleType>, IVehicleTypeRepository
 {
-    public VehicleRepository(CoreContext context) : base(context)
+    public VehicleTypeRepository(CoreContext context) : base(context)
     {
     }
 
-    protected override IQueryable<Domain.Core.Vehicle.Vehicle> IncludeAll()
+    protected override IQueryable<Domain.Core.Vehicle.VehicleType> IncludeAll()
     {
         return DbSet;
     }
@@ -29,7 +29,7 @@ public class VehicleRepository : Repository<Domain.Core.Vehicle.Vehicle>, IVehic
             throw new ArgumentException("Value cannot be null or whitespace.", nameof(city));
 
         var fareDetails = IncludeAll().Where(x =>
-                x.VehicleType == vehicleType && x.VehicleBodyType == vehicleBodyType)
+                x.Type == vehicleType && x.BodyType == vehicleBodyType)
             .Select(x => x.FareDetails.FirstOrDefault(q => q.City.Contains(city))).FirstOrDefaultAsync();
 
         return await fareDetails;
