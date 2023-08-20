@@ -61,8 +61,8 @@ namespace Vculp.Api.Booking.Controllers
                 return UnprocessableEntity(ModelState);
             }
         
-            // var commandResult = await _mediator.Send(command);
-            //
+            var commandResult = await _mediator.Send(command);
+            
             // if (commandResult.ResultType == CommandResultType.UnprocessableEntity)
             // {
             //     ModelState.AddModelErrors(commandResult.Errors);
