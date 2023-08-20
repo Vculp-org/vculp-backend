@@ -8,6 +8,7 @@ using Vculp.Api.Common.Common;
 using Vculp.Api.Common.Common.Dtos;
 using Vculp.Api.Common.User.Responses;
 using Microsoft.AspNetCore.Mvc;
+using Vculp.Api.Common.Booking.Commands;
 using Vculp.Api.Common.Location.Commands;
 using Vculp.Api.Common.Location.Queries;
 using Vculp.Api.Common.Location.Responses;
@@ -60,13 +61,13 @@ namespace Vculp.Api.Booking.Controllers
                 return UnprocessableEntity(ModelState);
             }
         
-            var commandResult = await _mediator.Send(command);
-            
-            if (commandResult.ResultType == CommandResultType.UnprocessableEntity)
-            {
-                ModelState.AddModelErrors(commandResult.Errors);
-                return UnprocessableEntity(ModelState);
-            }
+            // var commandResult = await _mediator.Send(command);
+            //
+            // if (commandResult.ResultType == CommandResultType.UnprocessableEntity)
+            // {
+            //     ModelState.AddModelErrors(commandResult.Errors);
+            //     return UnprocessableEntity(ModelState);
+            // }
             
             return NoContent();
         }
