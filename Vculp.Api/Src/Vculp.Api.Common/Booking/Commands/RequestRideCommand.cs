@@ -8,7 +8,7 @@ using Vculp.Api.Shared.Abstractions.Cqrs;
 
 namespace Vculp.Api.Common.Booking.Commands
 {
-    public class RequestRideCommand : IRequest<Common.ICommandResult>, ICommand, IRequest<ICommandResult<RequestRideCommandResponse>>
+    public class RequestRideCommand : ICommand, IRequest<ICommandResult<RequestRideCommandResponse>>
     {
         public RequestRideCommand()
         {
