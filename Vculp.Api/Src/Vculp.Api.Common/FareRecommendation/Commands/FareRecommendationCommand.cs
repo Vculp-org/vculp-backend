@@ -10,5 +10,6 @@ public class FareRecommendationCommand: IRequest<ICommandResult<FareRecommendati
     public string Destination { get; set; }
     public string VehicleType { get; set; }
     public string VehicleBodyType { get; set; }
+    public int? VehicleNoOfSeater { get; set; }
     
 }

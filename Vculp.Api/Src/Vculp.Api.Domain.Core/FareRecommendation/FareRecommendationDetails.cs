@@ -14,9 +14,10 @@ public class FareRecommendationDetails : AggregateRoot, ICreationAuditable, IUpd
         State = ObjectState.Unchanged;
     }
 
-    public FareRecommendationDetails(string origin, string destination, double distance,
+    public FareRecommendationDetails(int userId, string origin, string destination, double distance,
         double duration, double baseFare, double baseFareFreeKms, double actualDistanceAfterFreeKms,
-        double durationFare, double minimumDistanceFare, double recommendedDistanceFare, double tollCharges)
+        double durationFare, double minimumDistanceFare, double recommendedDistanceFare,
+        double tollCharges, double yourRecommendedFare, double yourMinimumFare)
     {
         if (string.IsNullOrWhiteSpace(origin))
         {
@@ -69,7 +70,19 @@ public class FareRecommendationDetails : AggregateRoot, ICreationAuditable, IUpd
         {
             throw new ArgumentException($"{nameof(tollCharges)} cannot be less than zero", nameof(tollCharges));
         }
+        
+        if (yourMinimumFare < 0)
+        {
+            throw new ArgumentException($"{nameof(yourMinimumFare)} cannot be less than zero", nameof(yourMinimumFare));
+        }
+        
+        if (yourRecommendedFare < 0)
+        {
+            throw new ArgumentException($"{nameof(yourRecommendedFare)} cannot be less than zero", nameof(yourRecommendedFare));
+        }
+        
 
+        UserId = userId;
         Origin = origin;
         Destination = destination;
         Distance = distance;
@@ -81,6 +94,8 @@ public class FareRecommendationDetails : AggregateRoot, ICreationAuditable, IUpd
         MinimumDistanceFare = minimumDistanceFare;
         RecommendedDistanceFare = recommendedDistanceFare;
         TollCharges = tollCharges;
+        YourMinimumFare = yourMinimumFare;
+        YourRecommendedFare = yourRecommendedFare;
 
     }
 
@@ -88,6 +103,7 @@ public class FareRecommendationDetails : AggregateRoot, ICreationAuditable, IUpd
 
     #region Properties
 
+    public int UserId { get; set; }
     public string Origin { get; set; }
     public string Destination { get; set; }
     public Guid VehicleTypeId { get; set; }
@@ -99,6 +115,8 @@ public class FareRecommendationDetails : AggregateRoot, ICreationAuditable, IUpd
     public double DurationFare { get; set; }
     public double MinimumDistanceFare { get; set; }
     public double RecommendedDistanceFare { get; set; }
+    public double YourMinimumFare { get; set; }
+    public double YourRecommendedFare { get; set; }
     public double TollCharges { get; set; }
     public DateTime CreationTime { get; }
     public int? CreatedByUserId { get; }

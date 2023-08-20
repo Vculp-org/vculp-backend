@@ -6,6 +6,18 @@ namespace Vculp.Api.Domain.Interfaces.GoogleMaps;
 
 public interface IDistanceMatrixApi
 {
-    [Get("destinations=<{destinations}>&origins<{origins}>")]
-    Task<DistanceMatrixResponse> GetAsync(string destinations, string origins);
+    [Get($"/api/distancematrix/json")]
+    Task<DistanceMatrixResponse> GetAsync([Query] DistanceMatrixQueryParams @params);
+}
+
+
+
+public class DistanceMatrixQueryParams
+{
+    [AliasAs("key")]
+    public string Key { get; set; }
+    [AliasAs("destinations")]
+    public string Destinations { get; set; }
+    [AliasAs("origins")]
+    public string Origins { get; set; }
 }

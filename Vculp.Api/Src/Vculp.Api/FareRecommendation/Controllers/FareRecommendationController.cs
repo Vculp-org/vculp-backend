@@ -17,12 +17,12 @@ namespace Vculp.Api.FareRecommendation.Controllers;
 public class FareRecommendationController: PagedCollectionController
 {
     private readonly IMediator _mediator;
-    private readonly IHateoasLinkGenerator<FareRecommendationResponse> _linkGenerator;
+    // private readonly IHateoasLinkGenerator<FareRecommendationResponse> _linkGenerator;
 
-    public FareRecommendationController(IMediator mediator, IHateoasLinkGenerator<FareRecommendationResponse> linkGenerator)
+    public FareRecommendationController(IMediator mediator)//, IHateoasLinkGenerator<FareRecommendationResponse> linkGenerator)
     {
         _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
-        _linkGenerator = linkGenerator ?? throw new ArgumentNullException(nameof(linkGenerator));
+        // _linkGenerator = linkGenerator ?? throw new ArgumentNullException(nameof(linkGenerator));
 
     }
     
@@ -34,7 +34,7 @@ public class FareRecommendationController: PagedCollectionController
     [ProducesResponseType(typeof(LinkedCollectionResourceWrapperDto<FareRecommendationResponse>), 200)]
     [Produces(MediaTypes.FareRecommenderModuleFareRecommendationV1MediaType)]
     [HttpPost(Name = RouteNames.FareRecommenderRecommendFare)]
-    public async Task<IActionResult> GetFareRecommendationAsync(FareRecommendationCommand command)
+    public async Task<IActionResult> GetFareRecommendationAsync([FromBody]FareRecommendationCommand command)
     {
         if (command == null)
         {
@@ -60,7 +60,7 @@ public class FareRecommendationController: PagedCollectionController
             return Conflict(ModelState);
         }
 
-        _linkGenerator.GenerateLinks(commandResult.Result);
+        //_linkGenerator.GenerateLinks(commandResult.Result);
 
         return Ok(commandResult.Result);
     }

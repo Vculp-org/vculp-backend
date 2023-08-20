@@ -2,6 +2,9 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Razor.TagHelpers;
+using Microsoft.Extensions.Options;
+using Vculp.Api.Common.Common;
+using Vculp.Api.Common.GoogleMaps.Configs;
 using Vculp.Api.Domain.Core.FareRecommendation;
 using Vculp.Api.Domain.Interfaces.FareRecommendation.Services;
 using Vculp.Api.Domain.Interfaces.GoogleMaps;
@@ -13,22 +16,41 @@ public class FareRecommenderService : IFareRecommenderService
 {
     private readonly IDistanceMatrixApi _distanceMatrixApi;
     private readonly IVehicleTypeRepository _vehicleRepository;
+    private readonly ICurrentUserAccessor _currentUserAccessor;
+    private readonly GoogleMapsConfiguration _googleMapsConfiguration;
 
-    public FareRecommenderService(IDistanceMatrixApi distanceMatrixApi, IVehicleTypeRepository vehicleRepository)
+    public FareRecommenderService(IDistanceMatrixApi distanceMatrixApi,
+        IVehicleTypeRepository vehicleRepository,
+        ICurrentUserAccessor currentUserAccessor,
+        IOptions<GoogleMapsConfiguration> googleMapsOptions)
     {
         _distanceMatrixApi = distanceMatrixApi ?? throw new ArgumentNullException(nameof(distanceMatrixApi));
         _vehicleRepository = vehicleRepository ?? throw new ArgumentNullException(nameof(vehicleRepository));
+        _currentUserAccessor = currentUserAccessor?? throw new ArgumentNullException(nameof(currentUserAccessor));
+        _googleMapsConfiguration = googleMapsOptions.Value?? throw new ArgumentNullException(nameof(googleMapsOptions));
     }
 
     public async Task<FareRecommendationDetails> RecommendFareAsync(string origin, string destination,
-        string vehicleType, string vehicleBodyType)
+        string vehicleType, string vehicleBodyType, int? noOfSeater)
     {
-        var distanceApiResponse = await _distanceMatrixApi.GetAsync(origin, destination);
+        var query = new DistanceMatrixQueryParams
+        {
+            Key = _googleMapsConfiguration.ApiKey,
+            Origins = $"<{origin}>",
+            Destinations = $"<{destination}>"
+        };
+        var distanceApiResponse = await _distanceMatrixApi.GetAsync(query);
 
         var element = distanceApiResponse.Rows.FirstOrDefault()?.Elements.FirstOrDefault();
 
-        var fareDetails = await _vehicleRepository.GetVehicleFareDetails(vehicleType, vehicleBodyType, origin);
-
+        var vehicleTypeDetails =
+            await _vehicleRepository.GetVehicleType(vehicleType, vehicleBodyType, origin, noOfSeater);
+        var fareDetails = vehicleTypeDetails.FareDetails.FirstOrDefault(q => q.City.Contains(origin));
+        if (fareDetails == null)
+        {
+            return null;
+        }
+        
         //Logic
         //(Cost per minute * time in ride) + (Cost per km * ride distance) + BaseFare + Toll Rates = Your Fare
 
@@ -49,12 +71,14 @@ public class FareRecommenderService : IFareRecommenderService
 
         var yourMinimumFare = baseFare + durationFare + durationFare + minDistanceFare + tollRate;
         var yourRecommendedFare = baseFare + durationFare + durationFare + recommendedDistanceFare + tollRate;
-
-        var fareRecommendationDetails = new FareRecommendationDetails(origin, destination, element?.Distance.Value ?? 0,
+        var user = _currentUserAccessor.UserId.GetValueOrDefault();
+        var fareRecommendationDetails = new FareRecommendationDetails(user, origin, destination,
+            element?.Distance.Value ?? 0,
             element?.Duration.Value ?? 0
             , baseFare, baseFareFreeKms, actualDistanceAfterFreeBaseFareKms.GetValueOrDefault(),
             durationFare.GetValueOrDefault(), minDistanceFare.GetValueOrDefault(),
-            recommendedDistanceFare.GetValueOrDefault(), tollRate);
+            recommendedDistanceFare.GetValueOrDefault(), tollRate, yourRecommendedFare.GetValueOrDefault(),
+            yourMinimumFare.GetValueOrDefault());
 
         return fareRecommendationDetails;
     }

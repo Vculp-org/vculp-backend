@@ -5,5 +5,6 @@ namespace Vculp.Api.Domain.Interfaces.Vehicle;
 
 public interface IVehicleTypeRepository : IRepository<Core.Vehicle.VehicleType>
 {
-    Task<Core.Vehicle.FareDetails> GetVehicleFareDetails(string vehicleType, string vehicleBodyType, string city);
+    Task<Core.Vehicle.VehicleType> GetVehicleType(string vehicleType, string vehicleBodyType, string city,
+        int? noOfSeater);
 }

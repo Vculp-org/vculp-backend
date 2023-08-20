@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
@@ -33,6 +34,7 @@ using Microsoft.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Converters;
 using Swashbuckle.AspNetCore.SwaggerUI;
+using Vculp.Api.Bootstrapper;
 using Vculp.Api.Bootstrapper.Applications;
 using Vculp.Api.Bootstrapper.Common;
 using Vculp.Api.Bootstrapper.GoogleMaps;
@@ -76,6 +78,14 @@ namespace Vculp.Api
 
             services.AddHttpContextAccessor();
             services.AddHttpClient();
+            services.AddHttpLogging(logging =>
+            {
+                logging.LoggingFields = HttpLoggingFields.All;
+            });
+
+// Add services to the container.
+
+            services.AddTransient<HttpLoggingHandler>();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 
             services.AddScoped<IUrlHelper>(implementationFactory =>

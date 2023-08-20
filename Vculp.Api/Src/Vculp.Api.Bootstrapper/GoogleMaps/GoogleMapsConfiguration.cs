@@ -19,6 +19,7 @@ public static class GoogleMapsModuleConfiguration
 
         services.Configure<GoogleMapsConfiguration>(configuration.GetSection("GoogleMapsConfiguration"));
 
+        ConfigureGoogleMapsRefitClient(services, configuration);
     }
 
     public static void ConfigureGoogleMapsRefitClient(this IServiceCollection services, IConfiguration configuration)
@@ -27,6 +28,7 @@ public static class GoogleMapsModuleConfiguration
         var googleMapsConfig = configuration.GetSection("GoogleMapsConfiguration")
             .Get<GoogleMapsConfiguration>();
         services.AddRefitClient<IDistanceMatrixApi>().ConfigureHttpClient(c =>
-            c.BaseAddress = new Uri(googleMapsConfig.BaseUrl + googleMapsConfig.ApiKey));
+                c.BaseAddress = new Uri(googleMapsConfig.BaseUrl))
+            .AddHttpMessageHandler<HttpLoggingHandler>();;
     }
 }

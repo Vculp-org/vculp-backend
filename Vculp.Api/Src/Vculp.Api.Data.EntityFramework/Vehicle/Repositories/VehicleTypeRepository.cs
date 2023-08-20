@@ -18,8 +18,8 @@ public class VehicleTypeRepository : Repository<Domain.Core.Vehicle.VehicleType>
         return DbSet;
     }
 
-    public async Task<Domain.Core.Vehicle.FareDetails> GetVehicleFareDetails(string vehicleType, string vehicleBodyType,
-        string city)
+    public async Task<Domain.Core.Vehicle.VehicleType> GetVehicleType(string vehicleType, string vehicleBodyType,
+        string city, int? noOfSeater)
     {
         if (string.IsNullOrWhiteSpace(vehicleType))
             throw new ArgumentException("Value cannot be null or whitespace.", nameof(vehicleType));
@@ -28,10 +28,8 @@ public class VehicleTypeRepository : Repository<Domain.Core.Vehicle.VehicleType>
         if (string.IsNullOrWhiteSpace(city))
             throw new ArgumentException("Value cannot be null or whitespace.", nameof(city));
 
-        var fareDetails = IncludeAll().Where(x =>
-                x.Type == vehicleType && x.BodyType == vehicleBodyType)
-            .Select(x => x.FareDetails.FirstOrDefault(q => q.City.Contains(city))).FirstOrDefaultAsync();
-
+        var fareDetails = IncludeAll().FirstOrDefaultAsync(x =>
+            x.Type.Contains(vehicleType) && x.BodyType.Contains(vehicleBodyType) && x.NoOfSeaters >= noOfSeater);
         return await fareDetails;
     }
 }
