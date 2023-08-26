@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Vculp.Api.Common.Booking.Responses;
 using Vculp.Api.Common.Common;
+using Vculp.Api.Domain.Core.SharedKernel;
 using Vculp.Api.Shared.Abstractions.Cqrs;
 
 namespace Vculp.Api.Common.Booking.Commands
@@ -18,7 +19,7 @@ namespace Vculp.Api.Common.Booking.Commands
         public decimal FromLongitude { get; set; }
         public decimal ToLatitude { get; set; }
         public decimal ToLongitude { get; set; }
-        public VehicleType VehicleType { get; set; }
+        public SharedEnums.VehicleType VehicleType { get; set; }
         public decimal RequestedFare { get; set; }
 
         [BindNever] public Guid CommandId { get; }

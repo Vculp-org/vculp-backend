@@ -58,7 +58,11 @@ public class RequestRideCommandHandler : CommandHandler,
             errResult.AddError(new OperationError("InvalidUser", Localizer["InvalidUser"]));
             return errResult;
         }
-        
+
+        var ride = new Domain.Core.Booking.Ride
+        (_currentUserAccessor.UserId.Value, request.FromLatitude, request.FromLongitude,
+            request.ToLatitude, request.ToLongitude,
+            request.VehicleType, request.RequestedFare);
         // var user = new Domain.Core.User.User(externalUserId: request.ExternalUserId,
         //     mobileNumber: request.MobileNumber,
         //     firstName: request.FirstName, lastName: request.LastName);

@@ -8,6 +8,7 @@ using Vculp.Api.Common.Common;
 using Vculp.Api.Common.Location.Queries;
 using Vculp.Api.Common.Location.Responses;
 using Vculp.Api.Data.EntityFramework.Common;
+using Vculp.Api.Domain.Core.SharedKernel;
 
 namespace Vculp.Api.Data.EntityFramework.Location.QueryHandlers;
 
@@ -43,7 +44,7 @@ public class NearestDriverQueryHandler: QueryHandler, IRequestHandler<NearestQue
                     Longitude = request.Longitude + (rnd.Next(-1000, 1000) / 10000M),
                     VehicleNumber = "BOND 007",
                     Model = "Aston Martin",
-                    Type = VehicleType.Car
+                    Type = SharedEnums.VehicleType.Car
                 },
                 new NearestDriverResponse
                 {
@@ -51,7 +52,7 @@ public class NearestDriverQueryHandler: QueryHandler, IRequestHandler<NearestQue
                     Longitude = request.Longitude + (rnd.Next(-1000, 1000) / 10000M),
                     VehicleNumber = "JAR 1111",
                     Model = "Bugatti",
-                    Type = VehicleType.Car
+                    Type = SharedEnums.VehicleType.Car
                 },
                 new NearestDriverResponse
                 {
@@ -59,7 +60,7 @@ public class NearestDriverQueryHandler: QueryHandler, IRequestHandler<NearestQue
                     Longitude = request.Longitude + (rnd.Next(-1000, 1000) / 10000M),
                     VehicleNumber = "STAT 404",
                     Model = "Royal Enfield",
-                    Type = VehicleType.Bike
+                    Type = SharedEnums.VehicleType.Bike
                 },
                 new NearestDriverResponse
                 {
@@ -67,7 +68,7 @@ public class NearestDriverQueryHandler: QueryHandler, IRequestHandler<NearestQue
                     Longitude = request.Longitude + (rnd.Next(-1000, 1000) / 10000M),
                     VehicleNumber = "TOM 3435",
                     Model = "Kawasaki Ninja",
-                    Type = VehicleType.Bike
+                    Type = SharedEnums.VehicleType.Bike
                 },
             };
 

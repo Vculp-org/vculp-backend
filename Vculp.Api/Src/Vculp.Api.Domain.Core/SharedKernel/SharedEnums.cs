@@ -4,10 +4,8 @@
     {
         public enum VehicleType
         {
-            Artic = 0,
-            Rigid = 1,
-            SteeringAxle = 2,
-            Mounty = 3
+            Car = 1,
+            Bike = 2
         }
 
         public enum DeliverySlot
