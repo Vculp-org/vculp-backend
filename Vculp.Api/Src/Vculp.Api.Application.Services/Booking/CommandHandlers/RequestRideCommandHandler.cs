@@ -20,17 +20,20 @@ public class RequestRideCommandHandler : CommandHandler,
     private readonly IUnitOfWork _unitOfWork;
     private readonly IUserRepository _userRepository;
     private readonly ICacheManager _cacheManager;
+    private readonly ICurrentUserAccessor _currentUserAccessor;
 
     public RequestRideCommandHandler(
         IUnitOfWork unitOfWork,
         IUserRepository userRepository,
         ICacheManager cacheManager,
+        ICurrentUserAccessor currentUserAccessor,
         IStringLocalizer<CommandHandlerErrors> stringLocalizer)
         : base(stringLocalizer)
     {
         _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
         _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
         _cacheManager = cacheManager?? throw new ArgumentNullException(nameof(cacheManager));
+        _currentUserAccessor = currentUserAccessor;
     }
 
     public async Task<ICommandResult<RequestRideCommandResponse>> Handle(RequestRideCommand request,
