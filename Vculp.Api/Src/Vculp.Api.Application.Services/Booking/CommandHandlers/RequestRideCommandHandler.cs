@@ -40,9 +40,7 @@ public class RequestRideCommandHandler : CommandHandler,
         CancellationToken cancellationToken)
     {
         if (request == null)
-        {
             throw new ArgumentNullException(nameof(request));
-        }
         
         var options = new DistributedCacheEntryOptions()
         {
@@ -54,8 +52,7 @@ public class RequestRideCommandHandler : CommandHandler,
         var data = await _cacheManager.GetAsync<RequestRideCommand>("Test", cancellationToken);
 
         //Check user already exist
-        var user = await _userRepository.GetByIdAsync(request.UserId);
-        if (user == null)
+        if (!_currentUserAccessor.UserId.HasValue)
         {
             var errResult = new UnauthorisedCommandResult<RequestRideCommandResponse>();
             errResult.AddError(new OperationError("InvalidUser", Localizer["InvalidUser"]));

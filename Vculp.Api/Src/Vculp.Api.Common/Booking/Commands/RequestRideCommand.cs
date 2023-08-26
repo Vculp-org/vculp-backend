@@ -14,7 +14,6 @@ namespace Vculp.Api.Common.Booking.Commands
             CommandId = Guid.NewGuid();
         }
 
-        public Guid UserId { get; set; }
         public decimal FromLatitude { get; set; }
         public decimal FromLongitude { get; set; }
         public decimal ToLatitude { get; set; }
