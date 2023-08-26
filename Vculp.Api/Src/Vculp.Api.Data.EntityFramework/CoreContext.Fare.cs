@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Vculp.Api.Data.EntityFramework.FareRecommendation.Configurations;
-using Vculp.Api.Data.EntityFramework.Vehicle.Configurations;
 
 namespace Vculp.Api.Data.EntityFramework;
 

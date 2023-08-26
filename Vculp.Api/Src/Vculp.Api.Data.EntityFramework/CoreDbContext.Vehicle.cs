@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Vculp.Api.Data.EntityFramework.Notifications.Configurations;
 using Vculp.Api.Data.EntityFramework.Vehicle.Configurations;
 
 namespace Vculp.Api.Data.EntityFramework;

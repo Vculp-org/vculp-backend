@@ -2,17 +2,11 @@ using System;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Swashbuckle.AspNetCore.Annotations;
 using Vculp.Api.Common;
 using Vculp.Api.Common.Common;
-using Vculp.Api.Common.Common.Dtos;
-using Vculp.Api.Common.User.Responses;
 using Microsoft.AspNetCore.Mvc;
 using Vculp.Api.Common.Booking.Commands;
-using Vculp.Api.Common.Location.Commands;
-using Vculp.Api.Common.Location.Queries;
-using Vculp.Api.Common.Location.Responses;
 
 
 namespace Vculp.Api.Booking.Controllers

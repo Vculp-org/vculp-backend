@@ -10,9 +10,6 @@ using Vculp.Api.Common;
 using Vculp.Api.Common.Authentication.Commands;
 using Vculp.Api.Common.Authentication.Responses;
 using Vculp.Api.Common.Common;
-using Vculp.Api.Common.User.Commands;
-using Vculp.Api.Common.User.Queries;
-using Vculp.Api.Common.User.Responses;
 
 namespace Vculp.Api.Authentication.Controllers;
 

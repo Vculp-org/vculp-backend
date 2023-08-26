@@ -1,5 +1,4 @@
 using Microsoft.Extensions.DependencyInjection;
-using Vculp.Api.Common.Caching;
 using Vculp.Api.Common.Serializer;
 
 namespace Vculp.Api.Bootstrapper.Common;

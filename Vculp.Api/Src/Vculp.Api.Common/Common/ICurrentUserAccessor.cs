@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Vculp.Api.Common.Common
+﻿namespace Vculp.Api.Common.Common
 {
     public interface ICurrentUserAccessor
     {

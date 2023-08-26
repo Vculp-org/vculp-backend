@@ -11,7 +11,6 @@ using Vculp.Api.Common.FareRecommendation.Responses;
 using Vculp.Api.Domain.Interfaces.Common;
 using Vculp.Api.Domain.Interfaces.FareRecommendation;
 using Vculp.Api.Domain.Interfaces.FareRecommendation.Services;
-using Vculp.Api.Domain.Interfaces.User;
 
 namespace Vculp.Api.Application.Services.FareRecommendation.CommandHandlers;
 

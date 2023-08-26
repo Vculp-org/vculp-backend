@@ -9,9 +9,6 @@ using Vculp.Api.Common.Common;
 using Vculp.Api.Common.Booking.Commands;
 using Vculp.Api.Common.Booking.Responses;
 using Vculp.Api.Common.Caching;
-using Vculp.Api.Common.User.Commands;
-using Vculp.Api.Common.User.Mappers;
-using Vculp.Api.Common.User.Responses;
 using Vculp.Api.Domain.Interfaces.Common;
 using Vculp.Api.Domain.Interfaces.User;
 

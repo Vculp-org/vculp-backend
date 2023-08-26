@@ -1,7 +1,6 @@
 using System;
 using MediatR;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Vculp.Api.Common.User.Responses;
 using Vculp.Api.Shared.Abstractions.Cqrs;
 
 namespace Vculp.Api.Common.Location.Commands

@@ -1,7 +1,6 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.Extensions.Options;
 using Vculp.Api.Common.Common;
 using Vculp.Api.Common.GoogleMaps.Configs;

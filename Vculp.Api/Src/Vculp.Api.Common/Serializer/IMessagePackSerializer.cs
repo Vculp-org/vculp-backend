@@ -1,5 +1,3 @@
-using System.Threading.Tasks;
-
 namespace Vculp.Api.Common.Serializer;
 
 public interface IMsgPackSerializer

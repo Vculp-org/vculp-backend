@@ -1,4 +1,3 @@
-using System;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Vculp.Api.Data.EntityFramework.Common;
 using Vculp.Api.Domain.Core.FareRecommendation;
