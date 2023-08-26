@@ -21,10 +21,6 @@
     <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
     <PackageReference Include="RazorLight" Version="2.0.0-rc.3" />
-<!--    <PackageReference Include="RedbusTech.Api.Shared.Types" Version="4.0.3" />-->
-<!--    <PackageReference Include="RedbusTech.DDD.EventDispatcher.DotnetCore" Version="2.0.3" />-->
-<!--    <PackageReference Include="RedbusTech.DDD.EventReducer.DotNetCore" Version="1.0.0" />-->
-<!--    <PackageReference Include="RedbusTech.Extensions.Http.AuthHandlers" Version="1.0.0" />-->
     <PackageReference Include="Scrutor" Version="4.2.2" />
   </ItemGroup>
   <ItemGroup>

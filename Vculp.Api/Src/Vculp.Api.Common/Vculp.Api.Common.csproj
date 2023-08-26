@@ -34,14 +34,11 @@
 	<ItemGroup>
 		<PackageReference Include="FluentValidation" Version="11.5.2" />
 		<PackageReference Include="MediatR" Version="9.0.0" />
+		<PackageReference Include="MessagePack" Version="2.5.124" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
 		<PackageReference Include="Microsoft.Azure.ServiceBus" Version="5.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="7.0.7" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-<!--		<PackageReference Include="RedbusTech.Api.Shared.Abstractions" Version="4.0.3" />-->
-<!--		<PackageReference Include="RedbusTech.Api.Shared.Types" Version="4.0.3" />-->
-<!--		<PackageReference Include="RedbusTech.String.Extensions" Version="1.1.1" />-->
-<!--		<PackageReference Include="RedbusTech.TransactionalOutbox" Version="1.0.2" />-->
 		<PackageReference Include="System.Text.Json" Version="7.0.3" />
 		<PackageReference Include="TimeZoneConverter" Version="6.1.0" />
 	</ItemGroup>

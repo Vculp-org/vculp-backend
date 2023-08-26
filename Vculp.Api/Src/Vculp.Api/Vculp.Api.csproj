@@ -54,8 +54,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.1" />
     <PackageReference Include="Mime-Detective" Version="0.0.5" />
-<!--    <PackageReference Include="RedbusTech.Extensions.AzureServiceBus" Version="1.0.3" />-->
-<!--    <PackageReference Include="RedbusTech.Extensions.Http.AuthHandlers" Version="1.0.0" />-->
     <PackageReference Include="Scrutor" Version="4.2.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />

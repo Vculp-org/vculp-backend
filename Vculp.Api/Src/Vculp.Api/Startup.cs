@@ -83,7 +83,7 @@ namespace Vculp.Api
                 logging.LoggingFields = HttpLoggingFields.All;
             });
 
-// Add services to the container.
+            // Add services to the container.
 
             services.AddTransient<HttpLoggingHandler>();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
@@ -94,6 +94,9 @@ namespace Vculp.Api
                 var urlHelperFactory = implementationFactory.GetRequiredService<IUrlHelperFactory>();
                 return urlHelperFactory.GetUrlHelper(actionContext);
             });
+            
+            services.AddSerializerConfiguration();
+            services.AddCachingConfiguration();
             
             services.AddEntityFrameworkConfiguration(Configuration.GetConnectionString("VculpConnection"));
             services.AddRepositories();

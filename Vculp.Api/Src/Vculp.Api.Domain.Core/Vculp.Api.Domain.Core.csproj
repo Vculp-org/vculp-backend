@@ -17,8 +17,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="7.0.0" />
-<!--    <PackageReference Include="RedbusTech.DateTime.Extensions" Version="1.1.0" />-->
-<!--    <PackageReference Include="RedbusTech.DDD.Shared" Version="4.0.0" />-->
   </ItemGroup>
 
   <ItemGroup>
