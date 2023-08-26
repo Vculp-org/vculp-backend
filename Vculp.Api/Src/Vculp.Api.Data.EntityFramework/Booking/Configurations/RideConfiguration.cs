@@ -4,7 +4,7 @@ using Vculp.Api.Domain.Core.Booking;
 
 namespace Vculp.Api.Data.EntityFramework.Booking.Configurations;
 
-public class RideConfiguration: EntityConfiguration<Domain.Core.Booking.Ride>
+public class RideConfiguration: EntityConfiguration<Ride>
 {
     public RideConfiguration(CoreContext context) : base(context)
     {
