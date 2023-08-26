@@ -4,14 +4,15 @@ using Vculp.Api.Domain.Core.Booking;
 
 namespace Vculp.Api.Data.EntityFramework.Booking.Configurations;
 
-public class RideConfiguration: EntityConfiguration<Ride>
+public class RideConfiguration : EntityConfiguration<Ride>
 {
     public RideConfiguration(CoreContext context) : base(context)
     {
     }
 
-    protected override string SchemaName { get; } = "Booking";
-    protected override string TableName { get; } = "Rides";
+    protected override string SchemaName => "Booking";
+    protected override string TableName => "Rides";
+
     public override void Configure(EntityTypeBuilder<Ride> builder)
     {
         base.Configure(builder);

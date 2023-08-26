@@ -21,6 +21,7 @@ namespace Vculp.Api.Data.EntityFramework
         {
             base.OnModelCreating(modelBuilder);
 
+            OnRideModelCreating(modelBuilder);
             OnUserModelCreating(modelBuilder);
             OnVehiclesModelCreating(modelBuilder);
             OnFareModelCreating(modelBuilder);

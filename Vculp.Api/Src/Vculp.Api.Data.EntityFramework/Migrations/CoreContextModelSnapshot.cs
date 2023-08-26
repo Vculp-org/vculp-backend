@@ -25,8 +25,13 @@ namespace Vculp.Api.Data.EntityFramework.Migrations
             modelBuilder.Entity("Vculp.Api.Domain.Core.Booking.Ride", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("ClusterId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClusterId"));
 
                     b.Property<int?>("CreatedByUserId")
                         .HasColumnType("int");
@@ -35,7 +40,10 @@ namespace Vculp.Api.Data.EntityFramework.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreationTime")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<decimal>("FromLatitude")
                         .HasColumnType("decimal(18,2)");
@@ -43,8 +51,14 @@ namespace Vculp.Api.Data.EntityFramework.Migrations
                     b.Property<decimal>("FromLongitude")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("LastUpdated")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasColumnName("LastUpdated")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<int?>("LastUpdatedByUserId")
                         .HasColumnType("int");
@@ -54,9 +68,6 @@ namespace Vculp.Api.Data.EntityFramework.Migrations
 
                     b.Property<decimal>("RequestedFare")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("State")
-                        .HasColumnType("int");
 
                     b.Property<decimal>("ToLatitude")
                         .HasColumnType("decimal(18,2)");
@@ -72,7 +83,18 @@ namespace Vculp.Api.Data.EntityFramework.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Rides");
+                    SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"), false);
+
+                    b.HasIndex("ClusterId")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Rides_ClusterId");
+
+                    SqlServerIndexBuilderExtensions.IsClustered(b.HasIndex("ClusterId"));
+
+                    b.HasIndex("IsDeleted")
+                        .HasDatabaseName("IX_Rides_IsDeleted");
+
+                    b.ToTable("Rides", "Booking");
                 });
 
             modelBuilder.Entity("Vculp.Api.Domain.Core.FareRecommendation.FareRecommendationDetails", b =>
