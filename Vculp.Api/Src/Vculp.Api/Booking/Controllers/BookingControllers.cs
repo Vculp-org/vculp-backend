@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Swashbuckle.AspNetCore.Annotations;
 using Vculp.Api.Common;
 using Vculp.Api.Common.Common;
@@ -63,11 +64,11 @@ namespace Vculp.Api.Booking.Controllers
         
             var commandResult = await _mediator.Send(command);
             
-            // if (commandResult.ResultType == CommandResultType.UnprocessableEntity)
-            // {
-            //     ModelState.AddModelErrors(commandResult.Errors);
-            //     return UnprocessableEntity(ModelState);
-            // }
+            if (commandResult.ResultType == CommandResultType.Unauthorised)
+            {
+                ModelState.AddModelErrors(commandResult.Errors);
+                return Unauthorized();
+            }
             
             return NoContent();
         }

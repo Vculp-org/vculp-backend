@@ -7,12 +7,8 @@ using Vculp.Api.Application.Services.Common;
 using Vculp.Api.Common.Common;
 using Vculp.Api.Common.Booking.Commands;
 using Vculp.Api.Common.Booking.Responses;
-using Vculp.Api.Common.User.Commands;
-using Vculp.Api.Common.User.Mappers;
-using Vculp.Api.Common.User.Responses;
 using Vculp.Api.Domain.Interfaces.Common;
 using Vculp.Api.Domain.Interfaces.User;
-using Vculp.Extensions.String;
 
 namespace Vculp.Api.Application.Services.Booking.CommandHandlers;
 
@@ -40,21 +36,15 @@ public class RequestRideCommandHandler : CommandHandler,
             throw new ArgumentNullException(nameof(request));
         }
 
-        // //Check user already exist
-        // var isExists = await _userRepository.ExistAsync(request.MobileNumber);
-        //
-        // if (isExists)
-        // {
-        //     var conflictResult = new ConflictCommandResult<UserResponse>();
-        //
-        //     conflictResult.AddError(
-        //         new OperationError(
-        //             "MobileIsInUse",
-        //             Localizer["CreateUserCommandHandler_MobileIsInUse", request.MobileNumber]));
-        //
-        //     return conflictResult;
-        // }
-        //
+        //Check user already exist
+        var user = await _userRepository.GetByIdAsync(request.UserId);
+        if (user == null)
+        {
+            var errResult = new UnauthorisedCommandResult<RequestRideCommandResponse>();
+            errResult.AddError(new OperationError("InvalidUser", Localizer["InvalidUser"]));
+            return errResult;
+        }
+        
         // var user = new Domain.Core.User.User(externalUserId: request.ExternalUserId,
         //     mobileNumber: request.MobileNumber,
         //     firstName: request.FirstName, lastName: request.LastName);

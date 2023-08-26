@@ -6,5 +6,6 @@
         Conflict,
         UnprocessableEntity,
         Success,
+        Unauthorised
     }
 }
