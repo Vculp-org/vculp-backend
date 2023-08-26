@@ -63,6 +63,8 @@ namespace Vculp.Api.Booking.Controllers
                 ModelState.AddModelErrors(commandResult.Errors);
                 return Unauthorized();
             }
+            else if (commandResult.ResultType == CommandResultType.Success)
+                return Ok(commandResult.Result);
             
             return NoContent();
         }

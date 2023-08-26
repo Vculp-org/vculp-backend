@@ -9,6 +9,7 @@ using Vculp.Api.Common.Common;
 using Vculp.Api.Common.Booking.Commands;
 using Vculp.Api.Common.Booking.Responses;
 using Vculp.Api.Common.Caching;
+using Vculp.Api.Domain.Interfaces.Booking;
 using Vculp.Api.Domain.Interfaces.Common;
 using Vculp.Api.Domain.Interfaces.User;
 
@@ -21,12 +22,14 @@ public class RequestRideCommandHandler : CommandHandler,
     private readonly IUserRepository _userRepository;
     private readonly ICacheManager _cacheManager;
     private readonly ICurrentUserAccessor _currentUserAccessor;
+    private readonly IRideRepository _rideRepository;
 
     public RequestRideCommandHandler(
         IUnitOfWork unitOfWork,
         IUserRepository userRepository,
         ICacheManager cacheManager,
         ICurrentUserAccessor currentUserAccessor,
+        IRideRepository rideRepository,
         IStringLocalizer<CommandHandlerErrors> stringLocalizer)
         : base(stringLocalizer)
     {
@@ -34,6 +37,7 @@ public class RequestRideCommandHandler : CommandHandler,
         _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
         _cacheManager = cacheManager?? throw new ArgumentNullException(nameof(cacheManager));
         _currentUserAccessor = currentUserAccessor;
+        _rideRepository = rideRepository;
     }
 
     public async Task<ICommandResult<RequestRideCommandResponse>> Handle(RequestRideCommand request,
@@ -63,28 +67,11 @@ public class RequestRideCommandHandler : CommandHandler,
         (_currentUserAccessor.UserId.Value, request.FromLatitude, request.FromLongitude,
             request.ToLatitude, request.ToLongitude,
             request.VehicleType, request.RequestedFare);
-        // var user = new Domain.Core.User.User(externalUserId: request.ExternalUserId,
-        //     mobileNumber: request.MobileNumber,
-        //     firstName: request.FirstName, lastName: request.LastName);
-        //
-        // if (!string.IsNullOrWhiteSpace(request.EmailAddress))
-        // {
-        //     user.ChangeEmail(email: request.EmailAddress);
-        // }
-        //
-        // if (!string.IsNullOrWhiteSpace(request.DateOfBirth))
-        // {
-        //     request.DateOfBirth.TryParseIso8601DateTimeToUtc(out var date);
-        //     user.ChangeDateOfBirth(date);
-        // }
-        //
-        // _userRepository.Add(user);
-        // await _unitOfWork.SaveChangesAsync();
-        //
-        // var response = UserMapper.MapToUserResponse(user);
+        _rideRepository.Add(ride);
+        await _unitOfWork.SaveChangesAsync();
 
         var successResult = new SuccessCommandResult<RequestRideCommandResponse>();
-        // successResult.SetResult(response);
+        successResult.SetResult(new RequestRideCommandResponse { Ride = ride });
 
         return successResult;
     }

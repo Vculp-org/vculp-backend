@@ -1,6 +1,8 @@
+using Vculp.Api.Domain.Core.Booking;
+
 namespace Vculp.Api.Common.Booking.Responses;
 
 public class RequestRideCommandResponse
 {
-    public int RideId { get; set; }
+    public Ride Ride { get; set; }
 }
