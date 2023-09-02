@@ -66,4 +66,8 @@ public interface ICacheManager
         /// <param name="token">Optional. The <see cref="CancellationToken"/> used to propagate notifications that the operation should be canceled.</param>
         /// <returns>The <see cref="Task"/> that represents the asynchronous operation.</returns>
         Task RemoveAsync(string key, CancellationToken token = default(CancellationToken));
+
+        DistributedCacheEntryOptions GetDefaultOptions();
+
+        DistributedCacheEntryOptions Get30MinSlidingOptions();
 }

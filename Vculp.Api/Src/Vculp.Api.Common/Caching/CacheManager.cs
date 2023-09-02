@@ -93,4 +93,17 @@ public class CacheManager : ICacheManager
     {
         await _distributedCache.RemoveAsync(key, token);
     }
+
+    public DistributedCacheEntryOptions GetDefaultOptions()
+    {
+        return Get30MinSlidingOptions();
+    }
+    public DistributedCacheEntryOptions Get30MinSlidingOptions()
+    {
+        var options = new DistributedCacheEntryOptions()
+        {
+            SlidingExpiration = new TimeSpan(0, 30, 0)
+        };
+        return options;
+    }
 }

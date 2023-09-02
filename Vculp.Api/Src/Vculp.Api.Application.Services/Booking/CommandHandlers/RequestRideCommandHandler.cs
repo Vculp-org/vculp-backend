@@ -46,15 +46,6 @@ public class RequestRideCommandHandler : CommandHandler,
         if (request == null)
             throw new ArgumentNullException(nameof(request));
         
-        var options = new DistributedCacheEntryOptions()
-        {
-            AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(5)
-        };
-
-        await _cacheManager.SetAsync("Test", request, options, cancellationToken);
-
-        var data = await _cacheManager.GetAsync<RequestRideCommand>("Test", cancellationToken);
-
         //Check user already exist
         if (!_currentUserAccessor.UserId.HasValue)
         {
@@ -72,6 +63,16 @@ public class RequestRideCommandHandler : CommandHandler,
 
         var successResult = new SuccessCommandResult<RequestRideCommandResponse>();
         successResult.SetResult(new RequestRideCommandResponse { Ride = ride });
+        
+        // work asynchronously
+        // save ride to cache, though this might not be required
+        // get nearest drivers
+        // notify drivers
+        
+        // save ride to cache, though this might not be required
+        // cache key creation logic should be unified unless used only once place
+        _cacheManager.SetAsync($"ride:{ride.Id}", ride, _cacheManager.Get30MinSlidingOptions(), cancellationToken);
+        
 
         return successResult;
     }
