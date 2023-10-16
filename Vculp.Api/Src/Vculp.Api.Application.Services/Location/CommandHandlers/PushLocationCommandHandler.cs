@@ -42,7 +42,7 @@ public class PushLocationCommandHandler:CommandHandler,
             return errResult;
         }
 
-        var location = new Domain.Core.Geo.Location(request.Latitude, request.Longitude);
+        var location = new Domain.Core.Location.Location(request.Latitude, request.Longitude);
         // inject location repository
         // save location
         var successResult = new SuccessCommandResult();

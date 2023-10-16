@@ -58,12 +58,12 @@ public class FareRecommenderService : IFareRecommenderService
         //Free Kms included in base fare, so that we can subtract the free kms from actual trip distance.
         var baseFareFreeKms = fareDetails.FreeKms;
         //Duration/Time fare factor - (Cost per minute * time in ride)
-        var durationFare = element?.Duration.Value * fareDetails.PerMinuteFare;
+        var durationFare = element?.Duration.Value * (fareDetails.PerMinuteFare/60);
         //Actual Distance after base fare included free kms 
-        var actualDistanceAfterFreeBaseFareKms = element?.Distance.Value - baseFareFreeKms;
+        var actualDistanceAfterFreeBaseFareKms = element?.Distance.Value - (baseFareFreeKms*1000);
         //Distance fare factor - (Cost per km * ride distance(actual ride distance))
-        var minDistanceFare = fareDetails.MinPerKmFare * actualDistanceAfterFreeBaseFareKms;
-        var recommendedDistanceFare = fareDetails.PerKmFare * actualDistanceAfterFreeBaseFareKms;
+        var minDistanceFare = (fareDetails.MinPerKmFare/1000) * actualDistanceAfterFreeBaseFareKms;
+        var recommendedDistanceFare = (fareDetails.PerKmFare/1000) * actualDistanceAfterFreeBaseFareKms;
         //Toll Rates
         const double
             tollRate = 0d; // This will be some dynamic value based on toll rate and the region where rider cross the border.

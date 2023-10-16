@@ -2,17 +2,16 @@ using System;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using Vculp.Api.Common;
 using Vculp.Api.Common.Common;
 using Vculp.Api.Common.Common.Dtos;
-using Microsoft.AspNetCore.Mvc;
 using Vculp.Api.Common.Location.Commands;
 using Vculp.Api.Common.Location.Queries;
 using Vculp.Api.Common.Location.Responses;
 
-
-namespace Vculp.Api.User.Controllers
+namespace Vculp.Api.Location.Controllers
 {
     [Area("Location")]
     [Route("location-api/location")]
