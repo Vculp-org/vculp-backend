@@ -23,7 +23,7 @@ namespace Vculp.Api.FavoriteRegion.Controllers
 {
     [Area("Favoriteregion")]
     [Route("favoriteregion-api/favoriteregion")]
-    [Microsoft.AspNetCore.Authorization.Authorize]
+    //[Microsoft.AspNetCore.Authorization.Authorize]
     public class FavoriteRegionController : PagedCollectionController
     {
         private readonly IMediator _mediator;
