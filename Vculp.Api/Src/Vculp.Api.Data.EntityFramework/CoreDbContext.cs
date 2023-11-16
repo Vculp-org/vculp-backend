@@ -26,7 +26,8 @@ namespace Vculp.Api.Data.EntityFramework
             OnVehiclesModelCreating(modelBuilder);
             OnFareModelCreating(modelBuilder);
             OnFavoriteRegionModelCreating(modelBuilder);
-
+            OnLocationsModelCreating(modelBuilder);
+            
             var dateTimeConverter = new ValueConverter<DateTime, DateTime>(
                 v => v, v => DateTime.SpecifyKind(v, DateTimeKind.Utc));
 

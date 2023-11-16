@@ -1,7 +1,7 @@
 using System;
 using Vculp.Api.Domain.Core.SharedKernel;
 
-namespace Vculp.Api.Domain.Core.Geo
+namespace Vculp.Api.Domain.Core.Location
 {
     public class Location:Entity
     {

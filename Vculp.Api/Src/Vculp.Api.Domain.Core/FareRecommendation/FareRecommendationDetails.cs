@@ -126,11 +126,4 @@ public class FareRecommendationDetails : AggregateRoot, ICreationAuditable, IUpd
     public string LastUpdatedByUserName { get; }
 
     #endregion
-
-    #region Methods
-
-
-    #endregion
-
-
 }
