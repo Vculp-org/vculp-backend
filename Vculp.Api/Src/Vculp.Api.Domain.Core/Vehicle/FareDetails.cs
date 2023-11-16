@@ -13,15 +13,15 @@ public class FareDetails : ValueObject<FareDetails>
         State = ObjectState.Unchanged;
     }
 
-    public FareDetails(VehicleType vehicle, string city, double baseFare, double freeKms,
+    public FareDetails(VehicleType vehicle, double origin, double baseFare, double freeKms,
         double perKmFare, double minPerKmFare, double perMinuteFare, double cancellationFeePercentage,
         double cancellationMaxAmount)
     {
         VehicleTypeId = vehicle?.Id ?? throw new ArgumentNullException(nameof(vehicle));
-        if (string.IsNullOrWhiteSpace(city))
-        {
-            throw new ArgumentException($"{nameof(city)} is null, empty or contains only whitespace", nameof(city));
-        }
+        // if (string.IsNullOrWhiteSpace(city))
+        // {
+        //     throw new ArgumentException($"{nameof(city)} is null, empty or contains only whitespace", nameof(city));
+        // }
 
         if (baseFare < 0)
         {
@@ -60,7 +60,7 @@ public class FareDetails : ValueObject<FareDetails>
                 nameof(cancellationMaxAmount));
         }
 
-        City = city;
+        Origin = origin;
         BaseFare = baseFare;
         FreeKms = freeKms;
         PerKmFare = perKmFare;
@@ -74,7 +74,7 @@ public class FareDetails : ValueObject<FareDetails>
     #endregion
 
     public Guid VehicleTypeId { get; set; }
-    public string City { get; set; }
+    public double Origin { get; set; }
     public double BaseFare { get; set; }
     public double FreeKms { get; set; }
     public double PerKmFare { get; set; }
@@ -91,7 +91,7 @@ public class FareDetails : ValueObject<FareDetails>
     protected override int GetHashCodeCore()
     {
         return VehicleTypeId.GetHashCode()
-               ^ City.GetHashCode() ^ BaseFare.GetHashCode()
+               ^ Origin.GetHashCode() ^ BaseFare.GetHashCode()
                ^ FreeKms.GetHashCode()
                ^ PerKmFare.GetHashCode() ^ MinPerKmFare.GetHashCode()
                ^ PerMinuteFare.GetHashCode()

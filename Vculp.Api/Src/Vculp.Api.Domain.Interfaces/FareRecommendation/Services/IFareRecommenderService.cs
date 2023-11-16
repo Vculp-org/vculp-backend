@@ -5,6 +5,6 @@ namespace Vculp.Api.Domain.Interfaces.FareRecommendation.Services;
 
 public interface IFareRecommenderService
 {
-    Task<FareRecommendationDetails> RecommendFareAsync(string origin, string destination,
+    Task<FareRecommendationDetails> RecommendFareAsync(double origin, double destination,
         string vehicleType, string vehicleBodyType, int? noOfSeater);
 }

@@ -29,7 +29,7 @@ public class FareRecommenderService : IFareRecommenderService
         _googleMapsConfiguration = googleMapsOptions.Value?? throw new ArgumentNullException(nameof(googleMapsOptions));
     }
 
-    public async Task<FareRecommendationDetails> RecommendFareAsync(string origin, string destination,
+    public async Task<FareRecommendationDetails> RecommendFareAsync(double origin, double destination,
         string vehicleType, string vehicleBodyType, int? noOfSeater)
     {
         var query = new DistanceMatrixQueryParams
@@ -44,7 +44,7 @@ public class FareRecommenderService : IFareRecommenderService
 
         var vehicleTypeDetails =
             await _vehicleRepository.GetVehicleType(vehicleType, vehicleBodyType, origin, noOfSeater);
-        var fareDetails = vehicleTypeDetails.FareDetails.FirstOrDefault(q => q.City.Contains(origin));
+        var fareDetails = vehicleTypeDetails.FareDetails.FirstOrDefault(q => q.Origin==origin);
         if (fareDetails == null)
         {
             return null;

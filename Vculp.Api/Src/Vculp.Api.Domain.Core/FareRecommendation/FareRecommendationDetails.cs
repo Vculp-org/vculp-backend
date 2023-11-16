@@ -14,20 +14,20 @@ public class FareRecommendationDetails : AggregateRoot, ICreationAuditable, IUpd
         State = ObjectState.Unchanged;
     }
 
-    public FareRecommendationDetails(int userId, string origin, string destination, double distance,
+    public FareRecommendationDetails(int userId, double origin, double destination, double distance,
         double duration, double baseFare, double baseFareFreeKms, double actualDistanceAfterFreeKms,
         double durationFare, double minimumDistanceFare, double recommendedDistanceFare,
         double tollCharges, double yourRecommendedFare, double yourMinimumFare)
     {
-        if (string.IsNullOrWhiteSpace(origin))
-        {
-            throw new ArgumentException($"{nameof(origin)} cannot be an empty name", nameof(origin));
-        }
-
-        if (string.IsNullOrWhiteSpace(destination))
-        {
-            throw new ArgumentException($"{nameof(destination)} cannot be an empty name", nameof(destination));
-        }
+        // if (string.IsNullOrWhiteSpace(origin))
+        // {
+        //     throw new ArgumentException($"{nameof(origin)} cannot be an empty name", nameof(origin));
+        // }
+        //
+        // if (string.IsNullOrWhiteSpace(destination))
+        // {
+        //     throw new ArgumentException($"{nameof(destination)} cannot be an empty name", nameof(destination));
+        // }
 
         if (distance < 0)
         {
@@ -104,8 +104,8 @@ public class FareRecommendationDetails : AggregateRoot, ICreationAuditable, IUpd
     #region Properties
 
     public int UserId { get; set; }
-    public string Origin { get; set; }
-    public string Destination { get; set; }
+    public double Origin { get; set; }
+    public double Destination { get; set; }
     public Guid VehicleTypeId { get; set; }
     public double Distance { get; set; }
     public double Duration { get; set; }

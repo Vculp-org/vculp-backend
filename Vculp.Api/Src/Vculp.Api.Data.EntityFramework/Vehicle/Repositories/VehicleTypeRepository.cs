@@ -19,14 +19,14 @@ public class VehicleTypeRepository : Repository<Domain.Core.Vehicle.VehicleType>
     }
 
     public async Task<Domain.Core.Vehicle.VehicleType> GetVehicleType(string vehicleType, string vehicleBodyType,
-        string city, int? noOfSeater)
+        double origin, int? noOfSeater)
     {
         if (string.IsNullOrWhiteSpace(vehicleType))
             throw new ArgumentException("Value cannot be null or whitespace.", nameof(vehicleType));
         if (string.IsNullOrWhiteSpace(vehicleBodyType))
             throw new ArgumentException("Value cannot be null or whitespace.", nameof(vehicleBodyType));
-        if (string.IsNullOrWhiteSpace(city))
-            throw new ArgumentException("Value cannot be null or whitespace.", nameof(city));
+        // if (string.IsNullOrWhiteSpace(origin))
+        //     throw new ArgumentException("Value cannot be null or whitespace.", nameof(city));
 
         var fareDetails = IncludeAll().FirstOrDefaultAsync(x =>
             x.Type.Contains(vehicleType) && x.BodyType.Contains(vehicleBodyType) && x.NoOfSeaters >= noOfSeater);

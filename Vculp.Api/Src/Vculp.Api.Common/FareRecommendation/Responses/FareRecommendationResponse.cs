@@ -5,8 +5,8 @@ namespace Vculp.Api.Common.FareRecommendation.Responses;
 
 public class FareRecommendationResponse: LinkedResourceDto
 {
-    public string Origin { get; set; }
-    public string Destination { get; set; }
+    public double Origin { get; set; }
+    public double Destination { get; set; }
     public Guid VehicleTypeId { get; set; }
     public double Distance { get; set; }
     public double Duration { get; set; }

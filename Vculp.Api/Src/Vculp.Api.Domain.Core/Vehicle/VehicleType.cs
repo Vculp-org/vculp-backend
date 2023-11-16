@@ -80,7 +80,7 @@ public class VehicleType : AggregateRoot, ICreationAuditable, IUpdateAuditable
             throw new ArgumentNullException(nameof(fareDetails), $"{nameof(fareDetails)} is null");
         }
 
-        if (!_fareDetails.Any(c => c.City == fareDetails.City))
+        if (!_fareDetails.Any(c => c.Origin == fareDetails.Origin))
         {
             _fareDetails.Add(fareDetails);
             SetStateToUpdated();
