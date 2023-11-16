@@ -9,6 +9,9 @@
 //------------------------------------------------------------------------------
 
 namespace Vculp.Api.Resources.Common.Validators {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -16,7 +19,7 @@ namespace Vculp.Api.Resources.Common.Validators {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class QueryValidatorMessages {
@@ -244,6 +247,15 @@ namespace Vculp.Api.Resources.Common.Validators {
         public static string IncludeRelatedOrderLineNotesIsNotRequiredError {
             get {
                 return ResourceManager.GetString("IncludeRelatedOrderLineNotesIsNotRequiredError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; must be between {1} &lt;-&gt; {2}..
+        /// </summary>
+        public static string InvalidRangeError {
+            get {
+                return ResourceManager.GetString("InvalidRangeError", resourceCulture);
             }
         }
         

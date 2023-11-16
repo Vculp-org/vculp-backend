@@ -38,7 +38,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
     <Folder Include="Notifications\KeylessEntities\" />
     <Folder Include="Notifications\QueryHandlers\" />
     <Folder Include="Notifications\Repositories\" />

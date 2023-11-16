@@ -24,6 +24,7 @@ namespace Vculp.Api
 
             BootstrapRbacDependecies(services);
             BootstrapNotificationDependecies(services);
+            BootstrapFavoriteRegionDependecies(services);
         }
     }
 }
