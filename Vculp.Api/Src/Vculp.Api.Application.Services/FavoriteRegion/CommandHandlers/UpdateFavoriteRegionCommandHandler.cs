@@ -49,6 +49,19 @@ namespace Vculp.Api.Application.Services.FavoriteRegion.CommandHandlers
 
             if (!string.IsNullOrWhiteSpace(request.Body.Name))
             {
+                var isExists = await _favoriteRegionRepository.ExistWithNameAsync(request.Body.Name);
+
+                if (isExists)
+                {
+                    var conflictResult = new ConflictCommandResult<FavoriteRegionResponse>();
+
+                    conflictResult.AddError(
+                        new OperationError(
+                            "NameIsInUse",
+                            Localizer["UpdateFavoriteRegionCommandHandler_NameIsInUse"]));
+
+                    return conflictResult;
+                }
                 favoriteRegion.ChangeName(request.Body.Name);
             }
 

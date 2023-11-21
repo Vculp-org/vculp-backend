@@ -53,7 +53,7 @@ namespace Vculp.Api.Application.Services.FavoriteRegion.CommandHandlers
                 conflictResult.AddError(
                     new OperationError(
                         "NameIsInUse",
-                        Localizer["CreateUserCommandHandler_NameIsInUse", request.Name]));
+                        Localizer["CreateFavoriteRegionCommandHandler_NameIsInUse"]));
 
                 return conflictResult;
             }
