@@ -16,7 +16,7 @@ namespace Vculp.Api.User.Controllers
 {
     [Area("User")]
     [Route("users-api/users")]
-    [Microsoft.AspNetCore.Authorization.Authorize]
+    //[Microsoft.AspNetCore.Authorization.Authorize]
     public class UserControllers : PagedCollectionController
     {
         private readonly IMediator _mediator;

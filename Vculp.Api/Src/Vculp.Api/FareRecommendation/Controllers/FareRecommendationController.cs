@@ -13,7 +13,7 @@ namespace Vculp.Api.FareRecommendation.Controllers;
 
 [Area("FareRecommendation")]
 [Route("fareRecommender-api/fareRecommendation")]
-[Microsoft.AspNetCore.Authorization.Authorize]
+//[Microsoft.AspNetCore.Authorization.Authorize]
 public class FareRecommendationController: PagedCollectionController
 {
     private readonly IMediator _mediator;
