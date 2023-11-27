@@ -30,5 +30,9 @@
         public const string BookingModuleBookingV1MediaType = "application/vnd.vculp.booking.v1.hateoas+json";
         public const string BookingModuleRequestRideV1MediaType = "application/vnd.vculp.booking.request.ride.v1+json";
 
+        //Favorite Region
+        public const string FavoriteRegionModuleMediaType = "application/vnd.vculp.favoriteregion.v1.hateoas+json";
+        public const string FavoriteRegionModuleCreateMediaType = "application/vnd.vculp.favoriteregion.create.v1+json";
+        public const string FavoriteRegionModuleUpdateMediaType = "application/vnd.vculp.favoriteregion.update.v1+json";
     }
 }

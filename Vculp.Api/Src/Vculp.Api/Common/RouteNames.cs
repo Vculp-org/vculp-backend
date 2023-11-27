@@ -27,5 +27,11 @@
         //FareRecommendation
         public const string FareRecommenderRecommendFare = "FareRecommenderRecommendFare";
 
+        //FavoriteRegion
+        public const string FavoriteRegion = "FavoriteRegion";
+        public const string FavoriteRegionById = "FavoriteRegionById";
+        public const string FavoriteRegions = "GetAllFavoriteRegion";
+        public const string UpdateFavoriteRegion = "UpdateFavoriteRegion";
+        public const string DeleteFavoriteRegion = "DeleteFavoriteRegion";
     }
 }

@@ -229,4 +229,8 @@
     <value>{0} should be later than or equal to {1}.</value>
     <comment>The error message returned when created before date is earlier than created after date.</comment>
   </data>
+  <data name="InvalidRangeError" xml:space="preserve">
+    <value>'{0}' must be between {1} &lt;-&gt; {2}.</value>
+    <comment>The error message retured from the API when field must be greater or less than some value</comment>
+  </data>
 </root>

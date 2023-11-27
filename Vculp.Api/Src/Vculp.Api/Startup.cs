@@ -121,15 +121,15 @@ namespace Vculp.Api
                 .AddNewtonsoftJson(
                     opts => opts.SerializerSettings.Converters.Add(new StringEnumConverter())
                     )
-                .AddAuthorization()
+                //.AddAuthorization()
                 .AddApiExplorer()
                 .AddMvcOptions(options =>
                 {
-                     var policy = new AuthorizationPolicyBuilder()
-                         .RequireAuthenticatedUser()
-                         .Build();
+                    // var policy = new AuthorizationPolicyBuilder()
+                    //     .RequireAuthenticatedUser()
+                    //     .Build();
 
-                    options.Filters.Add(new AuthorizeFilter(policy));
+                    //options.Filters.Add(new AuthorizeFilter(policy));
 
                     // We register custom media types below to work around the issue of some media types in the API
                     // having non-standard formats. When these non-standard formats are cleaned up, this code can be removed.
@@ -150,13 +150,13 @@ namespace Vculp.Api
                     fv.RegisterValidatorsFromAssemblyContaining<Startup>();
                 });
 
-            services.AddAuthentication("Bearer")
-                .AddIdentityServerAuthentication(options =>
-                {
-                    options.Authority = Configuration["identity_server:swagger_ui_identity_server_url"];
-                    options.RequireHttpsMetadata = false;
-                    options.ApiName = "Vculp.Api";
-                });
+            //services.AddAuthentication("Bearer")
+            //    .AddIdentityServerAuthentication(options =>
+            //    {
+            //        options.Authority = Configuration["identity_server:swagger_ui_identity_server_url"];
+            //        options.RequireHttpsMetadata = false;
+            //        options.ApiName = "Vculp.Api";
+            //    });
 
             services.AddSwaggerGen(options =>
             {
@@ -169,7 +169,7 @@ namespace Vculp.Api
 
                 });
 
-                options.OperationFilter<AuthorizeCheckOperationFilter>();
+                //options.OperationFilter<AuthorizeCheckOperationFilter>();
                 options.DescribeAllParametersInCamelCase();
 
                 options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
@@ -280,8 +280,8 @@ namespace Vculp.Api
 
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear(); // Ensures that the Subject Claim is populated.
 
-            app.UseAuthentication();
-            app.UseAuthorization();
+            //app.UseAuthentication();
+            //app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

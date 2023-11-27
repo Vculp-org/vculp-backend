@@ -15,35 +15,37 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{CA9057DA-4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{2CE86FF8-ACB6-4E8C-BF3A-A3D9A70F15F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.Api.Application.Services", "Src\Vculp.Api.Application.Services\Vculp.Api.Application.Services.csproj", "{63CCAC80-FEFC-49C6-A9B0-4F7854A6AE6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Api.Application.Services", "Src\Vculp.Api.Application.Services\Vculp.Api.Application.Services.csproj", "{63CCAC80-FEFC-49C6-A9B0-4F7854A6AE6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.Api.Application.Services.Interfaces", "Src\Vculp.Api.Application.Services.Interfaces\Vculp.Api.Application.Services.Interfaces.csproj", "{24C8FBF5-D75A-4DEE-9A1A-1FB65D554A5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Api.Application.Services.Interfaces", "Src\Vculp.Api.Application.Services.Interfaces\Vculp.Api.Application.Services.Interfaces.csproj", "{24C8FBF5-D75A-4DEE-9A1A-1FB65D554A5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.Api.Bootstrapper", "Src\Vculp.Api.Bootstrapper\Vculp.Api.Bootstrapper.csproj", "{EF09DE39-A56A-49AA-BE98-8B2FB501DF9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Api.Bootstrapper", "Src\Vculp.Api.Bootstrapper\Vculp.Api.Bootstrapper.csproj", "{EF09DE39-A56A-49AA-BE98-8B2FB501DF9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.Api.Common", "Src\Vculp.Api.Common\Vculp.Api.Common.csproj", "{6FEA02A2-5783-499F-8C7B-CBDD5157494A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Api.Common", "Src\Vculp.Api.Common\Vculp.Api.Common.csproj", "{6FEA02A2-5783-499F-8C7B-CBDD5157494A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.Api.Data.EntityFramework", "Src\Vculp.Api.Data.EntityFramework\Vculp.Api.Data.EntityFramework.csproj", "{B224855A-323F-4846-8F6C-2F2EBA287A5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Api.Data.EntityFramework", "Src\Vculp.Api.Data.EntityFramework\Vculp.Api.Data.EntityFramework.csproj", "{B224855A-323F-4846-8F6C-2F2EBA287A5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.Api.Domain", "Src\Vculp.Api.Domain\Vculp.Api.Domain.csproj", "{B6121B97-354D-4E75-A001-876AFC9536B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Api.Domain", "Src\Vculp.Api.Domain\Vculp.Api.Domain.csproj", "{B6121B97-354D-4E75-A001-876AFC9536B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.Api.Domain.Core", "Src\Vculp.Api.Domain.Core\Vculp.Api.Domain.Core.csproj", "{08F2EA57-F84F-4BE2-9A95-A59CC0787690}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Api.Domain.Core", "Src\Vculp.Api.Domain.Core\Vculp.Api.Domain.Core.csproj", "{08F2EA57-F84F-4BE2-9A95-A59CC0787690}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.Api.Domain.Interfaces", "Src\Vculp.Api.Domain.Interfaces\Vculp.Api.Domain.Interfaces.csproj", "{3D499D36-AFE2-4F8E-92D5-613F596ACFE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Api.Domain.Interfaces", "Src\Vculp.Api.Domain.Interfaces\Vculp.Api.Domain.Interfaces.csproj", "{3D499D36-AFE2-4F8E-92D5-613F596ACFE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.Services.Interfaces", "Src\Vculp.Services.Interfaces\Vculp.Services.Interfaces.csproj", "{CDCD2DF4-AA86-478F-B4DC-2FEB5249BBE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Services.Interfaces", "Src\Vculp.Services.Interfaces\Vculp.Services.Interfaces.csproj", "{CDCD2DF4-AA86-478F-B4DC-2FEB5249BBE2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3A4C0B6F-7B09-4EA5-B36A-A6C68B3184CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.DDD.Shared", "Src\Vculp.DDD.Shared\Vculp.DDD.Shared.csproj", "{27A034C1-431E-40CF-8F09-AA87A024251C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.DDD.Shared", "Src\Vculp.DDD.Shared\Vculp.DDD.Shared.csproj", "{27A034C1-431E-40CF-8F09-AA87A024251C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.TransactionalOutbox", "Src\Vculp.TransactionalOutbox\Vculp.TransactionalOutbox.csproj", "{0E8DDD75-2236-4A27-B9DB-6EC4E5260906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.TransactionalOutbox", "Src\Vculp.TransactionalOutbox\Vculp.TransactionalOutbox.csproj", "{0E8DDD75-2236-4A27-B9DB-6EC4E5260906}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.Api.Shared.Abstractions", "Src\Vculp.Api.Shared.Abstractions\Vculp.Api.Shared.Abstractions.csproj", "{F8DBD22D-7C3B-47E7-8C3B-67CDC2804746}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Api.Shared.Abstractions", "Src\Vculp.Api.Shared.Abstractions\Vculp.Api.Shared.Abstractions.csproj", "{F8DBD22D-7C3B-47E7-8C3B-67CDC2804746}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.Extensions", "Src\Vculp.Extensions\Vculp.Extensions.csproj", "{5306E0C8-B9DA-4784-8ABE-B40841FB97C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Extensions", "Src\Vculp.Extensions\Vculp.Extensions.csproj", "{5306E0C8-B9DA-4784-8ABE-B40841FB97C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vculp.Api.Shared", "Src\Vculp.Api.Shared\Vculp.Api.Shared.csproj", "{B8574D56-3EE7-4DC3-B7F4-29B55BA55F78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Api.Shared", "Src\Vculp.Api.Shared\Vculp.Api.Shared.csproj", "{B8574D56-3EE7-4DC3-B7F4-29B55BA55F78}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vculp.Api.Application.Services.Tests", "Tests\Vculp.Api.Application.Services.Tests\Vculp.Api.Application.Services.Tests.csproj", "{FF2D4669-A2EC-4E5B-B590-EDEEB0563830}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,7 +58,6 @@ Global
 		{EAEDD8CB-EB8D-4DC1-9029-BE1A5EE7E8B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAEDD8CB-EB8D-4DC1-9029-BE1A5EE7E8B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A5E7324-187D-4ABF-B191-5879AD523559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A5E7324-187D-4ABF-B191-5879AD523559}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A5E7324-187D-4ABF-B191-5879AD523559}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A5E7324-187D-4ABF-B191-5879AD523559}.Release|Any CPU.Build.0 = Release|Any CPU
 		{63CCAC80-FEFC-49C6-A9B0-4F7854A6AE6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -115,6 +116,10 @@ Global
 		{B8574D56-3EE7-4DC3-B7F4-29B55BA55F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8574D56-3EE7-4DC3-B7F4-29B55BA55F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8574D56-3EE7-4DC3-B7F4-29B55BA55F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF2D4669-A2EC-4E5B-B590-EDEEB0563830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF2D4669-A2EC-4E5B-B590-EDEEB0563830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF2D4669-A2EC-4E5B-B590-EDEEB0563830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF2D4669-A2EC-4E5B-B590-EDEEB0563830}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -138,6 +143,7 @@ Global
 		{F8DBD22D-7C3B-47E7-8C3B-67CDC2804746} = {3A4C0B6F-7B09-4EA5-B36A-A6C68B3184CE}
 		{5306E0C8-B9DA-4784-8ABE-B40841FB97C1} = {3A4C0B6F-7B09-4EA5-B36A-A6C68B3184CE}
 		{B8574D56-3EE7-4DC3-B7F4-29B55BA55F78} = {3A4C0B6F-7B09-4EA5-B36A-A6C68B3184CE}
+		{FF2D4669-A2EC-4E5B-B590-EDEEB0563830} = {1A9B9FEA-A57A-464B-AD42-694878489476}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B60A04C-AA9D-4CA6-9932-B9B6B42E56B0}
